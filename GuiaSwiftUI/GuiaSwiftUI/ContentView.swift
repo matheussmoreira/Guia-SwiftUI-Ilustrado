@@ -91,6 +91,8 @@ struct Pesos : View {
                 .fontWeight(.light)
             Text("Ultra light")
                 .fontWeight(.ultraLight)
+            Text("Hello Matheus")
+                .fontWeight(.ultraLight)
         }
     }
 }
