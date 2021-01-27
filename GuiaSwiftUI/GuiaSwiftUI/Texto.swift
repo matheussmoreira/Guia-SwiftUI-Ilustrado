@@ -9,12 +9,15 @@ import SwiftUI
 
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
-        Texto.Unico()
+        //Texto.Unico()
         //Texto.Tamanhos()
         //Texto.Pesos()
         //Texto.Cores()
         //Texto.CoresPrimary().preferredColorScheme(.light)
         //Texto.CoresPrimary().preferredColorScheme(.dark)
+        //Texto.Alinhamento()
+        //Texto.EspacoLinhas()
+        Texto.LimiteLinhas()
     }
 }
 
@@ -144,6 +147,86 @@ struct Texto {
             }
         }
     }
+    
+    struct Alinhamento : View {
+        var body : some View {
+            VStack {
+                /// LEADING
+                Text("Leading")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("O jardim não era especialmente exuberante nem especialmente bem cuidado. Mas era grande, e pertencia a ela. \n\n")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.leading)
+                
+                /// CENTER
+                Text("Center")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Uma macieira retorcida pela ação do vento e alguns arbustos que quase nunca davam bagas conseguiam sobreviver às fortes tempestades de inverno.\n\n")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                
+                /// TRAILING
+                Text("Trailing")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("O imenso jardim era rodeado por bétulas, que protegiam um pouco seu interior contra os ventos fortes.")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.trailing)
+            }
+        }
+    }
+    
+    struct EspacoLinhas : View {
+        var body: some View {
+            VStack {
+                Text("Espaço de valor 5:")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica. Elas são as grandes realizações intelectuais da primeira metade do século XX.\n")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(5)
+                
+                Text("Espaço de valor 20:")
+                    .foregroundColor(.red)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica. Elas são as grandes realizações intelectuais da primeira metade do século XX.")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .lineSpacing(20)
+            }
+        }
+    }
+    
+    struct LimiteLinhas : View {
+        var body: some View {
+            VStack {
+                Text("Limite de 3 linhas:")
+                    .foregroundColor(.orange)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(3)
+                
+                Text("\nSem limite de linhas:")
+                    .foregroundColor(.green)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(nil)
+            }
+        }
+    }
 }
-
 
