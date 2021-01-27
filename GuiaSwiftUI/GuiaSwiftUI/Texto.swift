@@ -184,7 +184,7 @@ struct Texto {
     struct EspacoLinhas : View {
         var body: some View {
             VStack {
-                Text("Espaço de valor 5:")
+                Text("Espaço de valor 5\n")
                     .foregroundColor(.blue)
                     .font(.title)
                     .fontWeight(.bold)
@@ -193,8 +193,8 @@ struct Texto {
                     .multilineTextAlignment(.center)
                     .lineSpacing(5)
                 
-                Text("Espaço de valor 20:")
-                    .foregroundColor(.red)
+                Text("Espaço de valor 20\n")
+                    .foregroundColor(.green)
                     .font(.title)
                     .fontWeight(.bold)
                 Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica. Elas são as grandes realizações intelectuais da primeira metade do século XX.")
@@ -208,7 +208,7 @@ struct Texto {
     struct LimiteLinhas : View {
         var body: some View {
             VStack {
-                Text("Limite de 3 linhas:")
+                Text("Limite de 3 linhas\n")
                     .foregroundColor(.orange)
                     .font(.title)
                     .fontWeight(.bold)
@@ -217,7 +217,7 @@ struct Texto {
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
                 
-                Text("\nSem limite de linhas:")
+                Text("\nSem limite de linhas\n")
                     .foregroundColor(.green)
                     .font(.title)
                     .fontWeight(.bold)
