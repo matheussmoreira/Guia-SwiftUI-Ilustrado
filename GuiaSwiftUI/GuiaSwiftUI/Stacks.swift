@@ -11,7 +11,8 @@ struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
         //Stacks.Exemplos()
         //Stacks.Alinhamentos()
-        Stacks.Espacamentos()
+        //Stacks.Espacamentos()
+        Stacks.Aninhadas()
     }
 }
 
@@ -161,6 +162,45 @@ struct Stacks {
                     .border(Color.green)
                 }
             }
+        }
+    }
+    
+    struct Aninhadas : View {
+        var body: some View {
+            VStack {
+                HStack {
+                    Rectangle()
+                        .frame(width: 120, height: 120)
+                        .foregroundColor(.gray)
+                    
+                    VStack {
+                        Rectangle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.green)
+                        Rectangle()
+                            .frame(width: 60, height: 60)
+                            .foregroundColor(.green)
+                    }.border(Color.black, width: 2)
+                    
+                }.border(Color.blue, width: 2)
+                
+                Capsule()
+                    .frame(width: 180, height: 100)
+                    .foregroundColor(.yellow)
+                
+                HStack {
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                }.border(Color.yellow, width: 2)
+                
+            }.border(Color.red, width: 2)
         }
     }
 }
