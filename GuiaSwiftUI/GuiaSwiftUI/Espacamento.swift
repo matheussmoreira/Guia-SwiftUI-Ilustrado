@@ -9,9 +9,9 @@ import SwiftUI
 
 struct EspacoAlinhamento_Previews : PreviewProvider {
     static var previews: some View {
-        Espacamento.EspacoBaixo()
-        Espacamento.EspacoCima()
-        Espacamento.EspacoMeio()
+        Espacamento.SpacerAbaixo()
+        Espacamento.SpacerAcima()
+        Espacamento.SpacerNoMeio()
         Espacamento.Divisor()
         Espacamento.Padding()
         Espacamento.PaddingNumerico()
@@ -20,7 +20,7 @@ struct EspacoAlinhamento_Previews : PreviewProvider {
 
 struct Espacamento {
     
-    struct EspacoBaixo : View {
+    struct SpacerAbaixo : View {
         var body: some View {
             VStack {
                 Text("Spacer inserido\nabaixo do texto")
@@ -32,7 +32,7 @@ struct Espacamento {
         }
     }
     
-    struct EspacoCima : View {
+    struct SpacerAcima : View {
         var body: some View {
             VStack {
                 Spacer()
@@ -43,7 +43,7 @@ struct Espacamento {
         }
     }
     
-    struct EspacoMeio : View {
+    struct SpacerNoMeio : View {
         var body: some View {
             VStack {
                 Text("Spacer entre")
