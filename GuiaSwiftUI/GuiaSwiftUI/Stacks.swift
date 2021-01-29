@@ -9,9 +9,9 @@ import SwiftUI
 
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
-        //Stacks.Exemplos()
-        //Stacks.Alinhamentos()
-        //Stacks.Espacamentos()
+        Stacks.Exemplos()
+        Stacks.Alinhamentos()
+        Stacks.Espacamentos()
         Stacks.Aninhadas()
     }
 }

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
-        //Texto.Unico()
-        //Texto.Tamanhos()
-        //Texto.Pesos()
-        //Texto.Cores()
-        //Texto.CoresPrimary().preferredColorScheme(.light)
-        //Texto.CoresPrimary().preferredColorScheme(.dark)
-        //Texto.Alinhamento()
-        //Texto.EspacoLinhas()
+        Texto.Unico()
+        Texto.Tamanhos()
+        Texto.Pesos()
+        Texto.Cores()
+        Texto.CoresPrimary().preferredColorScheme(.light)
+        Texto.CoresPrimary().preferredColorScheme(.dark)
+        Texto.Alinhamento()
+        Texto.EspacoLinhas()
         Texto.LimiteLinhas()
     }
 }
@@ -140,7 +140,7 @@ struct Texto {
     struct CoresPrimary : View {
         var body : some View {
             VStack {
-                Text("Preto no branco\nBranco no preto")
+                Text("Mesmo código,\ncores diferentes")
                     .foregroundColor(.primary)
                     .font(.title)
                     .fontWeight(.bold)
