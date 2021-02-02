@@ -101,38 +101,10 @@ struct Texto {
     struct Cores : View {
         var body : some View {
             VStack {
-                Text("Amarelo\n")
-                    .foregroundColor(.yellow)
-                    .fontWeight(.bold)
-                Text("Azul\n")
-                    .foregroundColor(.blue)
-                    .fontWeight(.bold)
                 Text("  Branco  ")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .background(Color.black)
-                Text("\nCinza\n")
-                    .foregroundColor(.gray)
-                    .fontWeight(.bold)
-                Text("Laranja\n")
-                    .foregroundColor(.orange)
-                    .fontWeight(.bold)
-                Text("Preto\n")
-                    .foregroundColor(.black)
-                    .fontWeight(.bold)
-                Text("Rosa\n")
-                    .foregroundColor(.pink)
-                    .fontWeight(.bold)
-                Text("Roxo\n")
-                    .foregroundColor(.purple)
-                    .fontWeight(.bold)
-                Text("Verde\n")
-                    .foregroundColor(.green)
-                    .fontWeight(.bold)
-                Text("Vermelho\n")
-                    .foregroundColor(.red)
-                    .fontWeight(.bold)
-                
             }.font(.title)
         }
     }
@@ -140,14 +112,24 @@ struct Texto {
     struct CoresPrimary : View {
         var body : some View {
             VStack {
-                Text("Mesmo código,\ncores diferentes")
+                Text(".primary")
                     .foregroundColor(.primary)
                     .font(.title)
                     .fontWeight(.bold)
+                    .padding()
+                
+                
+                Text(".secondary")
+                    .foregroundColor(.secondary)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
             }
         }
     }
     
+    
+  
     struct Alinhamento : View {
         var body : some View {
             VStack {
@@ -156,7 +138,7 @@ struct Texto {
                     .foregroundColor(.blue)
                     .font(.title)
                     .fontWeight(.bold)
-                Text("O jardim não era especialmente exuberante nem especialmente bem cuidado. Mas era grande, e pertencia a ela. \n\n")
+                Text("Se você quiser aprender SwiftUI temos duas dicas:\n\n")
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
                 
@@ -165,7 +147,7 @@ struct Texto {
                     .foregroundColor(.blue)
                     .font(.title)
                     .fontWeight(.bold)
-                Text("Uma macieira retorcida pela ação do vento e alguns arbustos que quase nunca davam bagas conseguiam sobreviver às fortes tempestades de inverno.\n\n")
+                Text("Dica 1: Dedique pelo menos 30 minutos do seu dia para estudar sobre os elementos de programação do SwiftUI.\n\n")
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                 
@@ -174,7 +156,7 @@ struct Texto {
                     .foregroundColor(.blue)
                     .font(.title)
                     .fontWeight(.bold)
-                Text("O imenso jardim era rodeado por bétulas, que protegiam um pouco seu interior contra os ventos fortes.")
+                Text("Dica 2: Depois dos estudos de SwiftUI pratique aquilo que você estudou para reforçar o aprendizado.\n\n")
                     .fontWeight(.bold)
                     .multilineTextAlignment(.trailing)
             }

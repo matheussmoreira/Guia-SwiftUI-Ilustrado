@@ -9,10 +9,10 @@ import SwiftUI
 
 struct Imagens_Previews : PreviewProvider {
     static var previews : some View {
-        //Imagens.Normal()
-        //Imagens.Resizable()
-        //Imagens.Fit()
-        //Imagens.Fill()
+        Imagens.Normal()
+        Imagens.Resizable()
+        Imagens.Fit()
+        Imagens.Fill()
         Imagens.Icones()
     }
 }
@@ -26,8 +26,15 @@ struct Imagens {
     
     struct Resizable : View {
         var body: some View {
-            Image("doguinho")
-                .resizable()
+            VStack{
+                Text("Resizable")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                
+                Image("doguinho")
+                    .resizable()
+            }
+
         }
     }
     
