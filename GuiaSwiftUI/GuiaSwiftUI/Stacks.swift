@@ -82,11 +82,11 @@ struct Stacks {
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.orange)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.orange)
                     }
                     .border(Color.blue)
                     
@@ -103,11 +103,11 @@ struct Stacks {
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.orange)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.orange)
                     }
                     .border(Color.blue)
                     
@@ -124,11 +124,11 @@ struct Stacks {
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.orange)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.red)
+                            .foregroundColor(.orange)
                     }
                     .border(Color.blue)
                 }
