@@ -9,7 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello Academy, venha programar!")
+//        Texto.Tamanhos()
+//        Texto.Pesos()
+//        Texto.Cores()
+//        Texto.Alinhamento()
+//        Texto.EspacoLinhas()
+        Texto.LimiteLinhas()
     }
 }
 
