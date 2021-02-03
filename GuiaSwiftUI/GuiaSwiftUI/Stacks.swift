@@ -10,9 +10,9 @@ import SwiftUI
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
         //Stacks.Exemplos()
-        Stacks.Alinhamentos()
+        //Stacks.Alinhamentos()
         //Stacks.Espacamentos()
-        //Stacks.Aninhadas()
+        Stacks.Aninhadas()
     }
 }
 
@@ -195,13 +195,9 @@ struct Stacks {
                         Rectangle()
                             .frame(width: 60, height: 60)
                             .foregroundColor(.green)
-                    }.border(Color.black, width: 2)
+                    } // Quadrados verdes
                     
-                }.border(Color.blue, width: 2)
-                
-                Capsule()
-                    .frame(width: 180, height: 100)
-                    .foregroundColor(.yellow)
+                }
                 
                 HStack {
                     Circle()
@@ -213,9 +209,14 @@ struct Stacks {
                     Circle()
                         .frame(width: 30, height: 30)
                         .foregroundColor(.blue)
-                }.border(Color.yellow, width: 2)
-                
-            }.border(Color.red, width: 2)
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                    Circle()
+                        .frame(width: 30, height: 30)
+                        .foregroundColor(.blue)
+                } // Circulos azuis
+            }
         }
     }
 }
