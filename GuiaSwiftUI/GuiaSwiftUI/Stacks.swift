@@ -9,10 +9,10 @@ import SwiftUI
 
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
-        Stacks.Exemplos()
+        //Stacks.Exemplos()
         Stacks.Alinhamentos()
-        Stacks.Espacamentos()
-        Stacks.Aninhadas()
+        //Stacks.Espacamentos()
+        //Stacks.Aninhadas()
     }
 }
 
@@ -71,48 +71,63 @@ struct Stacks {
                 /// EXEMPLO 1
                 HStack {
                     VStack(alignment: .leading) {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 100, height: 60)
+                                .foregroundColor(.blue)
+                            Text(".leading")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                         
                         Circle()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                         
                         Circle()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                     }
                     .border(Color.blue)
                     
                     /// EXEMPLO 2
                     VStack(alignment: .center) {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 100, height: 60)
+                                .foregroundColor(.blue)
+                            Text(".center")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                         
                         Circle()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                         
                         Circle()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                     }
                     .border(Color.blue)
                     
                     /// EXEMPLO 3
                     VStack(alignment: .trailing) {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.blue)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 100, height: 60)
+                                .foregroundColor(.blue)
+                            Text(".trailing")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                         
                         Circle()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                         
                         Circle()
-                            .frame(width: 50, height: 50)
+                            .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                     }
                     .border(Color.blue)
@@ -132,7 +147,7 @@ struct Stacks {
                 HStack {
                     VStack(spacing: 40) {
                         Rectangle()
-                            .frame(width: 60, height: 60)
+                            .frame(width: 160, height: 60)
                             .foregroundColor(.green)
                         
                         Circle()

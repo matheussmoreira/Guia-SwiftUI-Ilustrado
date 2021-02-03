@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Botao_Previews : PreviewProvider {
     static var previews: some View {
-        Botao.ExemploInicial()
+        Botao.ExemploInicial() 
     }
 }
 
