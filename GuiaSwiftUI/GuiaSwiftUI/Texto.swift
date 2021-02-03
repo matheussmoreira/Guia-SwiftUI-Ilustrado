@@ -66,9 +66,11 @@ struct Texto {
                     Text("Caption 2\n")
                         .font(.caption2)
                 }
-                
-                Text("Footnote")
-                    .font(.footnote)
+                Group {
+                    Text("Footnote")
+                        .font(.footnote)
+                }
+               
             }
         }
     }
@@ -189,16 +191,9 @@ struct Texto {
     
     struct LimiteLinhas : View {
         var body: some View {
+            
+            
             VStack {
-                Text("Limite de 3 linhas\n")
-                    .foregroundColor(.orange)
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .lineLimit(3)
-                
                 Text("\nSem limite de linhas\n")
                     .foregroundColor(.green)
                     .font(.title)
@@ -208,6 +203,9 @@ struct Texto {
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
             }
+            
+            
+            
         }
     }
 }
