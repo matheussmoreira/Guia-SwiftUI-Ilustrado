@@ -192,5 +192,4 @@ struct Espacamento {
             }
         }
     }
-    
 }
