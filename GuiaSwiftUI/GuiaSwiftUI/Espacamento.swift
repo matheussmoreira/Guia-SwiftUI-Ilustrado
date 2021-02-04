@@ -23,6 +23,7 @@ struct Espacamento {
     struct SpacerAbaixo : View {
         var body: some View {
             VStack {
+                
                 Text("Spacer inserido\nabaixo do texto")
                     .font(.title)
                     .fontWeight(.bold)
@@ -35,8 +36,11 @@ struct Espacamento {
     struct SpacerAcima : View {
         var body: some View {
             VStack {
+                
                 Spacer()
                 Text("Spacer inserido\nacima do texto")
+                    
+                    
                     .font(.title)
                     .fontWeight(.bold)
             }
@@ -45,31 +49,30 @@ struct Espacamento {
     
     struct SpacerNoMeio : View {
         var body: some View {
+            
             VStack {
                 Text("Spacer entre")
                     .font(.title)
                     .fontWeight(.bold)
-                
                 Spacer()
-                
                 Text("dois textos")
                     .font(.title)
                     .fontWeight(.bold)
             }
+        
         }
     }
     
     struct Divisor : View {
         var body: some View {
             VStack {
+                
                 VStack {
                     Circle()
                         .frame(width: 100, height: 100)
                         .foregroundColor(.blue)
                         .padding()
-                    
                     Divider()
-                    
                     Circle()
                         .frame(width: 100, height: 100)
                         .foregroundColor(.blue)

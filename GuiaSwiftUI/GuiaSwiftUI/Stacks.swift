@@ -22,6 +22,8 @@ struct Stacks {
         var body: some View {
             VStack {
                 Text("VStack").font(.title).fontWeight(.bold)
+                
+
                 VStack {
                     Rectangle()
                         .frame(width: 120, height: 120)
@@ -30,7 +32,10 @@ struct Stacks {
                     Circle()
                         .frame(width: 100, height: 100)
                         .foregroundColor(.red)
-                }.padding()
+                }
+                
+                
+                .padding()
                 
                 Spacer()
                 
@@ -70,6 +75,7 @@ struct Stacks {
                 
                 /// EXEMPLO 1
                 HStack {
+                    
                     VStack(alignment: .leading) {
                         ZStack {
                             Rectangle()
@@ -82,12 +88,15 @@ struct Stacks {
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                     }
+                    
+                    
+                    
                     .border(Color.blue)
                     
                     /// EXEMPLO 2
@@ -103,11 +112,11 @@ struct Stacks {
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                     }
                     .border(Color.blue)
                     
@@ -124,11 +133,11 @@ struct Stacks {
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                     }
                     .border(Color.blue)
                 }
@@ -161,6 +170,8 @@ struct Stacks {
                     .border(Color.green)
                     
                     /// EXEMPLO 2
+                    
+                    
                     VStack(spacing: 80) {
                         Rectangle()
                             .frame(width: 60, height: 60)
@@ -173,8 +184,11 @@ struct Stacks {
                         Circle()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.red)
-                    }
-                    .border(Color.green)
+                    }.border(Color.green)
+                    
+                    
+                    
+                    
                 }
             }
         }
@@ -187,7 +201,6 @@ struct Stacks {
                     Rectangle()
                         .frame(width: 120, height: 120)
                         .foregroundColor(.gray)
-                    
                     VStack {
                         Rectangle()
                             .frame(width: 60, height: 60)
@@ -196,9 +209,7 @@ struct Stacks {
                             .frame(width: 60, height: 60)
                             .foregroundColor(.green)
                     } // Quadrados verdes
-                    
                 }
-                
                 HStack {
                     Circle()
                         .frame(width: 30, height: 30)
@@ -219,4 +230,8 @@ struct Stacks {
             }
         }
     }
+
+
+
+
 }

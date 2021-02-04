@@ -9,12 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-//        Texto.Tamanhos()
-//        Texto.Pesos()
-//        Texto.Cores()
-//        Texto.Alinhamento()
-//        Texto.EspacoLinhas()
-        Texto.LimiteLinhas()
+        Stacks.Aninhadas()
     }
 }
 

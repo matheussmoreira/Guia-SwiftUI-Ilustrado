@@ -103,13 +103,42 @@ struct Texto {
     struct Cores : View {
         var body : some View {
             VStack {
+                Text("Amarelo\n")
+                    .foregroundColor(.yellow)
+                    .fontWeight(.bold)
+                Text("Azul\n")
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
                 Text("  Branco  ")
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .background(Color.black)
+                Text("\nCinza\n")
+                    .foregroundColor(.gray)
+                    .fontWeight(.bold)
+                Text("Laranja\n")
+                    .foregroundColor(.orange)
+                    .fontWeight(.bold)
+                Text("Preto\n")
+                    .foregroundColor(.black)
+                    .fontWeight(.bold)
+                Text("Rosa\n")
+                    .foregroundColor(.pink)
+                    .fontWeight(.bold)
+                Text("Roxo\n")
+                    .foregroundColor(.purple)
+                    .fontWeight(.bold)
+                Text("Verde\n")
+                    .foregroundColor(.green)
+                    .fontWeight(.bold)
+                Text("Vermelho\n")
+                    .foregroundColor(.red)
+                    .fontWeight(.bold)
+                
             }.font(.title)
         }
     }
+    
     
     struct CoresPrimary : View {
         var body : some View {
