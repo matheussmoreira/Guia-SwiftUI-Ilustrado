@@ -175,20 +175,20 @@ struct Espacamento {
     struct PaddingNumerico : View {
         var body: some View {
             VStack {
-                Text("Esquerda 20")
+                Text(".leading, 15")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
-                    .padding(.leading, 20)
+                    .padding(.leading, 15)
                     .background(Color.black)
                 
-                Text("Esquerda 70")
+                Text(".leading, 70")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.leading, 70)
                     .background(Color.black)
-                    .offset(y: 8)
+                    .offset(y: 16)
             }
         }
     }
