@@ -107,6 +107,7 @@ struct Texto {
                     .foregroundColor(.white)
                     .fontWeight(.bold)
                     .background(Color.black)
+                    .font(.title)
             }.font(.title)
         }
     }

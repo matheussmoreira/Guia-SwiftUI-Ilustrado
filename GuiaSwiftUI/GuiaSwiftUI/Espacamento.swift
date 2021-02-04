@@ -9,10 +9,10 @@ import SwiftUI
 
 struct EspacoAlinhamento_Previews : PreviewProvider {
     static var previews: some View {
-        Espacamento.SpacerAbaixo()
-        Espacamento.SpacerAcima()
-        Espacamento.SpacerNoMeio()
-        Espacamento.Divisor()
+        //Espacamento.SpacerAbaixo()
+        //Espacamento.SpacerAcima()
+        //Espacamento.SpacerNoMeio()
+        //Espacamento.Divisor()
         Espacamento.Padding()
         Espacamento.PaddingNumerico()
     }
@@ -98,31 +98,71 @@ struct Espacamento {
     struct Padding : View {
         var body: some View {
             VStack {
-                Text("Sem padding")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
-                
-                HStack {
-                    Circle().foregroundColor(.green).frame(width: 50, height: 50)
-                        .border(Color.red)
+                VStack {
+                    Text("Sem padding")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
                     
-                    Circle().foregroundColor(.green)
-                        .frame(width: 50, height: 50)
+                    Circle().foregroundColor(.green).frame(width: 40, height: 40)
+                        .border(Color.red)
                 }
                 
-                Text("Com padding na direita")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
+                VStack {
+                    Text(".padding(.top)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    
+                    Circle().foregroundColor(.green).frame(width: 40, height: 40)
+                        .padding(.top)
+                        .border(Color.red)
+                }
                 
-                HStack {
+                VStack {
+                    Text(".padding(.leading)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Circle().foregroundColor(.green).frame(width: 40, height: 40)
+                        .padding(.leading)
+                        .border(Color.red)
+                }
+                
+                VStack {
+                    Text(".padding(.bottom)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Circle().foregroundColor(.green).frame(width: 40, height: 40)
+                        .padding(.bottom)
+                        .border(Color.red)
+                }
+                
+                VStack {
+                    Text(".padding(.trailing)")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
                     Circle().foregroundColor(.green).frame(width: 50, height: 50)
                         .padding(.trailing)
                         .border(Color.red)
                     
-                    Circle().foregroundColor(.green)
-                        .frame(width: 50, height: 50)
+                }
+                
+                VStack {
+                    Text(".padding()")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding()
+                    
+                    Circle().foregroundColor(.green).frame(width: 50, height: 50)
+                        .padding()
+                        .border(Color.red)
                 }
                 
             }

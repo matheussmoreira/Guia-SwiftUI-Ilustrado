@@ -9,9 +9,9 @@ import SwiftUI
 
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
-        //Stacks.Exemplos()
-        //Stacks.Alinhamentos()
-        //Stacks.Espacamentos()
+        Stacks.Exemplos()
+        Stacks.Alinhamentos()
+        Stacks.Espacamentos()
         Stacks.Aninhadas()
     }
 }
@@ -78,15 +78,15 @@ struct Stacks {
                             Text(".leading")
                                 .bold()
                                 .foregroundColor(.white)
-                        }
+                        } // retagulo azul com texto
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                         
                         Circle()
                             .frame(width: 20, height: 20)
-                            .foregroundColor(.orange)
+                            .foregroundColor(.red)
                     }
                     .border(Color.blue)
                     
