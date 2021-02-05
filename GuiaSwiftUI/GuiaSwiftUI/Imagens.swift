@@ -92,7 +92,6 @@ struct Imagens {
                         .foregroundColor(.blue)
                 }.padding()
                 
-                
             }
         }
     }

@@ -23,7 +23,6 @@ struct Espacamento {
     struct SpacerAbaixo : View {
         var body: some View {
             VStack {
-                
                 Text("Spacer inserido\nabaixo do texto")
                     .font(.title)
                     .fontWeight(.bold)
@@ -36,11 +35,8 @@ struct Espacamento {
     struct SpacerAcima : View {
         var body: some View {
             VStack {
-                
                 Spacer()
                 Text("Spacer inserido\nacima do texto")
-                    
-                    
                     .font(.title)
                     .fontWeight(.bold)
             }
@@ -140,7 +136,9 @@ struct Espacamento {
                         .fontWeight(.bold)
                         .padding()
                     
-                    Circle().foregroundColor(.green).frame(width: 40, height: 40)
+                    Circle()
+                        .foregroundColor(.green)
+                        .frame(width: 40, height: 40)
                         .padding(.bottom)
                         .border(Color.red)
                 }
@@ -177,18 +175,16 @@ struct Espacamento {
             VStack {
                 Text(".leading, 15")
                     .font(.title)
-                    .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.leading, 15)
                     .background(Color.black)
                 
                 Text(".leading, 70")
                     .font(.title)
-                    .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.leading, 70)
                     .background(Color.black)
-                    .offset(y: 16)
+                    .offset(y: 15)
             }
         }
     }
