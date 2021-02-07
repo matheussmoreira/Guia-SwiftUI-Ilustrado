@@ -9,10 +9,10 @@ import SwiftUI
 
 struct Imagens_Previews : PreviewProvider {
     static var previews : some View {
-        Imagens.Normal()
-        Imagens.Resizable()
-        Imagens.Fit()
-        Imagens.Fill()
+        //Imagens.Normal()
+        //Imagens.Resizable()
+        //Imagens.Fit()
+        //Imagens.Fill()
         Imagens.Icones()
     }
 }
@@ -76,22 +76,29 @@ struct Imagens {
                     .padding()
                 
                 HStack {
-                    Image(systemName: "phone.circle")
+                    Image(systemName: "thermometer.sun")
+                        .font(.largeTitle)
+
+                    Image(systemName: "thermometer.sun.fill")
+                        .foregroundColor(.blue)
                         .font(.largeTitle)
                     
-                    Image(systemName: "phone.circle.fill")
+                    Image(systemName: "thermometer.sun.fill")
+                        .renderingMode(.original)
                         .font(.largeTitle)
-                }.padding()
+                } .padding()
                 
+                /*
                 HStack {
-                    Image(systemName: "thermometer.sun.fill").renderingMode(.original)
+                    Image(systemName: "thermometer.sun.fill")
+                        .renderingMode(.original)
                         .font(.largeTitle)
                     
                     Image(systemName: "staroflife.fill")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                 }.padding()
-                
+                */
             }
         }
     }
