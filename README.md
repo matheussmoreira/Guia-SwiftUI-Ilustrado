@@ -34,4 +34,4 @@ Detalhes a considerar durante sua contribuição:
 
 ## Idealizadores do Projeto
 
-<img src="https://drive.google.com/file/d/15VAm2-VTINg6Up35kddpKjSORl4CJTyn/view?usp=sharing">
+<img src="https://drive.google.com/file/d/15VAm2-VTINg6Up35kddpKjSORl4CJTyn/view" width=115>
