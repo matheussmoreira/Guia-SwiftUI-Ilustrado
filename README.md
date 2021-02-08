@@ -39,5 +39,6 @@ Detalhes a considerar durante sua contribuição:
 | <img src="https://avatars.githubusercontent.com/u/62520284?s=400&u=565e559fc4b743cbcd2ee3cde97e30854e166494&v=4" width=200>    | <img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=200> |
 | ----------- | ----------- |
 | **Matheus S. Moreira** | **Lidiane Chen Wang**|
+| Apple Developer Academy | Apple Developer Academy  |
 | Rio de Janeiro - Turma 2020 | Rio de Janeiro - Turma 2020 |
 | Programação | Design |
