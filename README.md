@@ -33,3 +33,6 @@ Detalhes a considerar durante sua contribuição:
 - Em caso de aprovação, sua branch de contribuição será deletada após mesclagem à branch principal e seu nome será incluído nos créditos do Guia (portanto, informe seu nome no texto explicativo da ilustração)!
 
 ## Idealizadores do Projeto
+
+| [<img src="https://drive.google.com/file/d/15VAm2-VTINg6Up35kddpKjSORl4CJTyn/view?usp=sharing">|
+| :---: |
