@@ -34,4 +34,4 @@ Detalhes a considerar durante sua contribuição:
 
 ## Idealizadores do Projeto
 
-<img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=115>
+[<img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=115>]
