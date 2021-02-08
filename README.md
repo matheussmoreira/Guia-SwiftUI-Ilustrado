@@ -37,4 +37,4 @@ Detalhes a considerar durante sua contribuição:
 | **Matheus S. Moreira** | **Lidiane Chen Wang**|
 | Apple Developer Academy | Apple Developer Academy  |
 | Rio de Janeiro - Turma 2020 | Rio de Janeiro - Turma 2020 |
-|      Programação |      Design |
+| Programação | Design |
