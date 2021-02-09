@@ -28,7 +28,6 @@ Detalhes a considerar durante sua contribuição:
 
 - Dê preferência à qualidade frente à quantidade. Evite adicionar muitas coisas numa branch de uma vez só.
 - O conteúdo final produzido por você pode sofrer algumas alterações, porém elas não passarão de pequenas correções que não necessitam de uma discussão aberta.
-- Não é necessário enviar enviar uma cópia do Guia atualizada, apenas o código conforme descrito acima.
 - Em caso de aprovação, sua branch de contribuição será deletada após mesclagem à branch principal e seu nome será incluído nos créditos do Guia (portanto, informe seu nome no texto explicativo da ilustração)!
 
 ## Idealizadores do Projeto
