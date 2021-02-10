@@ -30,7 +30,7 @@ Detalhes a considerar durante sua contribuição:
 - O conteúdo final produzido por você pode sofrer algumas alterações, porém elas não passarão de pequenas correções que não necessitam de uma discussão aberta.
 - Em caso de aprovação, sua branch de contribuição será deletada após a publicação de uma nova edição do e-book e seu nome será incluído nos créditos do Guia (portanto, informe seu nome no texto explicativo da ilustração)!
 
-Deseja discutir sobre outros detalhes do projeto? Envie um e-mail para matheussmoreira100@gmail.com com o assunto *Discussão: Guia SwiftUI Ilustrado*
+Deseja discutir sobre outros detalhes do projeto? Envie um e-mail para matheussmoreira100@gmail.com ou lidianechen@gmail.com com o assunto *Discussão: Guia SwiftUI Ilustrado*
 
 ## Idealizadores do Projeto
 | <img src="https://avatars.githubusercontent.com/u/62520284?s=400&u=565e559fc4b743cbcd2ee3cde97e30854e166494&v=4" width=200>    | <img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=200> |
