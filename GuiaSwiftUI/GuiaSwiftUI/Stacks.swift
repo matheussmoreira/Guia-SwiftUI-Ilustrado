@@ -155,9 +155,15 @@ struct Stacks {
                 /// EXEMPLO 1
                 HStack {
                     VStack(spacing: 40) {
-                        Rectangle()
-                            .frame(width: 160, height: 60)
-                            .foregroundColor(.green)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 160, height: 60)
+                                .foregroundColor(.green)
+                            Text("Valor 40")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
+                        
                         
                         Circle()
                             .frame(width: 50, height: 50)
@@ -170,12 +176,15 @@ struct Stacks {
                     .border(Color.green)
                     
                     /// EXEMPLO 2
-                    
-                    
                     VStack(spacing: 80) {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.green)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 160, height: 60)
+                                .foregroundColor(.green)
+                            Text("Valor 80")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                         
                         Circle()
                             .frame(width: 50, height: 50)

@@ -9,15 +9,17 @@ import SwiftUI
 
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
-        Texto.Unico()
-        Texto.Tamanhos()
-        Texto.Pesos()
-        Texto.Cores()
-        Texto.CoresPrimary().preferredColorScheme(.light)
-        Texto.CoresPrimary().preferredColorScheme(.dark)
-        Texto.Alinhamento()
-        Texto.EspacoLinhas()
-        Texto.LimiteLinhas()
+        //Texto.Unico()
+        //Texto.Tamanhos()
+        //Texto.Pesos()
+        //Texto.Cores()
+        Texto.CoresLightDarkMode().preferredColorScheme(.light)
+        Texto.CoresLightDarkMode().preferredColorScheme(.dark)
+        //Texto.CoresPrimarySecondary().preferredColorScheme(.light)
+        //Texto.CoresPrimarySecondary().preferredColorScheme(.dark)
+        //Texto.Alinhamento()
+        //Texto.EspacoLinhas()
+        //Texto.LimiteLinhas()
     }
 }
 
@@ -139,8 +141,17 @@ struct Texto {
         }
     }
     
+    struct CoresLightDarkMode : View {
+        var body : some View {
+            Text("Mesmo código,\ncores diferentes")
+                .foregroundColor(.primary)
+                .font(.title)
+                .fontWeight(.bold)
+                .padding()
+        }
+    }
     
-    struct CoresPrimary : View {
+    struct CoresPrimarySecondary : View {
         var body : some View {
             VStack {
                 Text(".primary")
@@ -159,8 +170,6 @@ struct Texto {
         }
     }
     
-    
-  
     struct Alinhamento : View {
         var body : some View {
             VStack {
