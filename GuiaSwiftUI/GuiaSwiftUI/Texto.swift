@@ -13,13 +13,13 @@ struct Texto_Previews: PreviewProvider {
         //Texto.Tamanhos()
         //Texto.Pesos()
         //Texto.Cores()
-        Texto.CoresLightDarkMode().preferredColorScheme(.light)
-        Texto.CoresLightDarkMode().preferredColorScheme(.dark)
+        //Texto.CoresLightDarkMode().preferredColorScheme(.light)
+        //Texto.CoresLightDarkMode().preferredColorScheme(.dark)
         //Texto.CoresPrimarySecondary().preferredColorScheme(.light)
         //Texto.CoresPrimarySecondary().preferredColorScheme(.dark)
         //Texto.Alinhamento()
         //Texto.EspacoLinhas()
-        //Texto.LimiteLinhas()
+        Texto.LimiteLinhas()
     }
 }
 
@@ -229,9 +229,18 @@ struct Texto {
     
     struct LimiteLinhas : View {
         var body: some View {
-            
-            
             VStack {
+                Text("Limite de 3 linhas")
+                    .foregroundColor(.orange)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .lineLimit(3)
+                
+                
                 Text("\nSem limite de linhas\n")
                     .foregroundColor(.green)
                     .font(.title)
@@ -241,9 +250,6 @@ struct Texto {
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
             }
-            
-            
-            
         }
     }
 }
