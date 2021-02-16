@@ -1,99 +1,20 @@
 //
-//  EspacoAlinhamento.swift
+//  Modifiers.swift
 //  GuiaSwiftUI
 //
-//  Created by Matheus S. Moreira on 28/01/21.
+//  Created by Matheus S. Moreira on 16/02/21.
 //
 
 import SwiftUI
 
-struct EspacoAlinhamento_Previews : PreviewProvider {
+struct Modifiers_Previews : PreviewProvider {
     static var previews: some View {
-        //Espacamento.SpacerAbaixo()
-        //Espacamento.SpacerAcima()
-        //Espacamento.SpacerNoMeio()
-        //Espacamento.Divisor()
-        Espacamento.Padding()
-        Espacamento.PaddingNumerico()
+        Modifiers.Padding()
+        Modifiers.PaddingNumerico()
     }
 }
 
-struct Espacamento {
-    
-    struct SpacerAbaixo : View {
-        var body: some View {
-            VStack {
-                Text("Spacer inserido\nabaixo do texto")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                Spacer()
-            }
-        }
-    }
-    
-    struct SpacerAcima : View {
-        var body: some View {
-            VStack {
-                Spacer()
-                Text("Spacer inserido\nacima do texto")
-                    .font(.title)
-                    .fontWeight(.bold)
-            }
-        }
-    }
-    
-    struct SpacerNoMeio : View {
-        var body: some View {
-            
-            VStack {
-                Text("Spacer entre")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Spacer()
-                Text("dois textos")
-                    .font(.title)
-                    .fontWeight(.bold)
-            }
-        
-        }
-    }
-    
-    struct Divisor : View {
-        var body: some View {
-            VStack {
-                
-                VStack {
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.blue)
-                        .padding()
-                    Divider()
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.blue)
-                        .padding()
-                }.border(Color.blue).padding()
-                
-                HStack {
-                    
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.orange)
-                        .padding()
-                    
-                    Divider()
-                    
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.orange)
-                        .padding()
-                    
-                }.border(Color.orange).padding()
-            }
-        }
-    }
-    
+struct Modifiers {
     struct Padding : View {
         var body: some View {
             VStack {
