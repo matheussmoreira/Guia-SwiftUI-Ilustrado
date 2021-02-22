@@ -9,10 +9,11 @@ import SwiftUI
 
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
-        Stacks.Exemplos()
-        Stacks.Alinhamentos()
-        Stacks.Espacamentos()
-        Stacks.Aninhadas()
+        //Stacks.Exemplos()
+        //Stacks.Alinhamentos()
+        //Stacks.Espacamentos()
+        //Stacks.Aninhadas()
+        Stacks.LazyStacks()
     }
 }
 
@@ -236,6 +237,29 @@ struct Stacks {
                         .frame(width: 30, height: 30)
                         .foregroundColor(.blue)
                 } // Circulos azuis
+            }
+        }
+    }
+    
+    struct LazyStacks : View {
+        var body: some View {
+            VStack {
+                Text("O código ao lado foi escrito para exibir 1000 quadrados. \n\nComo não mais que 4 aparecem na tela, somente estes são carregados pelo sistema, como se o restante não existisse.")
+                    .font(.title3)
+                    .padding()
+                
+                LazyHStack {
+                    ForEach(Range(1...1000)) { _ in
+                        Rectangle()
+                            .foregroundColor(.purple)
+                            .frame(width: 100, height: 100)
+                            .padding()
+                    }
+                }.frame(height: 200)
+                
+                Text("OBS: quando temos um número de componentes maior que o que conseguimos exibir na tela de uma só vez, é bem provável que eles estejam contidos numa barra de rolagem.")
+                    .font(.title3)
+                    .padding()
             }
         }
     }
