@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Botao_Previews : PreviewProvider {
     static var previews: some View {
-        Botao.ExemploInicial() 
+        Botao.Sheet()
     }
 }
 
@@ -41,6 +41,35 @@ struct Botao {
                         .foregroundColor(.red)
                 }.padding()
             }
+        }
+    }
+    
+    struct Sheet : View {
+        @State private var mostrarSheet = false // .toggle() = inverter valor
+        
+        var body: some View {
+            Button(action: { mostrarSheet.toggle() }) {
+                // Corpo do botão preto
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 250.0, height: 40.0)
+                        .foregroundColor(.black)
+                    
+                    Text("Clique para exibir o sheet")
+                        .bold()
+                        .foregroundColor(.white)
+                }
+            }.sheet(isPresented: $mostrarSheet,
+                   onDismiss: {print("Você saiu do sheet")},
+                   content: {
+                    
+                    VStack {
+                        Text("Sucesso!").font(.title).padding()
+                        
+                        Button("Voltar",action: { mostrarSheet.toggle() })
+                    }
+                    
+                   })
         }
     }
 }
