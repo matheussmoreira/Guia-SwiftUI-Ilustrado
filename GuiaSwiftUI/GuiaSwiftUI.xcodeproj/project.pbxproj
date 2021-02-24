@@ -10,6 +10,7 @@
 		6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC0C25DC45C6009752E3 /* Espaco.swift */; };
 		6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1425DC4BBE009752E3 /* Divisor.swift */; };
 		6601FC1B25DC5492009752E3 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1A25DC5492009752E3 /* Modifiers.swift */; };
+		666A8B0725E696AD0039E5D4 /* PaginaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666A8B0625E696AD0039E5D4 /* PaginaTexto.swift */; };
 		667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B0EFF25C1CAFB00A079F8 /* Stacks.swift */; };
 		66D3A91925C470B0001A0690 /* Botoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3A91825C470B0001A0690 /* Botoes.swift */; };
 		66F6577525C0D05D007F6C99 /* Texto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6577425C0D05D007F6C99 /* Texto.swift */; };
@@ -43,6 +44,7 @@
 		6601FC0C25DC45C6009752E3 /* Espaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Espaco.swift; sourceTree = "<group>"; };
 		6601FC1425DC4BBE009752E3 /* Divisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divisor.swift; sourceTree = "<group>"; };
 		6601FC1A25DC5492009752E3 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		666A8B0625E696AD0039E5D4 /* PaginaTexto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaTexto.swift; sourceTree = "<group>"; };
 		667B0EFF25C1CAFB00A079F8 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
 		66D3A91825C470B0001A0690 /* Botoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botoes.swift; sourceTree = "<group>"; };
 		66F6577425C0D05D007F6C99 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
@@ -114,6 +116,14 @@
 			path = ModifiersUniversais;
 			sourceTree = "<group>";
 		};
+		666A8B0525E6968E0039E5D4 /* Paginas */ = {
+			isa = PBXGroup;
+			children = (
+				666A8B0625E696AD0039E5D4 /* PaginaTexto.swift */,
+			);
+			path = Paginas;
+			sourceTree = "<group>";
+		};
 		BB576D4825C08FBD00F0B4E9 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		BB576D5325C08FBD00F0B4E9 /* GuiaSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				666A8B0525E6968E0039E5D4 /* Paginas */,
 				BB576D5825C08FC100F0B4E9 /* Assets.xcassets */,
 				6601FC0A25DC4592009752E3 /* ComponentesUI */,
 				6601FC1925DC547A009752E3 /* ModifiersUniversais */,
@@ -306,6 +317,7 @@
 			files = (
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botoes.swift in Sources */,
+				666A8B0725E696AD0039E5D4 /* PaginaTexto.swift in Sources */,
 				6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */,
 				66F6577525C0D05D007F6C99 /* Texto.swift in Sources */,
 				6601FC1B25DC5492009752E3 /* Modifiers.swift in Sources */,
@@ -471,7 +483,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GuiaSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = JT55BTWL93;
+				DEVELOPMENT_TEAM = P27VQVDFNQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GuiaSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -482,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "puc-rio.GuiaSwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -493,7 +505,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"GuiaSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = JT55BTWL93;
+				DEVELOPMENT_TEAM = P27VQVDFNQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GuiaSwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -504,7 +516,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "puc-rio.GuiaSwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

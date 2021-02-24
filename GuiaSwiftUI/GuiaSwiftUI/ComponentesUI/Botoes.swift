@@ -55,18 +55,47 @@ struct Botao {
                         .frame(width: 250.0, height: 40.0)
                         .foregroundColor(.black)
                     
-                    Text("Clique para exibir o sheet")
+                    Text("Clique para exibir")
                         .bold()
                         .foregroundColor(.white)
                 }
             }.sheet(isPresented: $mostrarSheet,
-                   onDismiss: {print("Você saiu do sheet")},
+                   onDismiss: {print("Você saiu do sheet!")},
                    content: {
                     
                     VStack {
-                        Text("Sucesso!").font(.title).padding()
+                        Text("Tela em modo sheet!").font(.title).padding()
                         
                         Button("Voltar",action: { mostrarSheet.toggle() })
+                    }
+                    
+                   })
+        }
+    }
+    
+    struct FullScreen : View {
+        @State private var fullScreen = false
+        
+        var body: some View {
+            Button(action: { fullScreen.toggle() }) {
+                // Corpo do botão preto
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 250.0, height: 40.0)
+                        .foregroundColor(.black)
+                    
+                    Text("Clique para exibir")
+                        .bold()
+                        .foregroundColor(.white)
+                }
+            }.fullScreenCover(isPresented: $fullScreen,
+                   onDismiss: { print("Você saiu do full screen!") },
+                   content: {
+                    
+                    VStack {
+                        Text("Tela em modo full screen!").font(.title).padding()
+                        
+                        Button("Voltar", action: { fullScreen.toggle() })
                     }
                     
                    })

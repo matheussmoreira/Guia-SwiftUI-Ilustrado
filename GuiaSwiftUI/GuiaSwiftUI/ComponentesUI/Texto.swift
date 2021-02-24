@@ -33,6 +33,9 @@ struct Texto {
     struct Tamanhos : View {
         var body: some View {
             VStack {
+                Barrinha()
+                Spacer()
+                
                 Text("Large Title")
                     .font(.largeTitle)
                     .padding(.bottom)
@@ -73,6 +76,7 @@ struct Texto {
                         .font(.footnote)
                 }
                
+                Spacer()
             }
         }
     }
@@ -80,64 +84,99 @@ struct Texto {
     struct Pesos : View {
         var body : some View {
             VStack {
-                Text("Black\n")
-                    .fontWeight(.black)
-                Text("Heavy\n")
-                    .fontWeight(.heavy)
-                Text("Bold\n")
-                    .fontWeight(.bold)
-                Text("Semibold\n")
-                    .fontWeight(.semibold)
-                Text("Medium\n")
-                    .fontWeight(.medium)
-                Text("Regular\n")
-                    .fontWeight(.regular)
-                Text("Light\n")
-                    .fontWeight(.light)
-                Text("Thin\n")
-                    .fontWeight(.thin)
-                Text("Ultra light")
-                    .fontWeight(.ultraLight)
+                Barrinha()
+                Spacer()
+                
+                Group {
+                    Text("Black\n")
+                        .fontWeight(.black)
+                    Text("Heavy\n")
+                        .fontWeight(.heavy)
+                    Text("Bold\n")
+                        .fontWeight(.bold)
+                    Text("Semibold\n")
+                        .fontWeight(.semibold)
+                    Text("Medium\n")
+                        .fontWeight(.medium)
+                    Text("Regular\n")
+                        .fontWeight(.regular)
+                    Text("Light\n")
+                        .fontWeight(.light)
+                    Text("Thin\n")
+                        .fontWeight(.thin)
+                    Text("Ultra light")
+                        .fontWeight(.ultraLight)
+                }
+                
+                Spacer()
             }.font(.title)
         }
     }
     
     struct Cores : View {
+        @Environment(\.colorScheme) var colorScheme
         var body : some View {
             VStack {
-                Text("Amarelo\n")
-                    .foregroundColor(.yellow)
-                    .fontWeight(.bold)
-                Text("Azul\n")
-                    .foregroundColor(.blue)
-                    .fontWeight(.bold)
-                Text("  Branco  ")
-                    .foregroundColor(.white)
-                    .fontWeight(.bold)
-                    .background(Color.black)
-                Text("\nCinza\n")
-                    .foregroundColor(.gray)
-                    .fontWeight(.bold)
-                Text("Laranja\n")
-                    .foregroundColor(.orange)
-                    .fontWeight(.bold)
-                Text("Preto\n")
-                    .foregroundColor(.black)
-                    .fontWeight(.bold)
-                Text("Rosa\n")
-                    .foregroundColor(.pink)
-                    .fontWeight(.bold)
-                Text("Roxo\n")
-                    .foregroundColor(.purple)
-                    .fontWeight(.bold)
-                Text("Verde\n")
-                    .foregroundColor(.green)
-                    .fontWeight(.bold)
-                Text("Vermelho\n")
-                    .foregroundColor(.red)
-                    .fontWeight(.bold)
+                Barrinha()
+                Spacer()
+                
+                Group {
+                    Text("Amarelo\n")
+                        .foregroundColor(.yellow)
+                        .fontWeight(.bold)
+                    Text("Azul\n")
+                        .foregroundColor(.blue)
+                        .fontWeight(.bold)
+                    Text("  Branco  ")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .background(colorScheme == .dark ? nil : Color.black)
+                    Text("\nCinza\n")
+                        .foregroundColor(.gray)
+                        .fontWeight(.bold)
+                    Text("Laranja\n")
+                        .foregroundColor(.orange)
+                        .fontWeight(.bold)
+                    Text("  Preto  ")
+                        .foregroundColor(.black)
+                        .fontWeight(.bold)
+                        .background(colorScheme == .dark ? Color.white : nil)
+                    Text("\nRosa\n")
+                        .foregroundColor(.pink)
+                        .fontWeight(.bold)
+                    Text("Roxo\n")
+                        .foregroundColor(.purple)
+                        .fontWeight(.bold)
+                    Text("Verde\n")
+                        .foregroundColor(.green)
+                        .fontWeight(.bold)
+                    Text("Vermelho\n")
+                        .foregroundColor(.red)
+                        .fontWeight(.bold)
+                }
+                
+                Spacer()
                 
             }.font(.title)
+        }
+    }
+    
+    struct AparelhoLightDarkMode : View {
+        @Environment(\.colorScheme) var colorScheme
+        var body: some View {
+            VStack {
+                Barrinha()
+                Spacer()
+                Text(colorScheme == .dark ?
+                        "Seu aparelho está\nno modo escuro" :
+                        "Seu aparelho está\nno modo claro")
+                    .foregroundColor(.primary)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Spacer()
+            }
         }
     }
     
@@ -173,32 +212,37 @@ struct Texto {
     struct Alinhamento : View {
         var body : some View {
             VStack {
-                /// LEADING
-                Text("Leading")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text("Se você quiser aprender SwiftUI temos duas dicas:\n\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
-                
-                /// CENTER
-                Text("Center")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text("Dica 1: Dedique pelo menos 30 minutos do seu dia para estudar sobre os elementos de programação do SwiftUI.\n\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                
-                /// TRAILING
-                Text("Trailing")
-                    .foregroundColor(.blue)
-                    .font(.title)
-                    .fontWeight(.bold)
-                Text("Dica 2: Depois dos estudos de SwiftUI pratique aquilo que você estudou para reforçar o aprendizado.\n\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.trailing)
+                Barrinha()
+                Spacer()
+                Group {
+                    /// LEADING
+                    Text("Leading")
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Text("Se você quiser aprender SwiftUI temos duas dicas:\n\n")
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.leading)
+                    
+                    /// CENTER
+                    Text("Center")
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Text("Dica 1: Dedique pelo menos 30 minutos do seu dia para estudar sobre os elementos de programação do SwiftUI.\n\n")
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                    
+                    /// TRAILING
+                    Text("Trailing")
+                        .foregroundColor(.blue)
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Text("Dica 2: Depois dos estudos de SwiftUI pratique aquilo que você estudou para reforçar o aprendizado.\n\n")
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.trailing)
+                }
+                Spacer()
             }
         }
     }
@@ -206,6 +250,8 @@ struct Texto {
     struct EspacoLinhas : View {
         var body: some View {
             VStack {
+                Barrinha()
+                Spacer()
                 Text("Espaço de valor 5\n")
                     .foregroundColor(.blue)
                     .font(.title)
@@ -214,6 +260,7 @@ struct Texto {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .lineSpacing(5)
+                    .padding()
                 
                 Text("Espaço de valor 20\n")
                     .foregroundColor(.green)
@@ -223,6 +270,8 @@ struct Texto {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .lineSpacing(20)
+                    .padding()
+                Spacer()
             }
         }
     }
@@ -230,6 +279,8 @@ struct Texto {
     struct LimiteLinhas : View {
         var body: some View {
             VStack {
+                Barrinha()
+                Spacer()
                 Text("Limite de 3 linhas")
                     .foregroundColor(.orange)
                     .font(.title)
@@ -239,6 +290,7 @@ struct Texto {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .lineLimit(3)
+                    .padding()
                 
                 
                 Text("\nSem limite de linhas\n")
@@ -249,6 +301,8 @@ struct Texto {
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .lineLimit(nil)
+                    .padding()
+                Spacer()
             }
         }
     }
