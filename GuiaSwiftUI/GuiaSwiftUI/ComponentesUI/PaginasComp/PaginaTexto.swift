@@ -53,7 +53,7 @@ struct PaginaTexto : View {
                 .sheet(isPresented: $showLimiteLinhas) {
                     Texto.LimiteLinhas()
                 }
-        }.navigationBarTitle(Text("Text"))
+        }.navigationBarTitle("Text")
         
     }
 }

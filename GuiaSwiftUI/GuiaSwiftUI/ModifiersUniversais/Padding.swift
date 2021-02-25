@@ -9,13 +9,13 @@ import SwiftUI
 
 struct Modifiers_Previews : PreviewProvider {
     static var previews: some View {
-        Modifiers.Padding()
-        Modifiers.PaddingNumerico()
+        Padding.Posicoes()
+        Padding.ValorNumerico()
     }
 }
 
-struct Modifiers {
-    struct Padding : View {
+struct Padding {
+    struct Posicoes : View {
         var body: some View {
             VStack {
                 VStack {
@@ -91,20 +91,21 @@ struct Modifiers {
         }
     }
     
-    struct PaddingNumerico : View {
+    struct ValorNumerico : View {
+        @Environment(\.colorScheme) var colorScheme
         var body: some View {
             VStack {
                 Text(".leading, 15")
                     .font(.title)
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .padding(.leading, 15)
-                    .background(Color.black)
+                    .background(colorScheme == .dark ? Color.white : Color.black)
                 
                 Text(".leading, 70")
                     .font(.title)
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .padding(.leading, 70)
-                    .background(Color.black)
+                    .background(colorScheme == .dark ? Color.white : Color.black)
                     .offset(y: 15)
             }
         }

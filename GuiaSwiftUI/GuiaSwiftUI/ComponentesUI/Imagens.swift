@@ -34,13 +34,11 @@ struct Imagens {
                 Image("doguinho")
                     .resizable()
             }
-
         }
     }
     
     struct Fit : View {
         var body: some View {
-            
             VStack {
                 Text("Fit")
                     .font(.largeTitle)
@@ -87,18 +85,6 @@ struct Imagens {
                         .renderingMode(.original)
                         .font(.largeTitle)
                 } .padding()
-                
-                /*
-                HStack {
-                    Image(systemName: "thermometer.sun.fill")
-                        .renderingMode(.original)
-                        .font(.largeTitle)
-                    
-                    Image(systemName: "staroflife.fill")
-                        .font(.largeTitle)
-                        .foregroundColor(.blue)
-                }.padding()
-                */
             }
         }
     }

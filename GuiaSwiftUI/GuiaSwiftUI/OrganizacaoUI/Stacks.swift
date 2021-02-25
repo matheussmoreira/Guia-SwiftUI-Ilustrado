@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
-        //Stacks.Exemplos()
+        //Stacks.Tipos()
         //Stacks.Alinhamentos()
         //Stacks.Espacamentos()
         //Stacks.Aninhadas()
@@ -19,12 +19,10 @@ struct Stacks_Previews: PreviewProvider {
 
 
 struct Stacks {
-    struct Exemplos : View {
+    struct Tipos : View {
         var body: some View {
             VStack {
                 Text("VStack").font(.title).fontWeight(.bold)
-                
-
                 VStack {
                     Rectangle()
                         .frame(width: 120, height: 120)
@@ -33,12 +31,8 @@ struct Stacks {
                     Circle()
                         .frame(width: 100, height: 100)
                         .foregroundColor(.red)
-                }
+                }.padding()
                 
-                
-                .padding()
-                
-                Spacer()
                 
                 Text("HStack").font(.title).fontWeight(.bold)
                 HStack {
@@ -51,7 +45,6 @@ struct Stacks {
                         .foregroundColor(.red)
                 }
                 
-                Spacer()
                 
                 Text("ZStack").font(.title).fontWeight(.bold)
                 ZStack {
@@ -76,7 +69,6 @@ struct Stacks {
                 
                 /// EXEMPLO 1
                 HStack {
-                    
                     VStack(alignment: .leading) {
                         ZStack {
                             Rectangle()
@@ -95,9 +87,6 @@ struct Stacks {
                             .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                     }
-                    
-                    
-                    
                     .border(Color.blue)
                     
                     /// EXEMPLO 2
@@ -165,7 +154,6 @@ struct Stacks {
                                 .foregroundColor(.white)
                         }
                         
-                        
                         Circle()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.red)
@@ -173,6 +161,7 @@ struct Stacks {
                         Circle()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.red)
+                            .padding()
                     }
                     .border(Color.green)
                     
@@ -194,11 +183,8 @@ struct Stacks {
                         Circle()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.red)
+                            .padding()
                     }.border(Color.green)
-                    
-                    
-                    
-                    
                 }
             }
         }
@@ -247,7 +233,6 @@ struct Stacks {
                 Text("O código ao lado foi escrito para exibir 1000 quadrados. \n\nComo não mais que 4 aparecem na tela, somente estes são carregados pelo sistema, como se o restante não existisse.")
                     .font(.title3)
                     .padding()
-                
                 LazyHStack {
                     ForEach(Range(1...1000)) { _ in
                         Rectangle()
@@ -256,7 +241,6 @@ struct Stacks {
                             .padding()
                     }
                 }.frame(height: 200)
-                
                 Text("OBS: quando temos um número de componentes maior que o que conseguimos exibir na tela de uma só vez, é bem provável que eles estejam contidos numa barra de rolagem.")
                     .font(.title3)
                     .padding()
