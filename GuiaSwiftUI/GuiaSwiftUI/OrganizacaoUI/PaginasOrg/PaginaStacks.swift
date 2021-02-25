@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PaginaStacks: View {
+    var corPagina: Color
     @State private var showTipos = false
     @State private var showAlignment = false
     @State private var showSpacing = false
@@ -16,6 +17,9 @@ struct PaginaStacks: View {
     
     var body: some View {
         VStack {
+            TituloEmBarra(titulo: "Stacks", corBarra: corPagina)
+            Spacer()
+            
             BotaoSimples(nome: "Tipos de Stacks")
                 .onTapGesture { showTipos.toggle() }
                 .sheet(isPresented: $showTipos) { Stacks.Tipos() }
@@ -43,12 +47,14 @@ struct PaginaStacks: View {
                 .sheet(isPresented: $showLazy) {
                     Stacks.LazyStacks()
                 }
-        }.navigationBarTitle("Stacks")
+            
+            Spacer()
+        }
     }
 }
 
 struct PaginaStacks_Previews: PreviewProvider {
     static var previews: some View {
-        PaginaStacks()
+        PaginaStacks(corPagina: .orange)
     }
 }

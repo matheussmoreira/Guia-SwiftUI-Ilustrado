@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct PaginaPadding: View {
+    var corPagina: Color
     @State private var showPosicoes = false
     @State private var showValores = false
     
     var body: some View {
         VStack {
+            TituloEmBarra(titulo: "Padding", corBarra: corPagina)
+            Spacer()
+            
             BotaoSimples(nome: "Posições")
                 .onTapGesture { showPosicoes.toggle() }
                 .sheet(isPresented: $showPosicoes) {
@@ -25,12 +29,13 @@ struct PaginaPadding: View {
                     Padding.ValorNumerico()
                 }
             
-        }.navigationBarTitle("Padding")
+            Spacer()
+        }
     }
 }
 
 struct PaginaPadding_Previews: PreviewProvider {
     static var previews: some View {
-        PaginaPadding()
+        PaginaPadding(corPagina: .green)
     }
 }

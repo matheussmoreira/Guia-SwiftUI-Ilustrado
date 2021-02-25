@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PaginaTexto : View {
+    var corPagina: Color
     @State private var showTamanhos = false
     @State private var showPesos = false
     @State private var showCores = false
@@ -18,6 +19,9 @@ struct PaginaTexto : View {
     
     var body: some View {
         VStack {
+            TituloEmBarra(titulo: "Text", corBarra: corPagina)
+            Spacer()
+            
             BotaoSimples(nome: "Tamanhos")
                 .onTapGesture { showTamanhos.toggle() }
                 .sheet(isPresented: $showTamanhos) { Texto.Tamanhos() }
@@ -53,13 +57,15 @@ struct PaginaTexto : View {
                 .sheet(isPresented: $showLimiteLinhas) {
                     Texto.LimiteLinhas()
                 }
-        }.navigationBarTitle("Text")
+            
+            Spacer()
+        }
         
     }
 }
 
 struct PaginaTexto_Previews: PreviewProvider {
     static var previews: some View {
-        PaginaTexto()
+        PaginaTexto(corPagina: .blue)
     }
 }

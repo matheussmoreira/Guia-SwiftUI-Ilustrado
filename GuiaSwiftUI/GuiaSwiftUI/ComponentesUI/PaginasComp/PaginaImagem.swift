@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PaginaImagem: View {
+    var corPagina: Color
     @State private var showImagem = false
     @State private var showResizable = false
     @State private var showFit = false
@@ -16,6 +17,9 @@ struct PaginaImagem: View {
     
     var body: some View {
         VStack {
+            TituloEmBarra(titulo: "Image", corBarra: corPagina)
+            Spacer()
+            
             BotaoSimples(nome: "Imagem Normal")
                 .onTapGesture { showImagem.toggle() }
                 .sheet(isPresented: $showImagem) { Imagens.Normal() }
@@ -37,13 +41,13 @@ struct PaginaImagem: View {
             BotaoSimples(nome: "Icones")
                 .onTapGesture { showIcones.toggle() }
                 .sheet(isPresented: $showIcones) { Imagens.Icones() }
-            
-        }.navigationBarTitle("Image")
+            Spacer()
+        }
     }
 }
 
 struct PaginaImagem_Previews: PreviewProvider {
     static var previews: some View {
-        PaginaImagem()
+        PaginaImagem(corPagina: .blue)
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PaginaSpacer: View {
+    var corPagina: Color
     @State private var showAbaixo = false
     @State private var showEntre = false
     @State private var showAcima = false
@@ -16,6 +17,9 @@ struct PaginaSpacer: View {
     
     var body: some View {
         VStack {
+            TituloEmBarra(titulo: "Spacer", corBarra: corPagina)
+            Spacer()
+            
             BotaoSimples(nome: "Abaixo do texto")
                 .onTapGesture { showAbaixo.toggle() }
                 .sheet(isPresented: $showAbaixo) {
@@ -46,12 +50,13 @@ struct PaginaSpacer: View {
                     Espaco.SpacerHorizontal2()
                 }
             
-        }.navigationBarTitle("Spacer")
+            Spacer()
+        }
     }
 }
 
 struct PaginaSpacer_Previews: PreviewProvider {
     static var previews: some View {
-        PaginaSpacer()
+        PaginaSpacer(corPagina: .orange)
     }
 }
