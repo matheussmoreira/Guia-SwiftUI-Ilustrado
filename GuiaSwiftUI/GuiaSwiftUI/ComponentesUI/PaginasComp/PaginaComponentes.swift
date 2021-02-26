@@ -9,24 +9,31 @@ import SwiftUI
 
 struct PaginaComponentes : View {
     var corPagina: Color
+    var columns: [GridItem] =
+             Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
-        VStack {
-            TituloEmBarra(titulo: "Componentes\nde interface", corBarra: corPagina)
-            
-            Spacer()
-            
-            NavigationLink(destination: PaginaTexto(corPagina: corPagina)){
-                BotaoSimples(nome: "Text")
+        ZStack {
+            VStack {
+                TituloEmBarra(titulo: "Componentes\nde interface", corBarra: corPagina)
+                Spacer()
             }
-            NavigationLink(destination: PaginaImagem(corPagina: corPagina)){
-                BotaoSimples(nome: "Image")
-            }
-            NavigationLink(destination: PaginaBotoes(corPagina: corPagina)) {
-                BotaoSimples(nome: "Button")
-            }
-            
-            Spacer()
+
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns){
+                    NavigationLink(destination: PaginaText(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Text")
+                    }
+                    BotaoQuadrado(nome: "Image")
+                    BotaoQuadrado(nome: "Button")
+                }.padding()
+            }.offset(y: 60)
         }
+    }
+}
+
+struct PaginaComponentes_Previews: PreviewProvider {
+    static var previews: some View {
+        PaginaComponentes(corPagina: .blue)
     }
 }

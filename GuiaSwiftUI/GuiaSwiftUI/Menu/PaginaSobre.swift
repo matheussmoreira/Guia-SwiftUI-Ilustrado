@@ -14,10 +14,10 @@ struct PaginaSobre: View {
         VStack {
             TituloEmBarra(titulo: "Sobre o app", corBarra: corPagina)
             
-            //Spacer()
             Image(systemName: "link").font(.title)
             
-            Text("Este app serve apenas como catálogo digital e navegável do conteúdo do e-book Guia SwiftUI Ilustrado.\n\n Para mais informações, consulte o \nGitHub do projeto no link abaixo:").multilineTextAlignment(.center).padding()
+            Text("Este app serve apenas como catálogo digital e navegável do conteúdo do e-book Guia SwiftUI Ilustrado.\n\nPara mais informações, consulte o \nGitHub do projeto no link abaixo:").multilineTextAlignment(.center).padding()
+            
             
             Link(destination: URL(string: "https://github.com/matheussmoreira/Guia-SwiftUI-Ilustrado")!){
                 Text("Visitar página")
@@ -30,6 +30,6 @@ struct PaginaSobre: View {
 
 struct Sobre_Previews: PreviewProvider {
     static var previews: some View {
-        PaginaSobre(corPagina: .red)
+        PaginaSobre(corPagina: .purple)
     }
 }

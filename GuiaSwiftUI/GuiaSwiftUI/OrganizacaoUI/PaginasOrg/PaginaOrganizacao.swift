@@ -9,29 +9,28 @@ import SwiftUI
 
 struct PaginaOrganizacao : View {
     var corPagina: Color
-    @State private var showDivider = false
     
     var body: some View {
-        VStack {
-            TituloEmBarra(titulo: "Organização\nde conteúdo", corBarra: corPagina)
-            
-            Spacer()
-            
-            NavigationLink(destination: PaginaStacks(corPagina: corPagina)) {
-                BotaoSimples(nome: "Stacks")
+        ZStack {
+            VStack {
+                TituloEmBarra(titulo: "Organização\nde conteúdo", corBarra: corPagina)
+                Spacer()
             }
-            NavigationLink(destination: PaginaSpacer(corPagina: corPagina)) {
-                BotaoSimples(nome: "Spacer")
-            }
-            BotaoSimples(nome: "Divider")
-                .onTapGesture {
-                    showDivider.toggle()
-                }
-                .sheet(isPresented: $showDivider) {
-                    Divisor.ExemploUnico()
-                }
             
-            Spacer()
+            VStack {
+                Spacer()
+                ScrollView(.vertical) {
+                    LinhaStacks()
+                    LinhaSpacer()
+                    LinhaDivider()
+                }
+            }.offset(y: 52)
         }
+    }
+}
+
+struct PaginaOrganizacao_Previews: PreviewProvider {
+    static var previews: some View {
+        PaginaOrganizacao(corPagina: .orange)
     }
 }

@@ -11,16 +11,19 @@ struct PaginaModifiers : View {
     var corPagina: Color
     
     var body: some View {
-        VStack {
-            TituloEmBarra(titulo: "Modificadores universais", corBarra: corPagina)
-            
-            Spacer()
-            
-            NavigationLink(destination: PaginaPadding(corPagina: corPagina)) {
-                BotaoSimples(nome: "Padding")
+        ZStack {
+            VStack {
+                TituloEmBarra(titulo: "Modificadores universais", corBarra: corPagina)
+                Spacer()
             }
             
-            Spacer()
+            VStack {
+                Spacer()
+                ScrollView(.vertical) {
+                    LinhaPadding()
+                }
+            }.offset(y: 52)
+            
         }
     }
 }

@@ -9,16 +9,6 @@ import SwiftUI
 
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
-        //Texto.Unico()
-        //Texto.Tamanhos()
-        //Texto.Pesos()
-        //Texto.Cores()
-        //Texto.CoresLightDarkMode().preferredColorScheme(.light)
-        //Texto.CoresLightDarkMode().preferredColorScheme(.dark)
-        //Texto.CoresPrimarySecondary().preferredColorScheme(.light)
-        //Texto.CoresPrimarySecondary().preferredColorScheme(.dark)
-        //Texto.Alinhamento()
-        //Texto.EspacoLinhas()
         Texto.LimiteLinhas()
     }
 }

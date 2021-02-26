@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Botao_Previews : PreviewProvider {
     static var previews: some View {
-        Botao.Sheet()
+        Botao.Sheet(mostrarSheet: .constant(true))
     }
 }
 
@@ -45,67 +45,23 @@ struct Botao {
     }
     
     struct Sheet : View {
-        @State private var mostrarSheet = false // .toggle() = inverte valor
+        @Binding var mostrarSheet : Bool
         
         var body: some View {
-            /*
-             Button(action: { mostrarSheet.toggle() }) {
-             // Corpo do botão preto
-             ZStack {
-             RoundedRectangle(cornerRadius: 10)
-             .frame(width: 250.0, height: 40.0)
-             .foregroundColor(.black)
-             
-             Text("Clique para exibir")
-             .bold()
-             .foregroundColor(.white)
-             }
-             */
-            BotaoSimples(nome: "Sheet")
-                .onTapGesture { mostrarSheet.toggle() }
-                .sheet(isPresented: $mostrarSheet,
-                       onDismiss: {print("Você saiu do sheet!")},
-                       content: {
-                        VStack {
-                            Text("Tela em modo sheet!").font(.title).padding()
-                            
-                            Button("Voltar",action: { mostrarSheet.toggle() })
-                        }
-                       })
+            VStack {
+                Text("Tela em modo sheet!").font(.title).padding()
+                Button("Voltar",action: { mostrarSheet.toggle() })
+            }
         }
     }
     
     struct FullScreen : View {
-        @State private var fullScreen = false
-        
+        @Binding var fullScreen : Bool
         var body: some View {
-            /*
-             Button(action: { fullScreen.toggle() }) {
-             // Corpo do botão preto
-             ZStack {
-             RoundedRectangle(cornerRadius: 10)
-             .frame(width: 250.0, height: 40.0)
-             .foregroundColor(.black)
-             
-             Text("Clique para exibir")
-             .bold()
-             .foregroundColor(.white)
-             }
-             */
-            BotaoSimples(nome: "Full screen")
-                .onTapGesture { fullScreen.toggle() }
-                .fullScreenCover(isPresented: $fullScreen,
-                                 onDismiss: { print("Você saiu do full screen!") },
-                                 content: {
-                                    
-                                    VStack {
-                                        Text("Tela em modo full screen!").font(.title).padding()
-                                        
-                                        Button("Voltar", action: { fullScreen.toggle() })
-                                    }
-                                    
-                                 })
-            
+            VStack {
+                Text("Tela em modo full screen!").font(.title).padding()
+                Button("Voltar", action: { fullScreen.toggle() })
+            }
         }
     }
 }

@@ -10,18 +10,19 @@
 		6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC0C25DC45C6009752E3 /* Espaco.swift */; };
 		6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1425DC4BBE009752E3 /* Divisor.swift */; };
 		6601FC1B25DC5492009752E3 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1A25DC5492009752E3 /* Padding.swift */; };
+		661DB47025E936B6008E18FB /* LinhaDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661DB46F25E936B6008E18FB /* LinhaDivider.swift */; };
 		66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */; };
 		66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */; };
 		66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F3425E8403200B5E578 /* PaginaModifiers.swift */; };
 		66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F4525E842A700B5E578 /* PaginaSobre.swift */; };
-		666A8B0725E696AD0039E5D4 /* PaginaTexto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666A8B0625E696AD0039E5D4 /* PaginaTexto.swift */; };
+		666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666A8B0625E696AD0039E5D4 /* PaginaText.swift */; };
 		667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B0EFF25C1CAFB00A079F8 /* Stacks.swift */; };
 		66D3A91925C470B0001A0690 /* Botoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3A91825C470B0001A0690 /* Botoes.swift */; };
-		66EA592025E7DE5A00303D1F /* PaginaImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA591F25E7DE5A00303D1F /* PaginaImagem.swift */; };
-		66EA592B25E7E19E00303D1F /* PaginaBotoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA592A25E7E19E00303D1F /* PaginaBotoes.swift */; };
-		66EA593125E7E57600303D1F /* PaginaStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA593025E7E57600303D1F /* PaginaStacks.swift */; };
-		66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA593825E7EAF000303D1F /* PaginaSpacer.swift */; };
-		66EA594625E7EF2F00303D1F /* PaginaPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA594525E7EF2F00303D1F /* PaginaPadding.swift */; };
+		66EA592025E7DE5A00303D1F /* LinhaImagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA591F25E7DE5A00303D1F /* LinhaImagem.swift */; };
+		66EA592B25E7E19E00303D1F /* LinhaBotao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA592A25E7E19E00303D1F /* LinhaBotao.swift */; };
+		66EA593125E7E57600303D1F /* LinhaStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA593025E7E57600303D1F /* LinhaStacks.swift */; };
+		66EA593925E7EAF000303D1F /* LinhaSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA593825E7EAF000303D1F /* LinhaSpacer.swift */; };
+		66EA594625E7EF2F00303D1F /* LinhaPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA594525E7EF2F00303D1F /* LinhaPadding.swift */; };
 		66EA594B25E7F86100303D1F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA594A25E7F86100303D1F /* UI.swift */; };
 		66F6577525C0D05D007F6C99 /* Texto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6577425C0D05D007F6C99 /* Texto.swift */; };
 		66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE1E6725C3458C0051B36E /* Imagens.swift */; };
@@ -54,18 +55,19 @@
 		6601FC0C25DC45C6009752E3 /* Espaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Espaco.swift; sourceTree = "<group>"; };
 		6601FC1425DC4BBE009752E3 /* Divisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divisor.swift; sourceTree = "<group>"; };
 		6601FC1A25DC5492009752E3 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		661DB46F25E936B6008E18FB /* LinhaDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaDivider.swift; sourceTree = "<group>"; };
 		66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaComponentes.swift; sourceTree = "<group>"; };
 		66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaOrganizacao.swift; sourceTree = "<group>"; };
 		66526F3425E8403200B5E578 /* PaginaModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaModifiers.swift; sourceTree = "<group>"; };
 		66526F4525E842A700B5E578 /* PaginaSobre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSobre.swift; sourceTree = "<group>"; };
-		666A8B0625E696AD0039E5D4 /* PaginaTexto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaTexto.swift; sourceTree = "<group>"; };
+		666A8B0625E696AD0039E5D4 /* PaginaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaText.swift; sourceTree = "<group>"; };
 		667B0EFF25C1CAFB00A079F8 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
 		66D3A91825C470B0001A0690 /* Botoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botoes.swift; sourceTree = "<group>"; };
-		66EA591F25E7DE5A00303D1F /* PaginaImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaImagem.swift; sourceTree = "<group>"; };
-		66EA592A25E7E19E00303D1F /* PaginaBotoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaBotoes.swift; sourceTree = "<group>"; };
-		66EA593025E7E57600303D1F /* PaginaStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaStacks.swift; sourceTree = "<group>"; };
-		66EA593825E7EAF000303D1F /* PaginaSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSpacer.swift; sourceTree = "<group>"; };
-		66EA594525E7EF2F00303D1F /* PaginaPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaPadding.swift; sourceTree = "<group>"; };
+		66EA591F25E7DE5A00303D1F /* LinhaImagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaImagem.swift; sourceTree = "<group>"; };
+		66EA592A25E7E19E00303D1F /* LinhaBotao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaBotao.swift; sourceTree = "<group>"; };
+		66EA593025E7E57600303D1F /* LinhaStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaStacks.swift; sourceTree = "<group>"; };
+		66EA593825E7EAF000303D1F /* LinhaSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaSpacer.swift; sourceTree = "<group>"; };
+		66EA594525E7EF2F00303D1F /* LinhaPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinhaPadding.swift; sourceTree = "<group>"; };
 		66EA594A25E7F86100303D1F /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		66F6577425C0D05D007F6C99 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
 		66FE1E6725C3458C0051B36E /* Imagens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagens.swift; sourceTree = "<group>"; };
@@ -176,9 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */,
-				666A8B0625E696AD0039E5D4 /* PaginaTexto.swift */,
-				66EA591F25E7DE5A00303D1F /* PaginaImagem.swift */,
-				66EA592A25E7E19E00303D1F /* PaginaBotoes.swift */,
+				666A8B0625E696AD0039E5D4 /* PaginaText.swift */,
+				66EA591F25E7DE5A00303D1F /* LinhaImagem.swift */,
+				66EA592A25E7E19E00303D1F /* LinhaBotao.swift */,
 			);
 			path = PaginasComp;
 			sourceTree = "<group>";
@@ -186,8 +188,8 @@
 		66EA595325E7F9CA00303D1F /* PaginasMod */ = {
 			isa = PBXGroup;
 			children = (
-				66EA594525E7EF2F00303D1F /* PaginaPadding.swift */,
 				66526F3425E8403200B5E578 /* PaginaModifiers.swift */,
+				66EA594525E7EF2F00303D1F /* LinhaPadding.swift */,
 			);
 			path = PaginasMod;
 			sourceTree = "<group>";
@@ -196,8 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */,
-				66EA593025E7E57600303D1F /* PaginaStacks.swift */,
-				66EA593825E7EAF000303D1F /* PaginaSpacer.swift */,
+				66EA593025E7E57600303D1F /* LinhaStacks.swift */,
+				66EA593825E7EAF000303D1F /* LinhaSpacer.swift */,
+				661DB46F25E936B6008E18FB /* LinhaDivider.swift */,
 			);
 			path = PaginasOrg;
 			sourceTree = "<group>";
@@ -405,21 +408,22 @@
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
 				66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botoes.swift in Sources */,
-				666A8B0725E696AD0039E5D4 /* PaginaTexto.swift in Sources */,
-				66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */,
-				66EA593125E7E57600303D1F /* PaginaStacks.swift in Sources */,
-				66EA594625E7EF2F00303D1F /* PaginaPadding.swift in Sources */,
+				666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */,
+				66EA593925E7EAF000303D1F /* LinhaSpacer.swift in Sources */,
+				66EA593125E7E57600303D1F /* LinhaStacks.swift in Sources */,
+				66EA594625E7EF2F00303D1F /* LinhaPadding.swift in Sources */,
 				66EA594B25E7F86100303D1F /* UI.swift in Sources */,
 				6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */,
 				66F6577525C0D05D007F6C99 /* Texto.swift in Sources */,
-				66EA592B25E7E19E00303D1F /* PaginaBotoes.swift in Sources */,
+				661DB47025E936B6008E18FB /* LinhaDivider.swift in Sources */,
+				66EA592B25E7E19E00303D1F /* LinhaBotao.swift in Sources */,
 				6601FC1B25DC5492009752E3 /* Padding.swift in Sources */,
 				6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */,
 				66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */,
 				66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */,
 				BB576D5725C08FBD00F0B4E9 /* ContentView.swift in Sources */,
 				66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */,
-				66EA592025E7DE5A00303D1F /* PaginaImagem.swift in Sources */,
+				66EA592025E7DE5A00303D1F /* LinhaImagem.swift in Sources */,
 				BB576D5525C08FBD00F0B4E9 /* GuiaSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

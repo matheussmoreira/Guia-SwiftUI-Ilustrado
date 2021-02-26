@@ -28,28 +28,28 @@ struct ContentView: View {
                     NavigationLink(
                         destination: PaginaComponentes(corPagina: corComponentes)
                     ){
-                        BotaoMaior(nome: "Componentes\nde interface", cor: corComponentes)
+                        BotaoQuadradoColorido(nome: "Componentes\nde interface", cor: corComponentes)
                     }
                     
                     NavigationLink(
                         destination: PaginaOrganizacao(
                             corPagina: corOrganizacao)
                     ){
-                        BotaoMaior(nome: "Organização\nde conteúdo", cor: corOrganizacao)
+                        BotaoQuadradoColorido(nome: "Organização\nde conteúdo", cor: corOrganizacao)
                     }
                     
                     NavigationLink(
                         destination: PaginaModifiers(
                             corPagina: corModifiers)
                     ){
-                        BotaoMaior(nome: "Modificadores\nuniversais", cor: corModifiers)
+                        BotaoQuadradoColorido(nome: "Modificadores\nuniversais", cor: corModifiers)
                     }
                     
                     NavigationLink(
                         destination: PaginaSobre(
                             corPagina: corSobre)
                     ){
-                        BotaoMaior(nome: "Sobre o app", cor: corSobre)
+                        BotaoQuadradoColorido(nome: "Sobre o app", cor: corSobre)
                     }
                 }.padding(.horizontal)
                 
