@@ -9,7 +9,8 @@ import SwiftUI
 
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
-        Texto.LimiteLinhas()
+        //Texto.LimiteLinhas()
+        Texto.AparelhoLightDarkMode()
     }
 }
 
@@ -137,8 +138,9 @@ struct Texto {
         @Environment(\.colorScheme) var colorScheme
         var body: some View {
             Text(colorScheme == .dark ?
-                    "Seu aparelho está\nno modo escuro" :
-                    "Seu aparelho está\nno modo claro")
+                    "A cor primary fica\nbranca no modo escuro" :
+                    "A cor primary fica\npreta no modo claro"
+                    )
                 .foregroundColor(.primary)
                 .font(.title)
                 .fontWeight(.bold)
