@@ -20,36 +20,36 @@ struct ContentView: View {
         NavigationView {
             
             VStack {
-                    Text("Guia SwiftUI Ilustrado").font(.title).bold()
-                    Text("Todos podem programar").font(.subheadline)
+                Text("Guia SwiftUI Ilustrado").font(.title).bold()
+                Text("Todos podem programar").font(.subheadline)
                 Spacer()
                 
                 LazyVGrid(columns: columns){
                     NavigationLink(
                         destination: PaginaComponentes(corPagina: corComponentes)
                     ){
-                        BotaoQuadradoColorido(nome: "Componentes\nde interface", cor: corComponentes)
+                        BotaoQuadrado(nome: "Componentes\nde interface", cor: corComponentes)
                     }
                     
                     NavigationLink(
                         destination: PaginaOrganizacao(
                             corPagina: corOrganizacao)
                     ){
-                        BotaoQuadradoColorido(nome: "Organização\nde conteúdo", cor: corOrganizacao)
+                        BotaoQuadrado(nome: "Organização\nde conteúdo", cor: corOrganizacao)
                     }
                     
                     NavigationLink(
                         destination: PaginaModifiers(
                             corPagina: corModifiers)
                     ){
-                        BotaoQuadradoColorido(nome: "Modificadores\nuniversais", cor: corModifiers)
+                        BotaoQuadrado(nome: "Modificadores\nuniversais", cor: corModifiers)
                     }
                     
                     NavigationLink(
                         destination: PaginaSobre(
                             corPagina: corSobre)
                     ){
-                        BotaoQuadradoColorido(nome: "Sobre o app", cor: corSobre)
+                        BotaoQuadrado(nome: "Sobre o app", cor: corSobre)
                     }
                 }.padding(.horizontal)
                 

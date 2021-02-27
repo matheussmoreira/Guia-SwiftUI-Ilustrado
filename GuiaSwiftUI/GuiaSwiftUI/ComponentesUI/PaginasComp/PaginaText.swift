@@ -31,37 +31,35 @@ struct PaginaText : View {
                     }
                     .sheet(isPresented: $showTamanhos) { Texto.Tamanhos() }
                     
-                    BotaoRetangular(nome: "Pesos")
-                        .onTapGesture { showPesos.toggle() }
-                        .sheet(isPresented: $showPesos) { Texto.Pesos() }
+                    Button(action: {showPesos.toggle()}) {
+                        BotaoRetangular(nome: "Pesos")
+                    }
+                    .sheet(isPresented: $showPesos) { Texto.Pesos() }
                     
-                    BotaoRetangular(nome: "Cores")
-                        .onTapGesture { showCores.toggle() }
-                        .sheet(isPresented: $showCores) { Texto.Cores() }
+                    Button(action: {showCores.toggle()}) {
+                        BotaoRetangular(nome: "Cores")
+                    }
+                    .sheet(isPresented: $showCores) { Texto.Cores() }
                     
-                    BotaoRetangular(nome: "Modo claro ou escuro?")
-                        .onTapGesture { showModoEscuro.toggle() }
-                        .sheet(isPresented: $showModoEscuro) {
-                            Texto.AparelhoLightDarkMode()
-                        }
+                    Button(action: {showModoEscuro.toggle()}) {
+                        BotaoRetangular(nome: "Modo claro ou escuro")
+                    }
+                    .sheet(isPresented: $showModoEscuro) { Texto.AparelhoLightDarkMode() }
                     
-                    BotaoRetangular(nome: "Alinhamentos")
-                        .onTapGesture { showAlinhamentos.toggle() }
-                        .sheet(isPresented: $showAlinhamentos) {
-                            Texto.Alinhamento()
-                        }
+                    Button(action: {showAlinhamentos.toggle()}) {
+                        BotaoRetangular(nome: "Alinhamentos")
+                    }
+                    .sheet(isPresented: $showAlinhamentos) { Texto.Alinhamento() }
                     
-                    BotaoRetangular(nome: "Espaçamentos")
-                        .onTapGesture { showEspacamentos.toggle() }
-                        .sheet(isPresented: $showEspacamentos) {
-                            Texto.EspacoLinhas()
-                        }
+                    Button(action: {showEspacamentos.toggle()}) {
+                        BotaoRetangular(nome: "Espaçamentos")
+                    }
+                    .sheet(isPresented: $showEspacamentos) { Texto.EspacoLinhas() }
                     
-                    BotaoRetangular(nome: "Limite de linhas")
-                        .onTapGesture { showLimiteLinhas.toggle() }
-                        .sheet(isPresented: $showLimiteLinhas) {
-                            Texto.LimiteLinhas()
-                        }
+                    Button(action: {showLimiteLinhas.toggle()}) {
+                        BotaoRetangular(nome: "Limite de linhas")
+                    }
+                    .sheet(isPresented: $showLimiteLinhas) { Texto.LimiteLinhas() }
                     
                     Espacinho()
                 }.padding()

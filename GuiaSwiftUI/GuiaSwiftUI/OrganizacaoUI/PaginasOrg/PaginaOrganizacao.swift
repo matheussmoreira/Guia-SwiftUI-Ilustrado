@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct PaginaOrganizacao : View {
+    @State private var showDivider = false
     var corPagina: Color
+    var columns: [GridItem] =
+             Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
         ZStack {
@@ -17,14 +20,21 @@ struct PaginaOrganizacao : View {
                 Spacer()
             }
             
-            VStack {
-                Spacer()
-                ScrollView(.vertical) {
-                    LinhaStacks()
-                    LinhaSpacer()
-                    LinhaDivider()
-                }
-            }.offset(y: 52)
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns){
+                    NavigationLink(destination: PaginaStacks(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Stacks", cor: nil)
+                    }
+                    NavigationLink(destination: PaginaSpacer(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Spacer", cor: nil)
+                    }
+                    
+                    Button(action: { showDivider.toggle() }) {
+                        BotaoQuadrado(nome: "Divider", cor: nil)
+                    }
+                    .sheet(isPresented: $showDivider) { Divisor.ExemploUnico() }
+                }.padding()
+            }.offset(y: 60)
         }
     }
 }

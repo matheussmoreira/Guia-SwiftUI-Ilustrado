@@ -9,6 +9,8 @@ import SwiftUI
 
 struct PaginaModifiers : View {
     var corPagina: Color
+    var columns: [GridItem] =
+             Array(repeating: .init(.flexible()), count: 2)
     
     var body: some View {
         ZStack {
@@ -17,12 +19,13 @@ struct PaginaModifiers : View {
                 Spacer()
             }
             
-            VStack {
-                Spacer()
-                ScrollView(.vertical) {
-                    LinhaPadding()
-                }
-            }.offset(y: 52)
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns){
+                    NavigationLink(destination: PaginaPadding(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Padding", cor: nil)
+                    }
+                }.padding()
+            }.offset(y: 60)
             
         }
     }

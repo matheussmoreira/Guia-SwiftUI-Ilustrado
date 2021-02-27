@@ -22,10 +22,17 @@ struct PaginaComponentes : View {
             ScrollView(.vertical) {
                 LazyVGrid(columns: columns){
                     NavigationLink(destination: PaginaText(corPagina: corPagina)) {
-                        BotaoQuadrado(nome: "Text")
+                        BotaoQuadrado(nome: "Text", cor: nil)
                     }
-                    BotaoQuadrado(nome: "Image")
-                    BotaoQuadrado(nome: "Button")
+                    
+                    NavigationLink(destination: PaginaImage(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Image", cor: nil)
+                    }
+                    
+                    NavigationLink(destination: PaginaButton(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Button", cor: nil)
+                    }
+                    
                 }.padding()
             }.offset(y: 60)
         }
