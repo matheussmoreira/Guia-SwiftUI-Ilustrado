@@ -12,6 +12,8 @@ struct PaginaButton: View {
     @State private var showNormal = false
     @State private var showSheet = false
     @State private var showFullScreen = false
+    @State private var showAlert1 = false
+    @State private var showAlert2 = false
     
     var body: some View {
         ZStack {
@@ -37,6 +39,20 @@ struct PaginaButton: View {
                     }
                     .fullScreenCover(isPresented: $showFullScreen) {
                         Botao.FullScreen(fullScreen: $showFullScreen)
+                    }
+                    
+                    Button(action: { showAlert1.toggle() }) {
+                        BotaoRetangular(nome: "Alert - Exemplo 1")
+                    }
+                    .sheet(isPresented: $showAlert1) {
+                        Botao.Alerta()
+                    }
+                    
+                    Button(action: { showAlert2.toggle() }) {
+                        BotaoRetangular(nome: "Alert - Exemplo 2")
+                    }
+                    .sheet(isPresented: $showAlert2) {
+                        Botao.Alerta2()
                     }
                     
                 }.padding()
