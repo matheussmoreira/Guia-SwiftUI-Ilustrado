@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Botao_Previews : PreviewProvider {
     static var previews: some View {
-        //Botao.Alerta()
+        Botao.Alerta()
         Botao.Alerta2()
     }
 }
@@ -83,7 +83,7 @@ struct Botao {
                 }
             }.alert(isPresented: $mostrarAlert) {
                 
-                Alert(title: Text("Localização atual indisponível!"),
+                Alert(title: Text("Localização indisponível!"),
                       message: Text("Infelizmente, não foi possível determinar sua localização atual."),
                       dismissButton: .default(Text("OK")))
             }
@@ -108,7 +108,7 @@ struct Botao {
             }.alert(isPresented: $mostrarAlert) {
                 
                 Alert(title: Text("Tem certeza que deseja deletar?"),
-                      message: Text("Após fazer isto, sua ação não poderá ser desfeita!"),
+                      message: Text("Após fazer isto, sua ação\nnão poderá ser desfeita!"),
                       primaryButton: .cancel(Text("Cancelar")),
                       secondaryButton: .destructive(Text("Deletar")){
                         print("Deleção realizada!")

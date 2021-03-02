@@ -11,8 +11,7 @@ import SwiftUI
 struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            Botao.Alerta()
+            ContentView()
         }
     }
 }
