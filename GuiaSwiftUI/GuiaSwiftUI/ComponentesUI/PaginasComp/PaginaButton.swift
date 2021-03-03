@@ -14,6 +14,7 @@ struct PaginaButton: View {
     @State private var showFullScreen = false
     @State private var showAlert1 = false
     @State private var showAlert2 = false
+    @State private var showActionSheet = false
     
     var body: some View {
         ZStack {
@@ -54,6 +55,14 @@ struct PaginaButton: View {
                     .sheet(isPresented: $showAlert2) {
                         Botao.Alerta2()
                     }
+                    
+                    Button(action: { showActionSheet.toggle() }) {
+                        BotaoRetangular(nome: "Action Sheet")
+                    }
+                    .sheet(isPresented: $showActionSheet) {
+                        Botao.Action_Sheet()
+                    }
+                    
                     
                 }.padding()
             }.offset(y: 60)

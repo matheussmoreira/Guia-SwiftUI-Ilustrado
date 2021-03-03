@@ -9,8 +9,7 @@ import SwiftUI
 
 struct Botao_Previews : PreviewProvider {
     static var previews: some View {
-        Botao.Alerta()
-        Botao.Alerta2()
+        Botao.Action_Sheet()
     }
 }
 
@@ -113,6 +112,36 @@ struct Botao {
                       secondaryButton: .destructive(Text("Deletar")){
                         print("Deleção realizada!")
                       })
+            }
+        }
+    }
+    
+    struct Action_Sheet : View {
+        @State private var mostrarActSheet = false
+        
+        var body: some View {
+            Button(action: { mostrarActSheet.toggle()}) {
+                // Corpo do botão
+                ZStack {
+                    RoundedRectangle(cornerRadius: 10)
+                        .frame(width: 300.0, height: 40.0)
+                        .foregroundColor(.black)
+                    
+                    Text("Clique para mostrar o Action Sheet")
+                        .foregroundColor(.white)
+                        .bold()
+                }
+            }.actionSheet(isPresented: $mostrarActSheet) {
+                
+                ActionSheet(
+                    title: Text("Deseja esvaziar a lixeira permanentemente?"),
+                    message: Text("Sua ação não poderá ser desfeita!"),
+                    buttons: [
+                        .cancel(Text("Cancelar")),
+                        .destructive(Text("Esvaziar")){
+                            print("Lixeira vazia!")
+                      }]
+                )
             }
         }
     }
