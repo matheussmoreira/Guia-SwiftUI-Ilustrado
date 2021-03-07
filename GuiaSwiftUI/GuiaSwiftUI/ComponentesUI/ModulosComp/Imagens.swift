@@ -13,7 +13,7 @@ struct Imagens_Previews : PreviewProvider {
         //Imagens.Resizable()
         //Imagens.Fit()
         //Imagens.Fill()
-        Imagens.Icones()
+        Imagens.ImageScale()
     }
 }
 
@@ -85,6 +85,29 @@ struct Imagens {
                         .renderingMode(.original)
                         .font(.largeTitle)
                 } .padding()
+            }
+        }
+    }
+    
+    struct ImageScale : View {
+        var body : some View {
+            VStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "heart.fill")
+                        .imageScale(.small)
+                    Text(".small")
+                }
+                HStack {
+                    Image(systemName: "heart.fill")
+                        .imageScale(.medium)
+                    Text(".medium")
+                }
+
+                HStack {
+                    Image(systemName: "heart.fill")
+                        .imageScale(.large)
+                    Text(".large")
+                }
             }
         }
     }

@@ -22,7 +22,6 @@
 		66EA593125E7E57600303D1F /* PaginaStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA593025E7E57600303D1F /* PaginaStacks.swift */; };
 		66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA593825E7EAF000303D1F /* PaginaSpacer.swift */; };
 		66EA594625E7EF2F00303D1F /* PaginaPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA594525E7EF2F00303D1F /* PaginaPadding.swift */; };
-		66EA594B25E7F86100303D1F /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA594A25E7F86100303D1F /* UI.swift */; };
 		66F6577525C0D05D007F6C99 /* Texto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6577425C0D05D007F6C99 /* Texto.swift */; };
 		66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FE1E6725C3458C0051B36E /* Imagens.swift */; };
 		BB576D5525C08FBD00F0B4E9 /* GuiaSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB576D5425C08FBD00F0B4E9 /* GuiaSwiftUIApp.swift */; };
@@ -31,6 +30,7 @@
 		BB576D5C25C08FC100F0B4E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB576D5B25C08FC100F0B4E9 /* Preview Assets.xcassets */; };
 		BB576D6725C08FC200F0B4E9 /* GuiaSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB576D6625C08FC200F0B4E9 /* GuiaSwiftUITests.swift */; };
 		BB576D7225C08FC200F0B4E9 /* GuiaSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB576D7125C08FC200F0B4E9 /* GuiaSwiftUIUITests.swift */; };
+		CED8E64A25F522F600615929 /* UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED8E64925F522F600615929 /* UI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +66,6 @@
 		66EA593025E7E57600303D1F /* PaginaStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaStacks.swift; sourceTree = "<group>"; };
 		66EA593825E7EAF000303D1F /* PaginaSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSpacer.swift; sourceTree = "<group>"; };
 		66EA594525E7EF2F00303D1F /* PaginaPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaPadding.swift; sourceTree = "<group>"; };
-		66EA594A25E7F86100303D1F /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 		66F6577425C0D05D007F6C99 /* Texto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texto.swift; sourceTree = "<group>"; };
 		66FE1E6725C3458C0051B36E /* Imagens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Imagens.swift; sourceTree = "<group>"; };
 		BB576D5125C08FBD00F0B4E9 /* GuiaSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuiaSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +80,7 @@
 		BB576D6D25C08FC200F0B4E9 /* GuiaSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuiaSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB576D7125C08FC200F0B4E9 /* GuiaSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuiaSwiftUIUITests.swift; sourceTree = "<group>"; };
 		BB576D7325C08FC200F0B4E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED8E64925F522F600615929 /* UI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,8 +207,8 @@
 			children = (
 				BB576D5625C08FBD00F0B4E9 /* ContentView.swift */,
 				BB576D5425C08FBD00F0B4E9 /* GuiaSwiftUIApp.swift */,
-				66EA594A25E7F86100303D1F /* UI.swift */,
 				66526F4525E842A700B5E578 /* PaginaSobre.swift */,
+				CED8E64925F522F600615929 /* UI.swift */,
 			);
 			path = Menu;
 			sourceTree = "<group>";
@@ -409,12 +409,12 @@
 				66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */,
 				66EA593125E7E57600303D1F /* PaginaStacks.swift in Sources */,
 				66EA594625E7EF2F00303D1F /* PaginaPadding.swift in Sources */,
-				66EA594B25E7F86100303D1F /* UI.swift in Sources */,
 				6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */,
 				66F6577525C0D05D007F6C99 /* Texto.swift in Sources */,
 				66EA592B25E7E19E00303D1F /* PaginaButton.swift in Sources */,
 				6601FC1B25DC5492009752E3 /* Padding.swift in Sources */,
 				6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */,
+				CED8E64A25F522F600615929 /* UI.swift in Sources */,
 				66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */,
 				66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */,
 				BB576D5725C08FBD00F0B4E9 /* ContentView.swift in Sources */,
