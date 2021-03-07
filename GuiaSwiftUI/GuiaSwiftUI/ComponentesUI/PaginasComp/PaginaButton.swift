@@ -63,7 +63,7 @@ struct PaginaButton: View {
                         Botao.Action_Sheet()
                     }
                     
-                    
+                    Espacinho()
                 }.padding()
             }.offset(y: 60)
         }

@@ -7,18 +7,12 @@
 
 import SwiftUI
 
-struct BotaoQuadrado_Previews: PreviewProvider {
-    static var previews: some View {
-        BotaoQuadrado(nome: "Nome", cor: nil).preferredColorScheme(.dark)
-    }
-}
-
 struct BotaoQuadrado : View {
     @Environment(\.colorScheme) var colorScheme
     var nome : String
-    let customGray = Color(red: 32/255, green: 32/255, blue: 37/255)
     var cor: Color?
     var corNeutra : Color {
+        let customGray = Color(red: 32/255, green: 32/255, blue: 37/255)
         return colorScheme == .dark ? customGray : .white
     }
     var corBotao : Color {
@@ -43,13 +37,24 @@ struct BotaoQuadrado : View {
 }
 
 struct BotaoRetangular : View {
+    @Environment(\.colorScheme) var colorScheme
     var nome : String
+    var cor : Color {
+        let customGray = Color(red: 32/255, green: 32/255, blue: 37/255)
+        return colorScheme == .dark ? customGray : .white
+    }
+    
     var body : some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .frame(width: UIScreen.main.bounds.width, height: 100)
+                .frame(width: UIScreen.main.bounds.width-20, height: 100)
                 .shadow(radius: 2)
+                .foregroundColor(cor)
+            
             Text(nome)
+                .bold()
+                .foregroundColor(cor == .white ? .black : .white)
+                .multilineTextAlignment(.center)
         }
     }
 }
@@ -65,7 +70,11 @@ struct TituloEmBarra : View {
                 .foregroundColor(corBarra)
             
             Text(titulo)
-        }.offset(y: -32)
+                .font(.title)
+                .bold()
+                .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+        }.offset(y: -40)
     }
 }
 
