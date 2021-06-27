@@ -91,6 +91,16 @@ struct Padding {
         }
     }
     
+    struct MultiplasPosicoes : View {
+        var body: some View {
+            Circle()
+                .foregroundColor(.green)
+                .frame(width: 40, height: 40)
+                .padding([.top, .bottom, .leading])
+                .border(Color.red)
+        }
+    }
+    
     struct ValorNumerico : View {
         @Environment(\.colorScheme) var colorScheme
         var body: some View {

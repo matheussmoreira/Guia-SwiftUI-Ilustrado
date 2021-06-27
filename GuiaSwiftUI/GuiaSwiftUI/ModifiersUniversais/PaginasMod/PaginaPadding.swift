@@ -10,6 +10,7 @@ import SwiftUI
 struct PaginaPadding: View {
     var corPagina: Color
     @State private var showPosicoes = false
+    @State private var showMultiplas = false
     @State private var showValores = false
     
     var body: some View {
@@ -25,6 +26,11 @@ struct PaginaPadding: View {
                         BotaoRetangular(nome: "Posições")
                     }
                     .sheet(isPresented: $showPosicoes) { Padding.Posicoes() }
+                    
+                    Button(action: { showMultiplas.toggle() }) {
+                        BotaoRetangular(nome: "Múltiplas posições")
+                    }
+                    .sheet(isPresented: $showMultiplas) { Padding.MultiplasPosicoes() }
                     
                     Button(action: { showValores.toggle() }) {
                         BotaoRetangular(nome: "Valores\nnuméricos")
