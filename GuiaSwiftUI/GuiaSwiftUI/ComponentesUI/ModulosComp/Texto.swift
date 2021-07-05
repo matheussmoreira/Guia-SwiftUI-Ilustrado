@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.AparelhoLightDarkMode()
+        Texto.FatorMinEscala()
     }
 }
 
@@ -262,6 +262,18 @@ struct Texto {
                     .lineLimit(nil)
                     .padding()
             }
+        }
+    }
+    
+    struct FatorMinEscala : View {
+        var body: some View {
+            HStack {
+                Text("Texto qualquer")
+                    .bold()
+                Text("Este é um texto bem longo, como você pode ver!")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+            }.padding()
         }
     }
 }
