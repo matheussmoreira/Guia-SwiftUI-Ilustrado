@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.Tracking()
+        Texto.Underline()
     }
 }
 
@@ -312,6 +312,18 @@ struct Texto {
                 Text("ABCDEF").tracking(-3)
                 Text("ABCDEF")
                 Text("ABCDEF").tracking(8)
+            }.font(.title)
+        }
+    }
+    
+    struct Underline : View {
+        var body: some View {
+            VStack {
+                Text("Underline padrão")
+                    .foregroundColor(.blue)
+                    .underline()
+                Text("Underline colorido")
+                    .underline(color: .orange)
             }.font(.title)
         }
     }
