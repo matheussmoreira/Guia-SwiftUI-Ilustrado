@@ -20,6 +20,7 @@ struct PaginaText : View {
     @State private var showTruncamento = false
     @State private var showKerning = false
     @State private var showTracking = false
+    @State private var showUnderline = false
     
     var body: some View {
         ZStack {
@@ -87,6 +88,12 @@ struct PaginaText : View {
                             BotaoRetangular(nome: "Tracking")
                         }
                         .sheet(isPresented: $showTracking) { Texto.Tracking() }
+                        
+                        Button(action: {showUnderline.toggle()}) {
+                            BotaoRetangular(nome: "Sublinhado")
+                        }
+                        .sheet(isPresented: $showUnderline) { Texto.Underline() }
+                        
                     }
                     
                     Espacinho()
