@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.Truncamento()
+        Texto.Tracking()
     }
 }
 
@@ -294,6 +294,26 @@ struct Texto {
             }
         }
             
+    }
+    
+    struct Kerning : View {
+        var body: some View {
+            VStack {
+                Text("ABCDEF").kerning(-3)
+                Text("ABCDEF")
+                Text("ABCDEF").kerning(8)
+            }.font(.title)
+        }
+    }
+    
+    struct Tracking : View {
+        var body: some View {
+            VStack {
+                Text("ABCDEF").tracking(-3)
+                Text("ABCDEF")
+                Text("ABCDEF").tracking(8)
+            }.font(.title)
+        }
     }
 }
 

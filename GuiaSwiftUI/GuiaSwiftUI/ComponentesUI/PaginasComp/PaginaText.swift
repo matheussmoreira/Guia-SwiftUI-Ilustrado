@@ -18,6 +18,8 @@ struct PaginaText : View {
     @State private var showLimiteLinhas = false
     @State private var showFatorMinEscala = false
     @State private var showTruncamento = false
+    @State private var showKerning = false
+    @State private var showTracking = false
     
     var body: some View {
         ZStack {
@@ -28,50 +30,64 @@ struct PaginaText : View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(spacing: 10) {
-                    Button(action: {showTamanhos.toggle()}) {
-                        BotaoRetangular(nome: "Tamanhos")
+                    Group {
+                        Button(action: {showTamanhos.toggle()}) {
+                            BotaoRetangular(nome: "Tamanhos")
+                        }
+                        .sheet(isPresented: $showTamanhos) { Texto.Tamanhos() }
+                        
+                        Button(action: {showPesos.toggle()}) {
+                            BotaoRetangular(nome: "Pesos")
+                        }
+                        .sheet(isPresented: $showPesos) { Texto.Pesos() }
+                        
+                        Button(action: {showCores.toggle()}) {
+                            BotaoRetangular(nome: "Cores")
+                        }
+                        .sheet(isPresented: $showCores) { Texto.Cores() }
+                        
+                        Button(action: {showModoEscuro.toggle()}) {
+                            BotaoRetangular(nome: "Modo claro ou escuro")
+                        }
+                        .sheet(isPresented: $showModoEscuro) { Texto.AparelhoLightDarkMode() }
+                        
+                        Button(action: {showAlinhamentos.toggle()}) {
+                            BotaoRetangular(nome: "Alinhamentos")
+                        }
+                        .sheet(isPresented: $showAlinhamentos) { Texto.Alinhamento() }
+                        
+                        Button(action: {showEspacamentos.toggle()}) {
+                            BotaoRetangular(nome: "Espaçamentos")
+                        }
+                        .sheet(isPresented: $showEspacamentos) { Texto.EspacoLinhas() }
+                        
+                        Button(action: {showLimiteLinhas.toggle()}) {
+                            BotaoRetangular(nome: "Limite de linhas")
+                        }
+                        .sheet(isPresented: $showLimiteLinhas) { Texto.LimiteLinhas() }
+                        
+                        Button(action: {showFatorMinEscala.toggle()}) {
+                            BotaoRetangular(nome: "Fator mínimo de escala")
+                        }
+                        .sheet(isPresented: $showFatorMinEscala) { Texto.FatorMinEscala() }
+                        
+                        Button(action: {showTruncamento.toggle()}) {
+                            BotaoRetangular(nome: "Truncamento")
+                        }
+                        .sheet(isPresented: $showTruncamento) { Texto.Truncamento() }
                     }
-                    .sheet(isPresented: $showTamanhos) { Texto.Tamanhos() }
                     
-                    Button(action: {showPesos.toggle()}) {
-                        BotaoRetangular(nome: "Pesos")
+                    Group {
+                        Button(action: {showKerning.toggle()}) {
+                            BotaoRetangular(nome: "Kerning")
+                        }
+                        .sheet(isPresented: $showKerning) { Texto.Kerning() }
+                        
+                        Button(action: {showTracking.toggle()}) {
+                            BotaoRetangular(nome: "Tracking")
+                        }
+                        .sheet(isPresented: $showTracking) { Texto.Tracking() }
                     }
-                    .sheet(isPresented: $showPesos) { Texto.Pesos() }
-                    
-                    Button(action: {showCores.toggle()}) {
-                        BotaoRetangular(nome: "Cores")
-                    }
-                    .sheet(isPresented: $showCores) { Texto.Cores() }
-                    
-                    Button(action: {showModoEscuro.toggle()}) {
-                        BotaoRetangular(nome: "Modo claro ou escuro")
-                    }
-                    .sheet(isPresented: $showModoEscuro) { Texto.AparelhoLightDarkMode() }
-                    
-                    Button(action: {showAlinhamentos.toggle()}) {
-                        BotaoRetangular(nome: "Alinhamentos")
-                    }
-                    .sheet(isPresented: $showAlinhamentos) { Texto.Alinhamento() }
-                    
-                    Button(action: {showEspacamentos.toggle()}) {
-                        BotaoRetangular(nome: "Espaçamentos")
-                    }
-                    .sheet(isPresented: $showEspacamentos) { Texto.EspacoLinhas() }
-                    
-                    Button(action: {showLimiteLinhas.toggle()}) {
-                        BotaoRetangular(nome: "Limite de linhas")
-                    }
-                    .sheet(isPresented: $showLimiteLinhas) { Texto.LimiteLinhas() }
-                    
-                    Button(action: {showFatorMinEscala.toggle()}) {
-                        BotaoRetangular(nome: "Fator mínimo de escala")
-                    }
-                    .sheet(isPresented: $showFatorMinEscala) { Texto.FatorMinEscala() }
-                    
-                    Button(action: {showTruncamento.toggle()}) {
-                        BotaoRetangular(nome: "Truncamento")
-                    }
-                    .sheet(isPresented: $showTruncamento) { Texto.Truncamento() }
                     
                     Espacinho()
                 }.padding()
