@@ -17,6 +17,7 @@ struct PaginaText : View {
     @State private var showEspacamentos = false
     @State private var showLimiteLinhas = false
     @State private var showFatorMinEscala = false
+    @State private var showTruncamento = false
     
     var body: some View {
         ZStack {
@@ -66,6 +67,11 @@ struct PaginaText : View {
                         BotaoRetangular(nome: "Fator mínimo de escala")
                     }
                     .sheet(isPresented: $showFatorMinEscala) { Texto.FatorMinEscala() }
+                    
+                    Button(action: {showTruncamento.toggle()}) {
+                        BotaoRetangular(nome: "Truncamento")
+                    }
+                    .sheet(isPresented: $showTruncamento) { Texto.Truncamento() }
                     
                     Espacinho()
                 }.padding()

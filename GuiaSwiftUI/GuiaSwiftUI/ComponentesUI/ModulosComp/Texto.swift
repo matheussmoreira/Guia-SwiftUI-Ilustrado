@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.FatorMinEscala()
+        Texto.Truncamento()
     }
 }
 
@@ -275,6 +275,25 @@ struct Texto {
                     .minimumScaleFactor(0.5)
             }.padding()
         }
+    }
+    
+    struct Truncamento : View {
+        var body: some View {
+            VStack {
+                Text("Esse é um bloco de texto que provavelmente contém múltiplas linhas. O texto vai preencher o espaço disponível e então, eventualmente, ser truncado.")
+                    .frame(width: 150, height: 150)
+                    .truncationMode(.tail)
+                
+                Text("Esse é um bloco de texto que provavelmente contém múltiplas linhas. O texto vai preencher o espaço disponível e então, eventualmente, ser truncado.")
+                    .frame(width: 150, height: 150)
+                    .truncationMode(.middle)
+                
+                Text("Esse é um bloco de texto que provavelmente contém múltiplas linhas. O texto vai preencher o espaço disponível e então, eventualmente, ser truncado.")
+                    .frame(width: 150, height: 150)
+                    .truncationMode(.head)
+            }
+        }
+            
     }
 }
 
