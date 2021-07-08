@@ -22,6 +22,7 @@ struct PaginaText : View {
     @State private var showTracking = false
     @State private var showUnderline = false
     @State private var showTachado = false
+    @State private var showFontSystem = false
     
     var body: some View {
         ZStack {
@@ -99,6 +100,11 @@ struct PaginaText : View {
                             BotaoRetangular(nome: "Tachado")
                         }
                         .sheet(isPresented: $showTachado) { Texto.Tachado() }
+                        
+                        Button(action: {showFontSystem.toggle()}) {
+                            BotaoRetangular(nome: "Fontes do sistema")
+                        }
+                        .sheet(isPresented: $showFontSystem) { Texto.FontSystem() }
                         
                     }
                     

@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.Tachado()
+        Texto.FontSystem()
     }
 }
 
@@ -353,6 +353,32 @@ struct Texto {
                 Text("Tachado colorido")
                     .strikethrough(color: .red)
             }.font(.title)
+        }
+    }
+    
+    struct FontSystem : View {
+        var body: some View {
+            VStack {
+                Text("Fonte com tamanho 20")
+                    .font(Font.system(size: 20))
+                    .padding()
+                
+                Text("Tamanho 20, peso Bold")
+                    .font(Font.system(size: 20, weight: .bold))
+                    .padding()
+
+                Text("Tamanho 20, design Serif")
+                    .font(Font.system(size: 20, design: .serif))
+                    .padding()
+
+                Text("Tamanho 20, design Rounded")
+                    .font(Font.system(size: 20, design: .rounded))
+                    .padding()
+
+                Text("Tamanho 20, design Monospaced")
+                    .font(Font.system(size: 20, design: .monospaced))
+                    .padding()
+            }
         }
     }
 }
