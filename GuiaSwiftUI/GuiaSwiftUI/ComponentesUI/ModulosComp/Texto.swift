@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.Underline()
+        Texto.Tachado()
     }
 }
 
@@ -324,6 +324,34 @@ struct Texto {
                     .underline()
                 Text("Underline colorido")
                     .underline(color: .orange)
+            }.font(.title)
+        }
+    }
+    
+    struct NegritoItalico : View {
+        var body: some View {
+            VStack {
+                Text("Negrito")
+                    .bold()
+                
+                Text("Itálico")
+                    .italic()
+                
+                Text("Negrito e itálico")
+                    .bold()
+                    .italic()
+            }.font(.title)
+        }
+    }
+    
+    struct Tachado : View {
+        var body: some View {
+            VStack {
+                Text("Tachado padrão")
+                    .foregroundColor(.green)
+                    .strikethrough()
+                Text("Tachado colorido")
+                    .strikethrough(color: .red)
             }.font(.title)
         }
     }

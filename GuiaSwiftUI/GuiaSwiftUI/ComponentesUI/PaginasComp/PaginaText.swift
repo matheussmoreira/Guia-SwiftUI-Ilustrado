@@ -21,6 +21,7 @@ struct PaginaText : View {
     @State private var showKerning = false
     @State private var showTracking = false
     @State private var showUnderline = false
+    @State private var showTachado = false
     
     var body: some View {
         ZStack {
@@ -93,6 +94,11 @@ struct PaginaText : View {
                             BotaoRetangular(nome: "Sublinhado")
                         }
                         .sheet(isPresented: $showUnderline) { Texto.Underline() }
+                        
+                        Button(action: {showTachado.toggle()}) {
+                            BotaoRetangular(nome: "Tachado")
+                        }
+                        .sheet(isPresented: $showTachado) { Texto.Tachado() }
                         
                     }
                     
