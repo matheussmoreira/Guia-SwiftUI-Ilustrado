@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.FontSystem()
+        Texto.Tightening()
     }
 }
 
@@ -379,6 +379,31 @@ struct Texto {
                     .font(Font.system(size: 20, design: .monospaced))
                     .padding()
             }
+        }
+    }
+    
+    struct TextCase : View {
+        var body: some View {
+            VStack {
+                Text("TUDO MINÚSCULO").textCase(.lowercase)
+                Text("tudo maiúsculo").textCase(.uppercase)
+            }.font(.title)
+        }
+    }
+    
+    struct Tightening : View {
+        var body: some View {
+            VStack {
+                Text("Este é um texto bem longo")
+                    .frame(width: 310, height: 50, alignment: .leading)
+                    .lineLimit(1)
+                    .allowsTightening(true)
+
+                Text("Este é um texto bem longo")
+                    .frame(width: 310, height: 50, alignment: .leading)
+                    .lineLimit(1)
+                    .allowsTightening(false)
+            }.font(.title)
         }
     }
 }

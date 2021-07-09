@@ -23,6 +23,8 @@ struct PaginaText : View {
     @State private var showUnderline = false
     @State private var showTachado = false
     @State private var showFontSystem = false
+    @State private var showTextCase = false
+    @State private var showTightening = false
     
     var body: some View {
         ZStack {
@@ -105,6 +107,16 @@ struct PaginaText : View {
                             BotaoRetangular(nome: "Fontes do sistema")
                         }
                         .sheet(isPresented: $showFontSystem) { Texto.FontSystem() }
+                        
+                        Button(action: {showTextCase.toggle()}) {
+                            BotaoRetangular(nome: "Capitalização")
+                        }
+                        .sheet(isPresented: $showTextCase) { Texto.TextCase() }
+                        
+                        Button(action: {showTightening.toggle()}) {
+                            BotaoRetangular(nome: "Compressão")
+                        }
+                        .sheet(isPresented: $showTightening) { Texto.Tightening() }
                         
                     }
                     
