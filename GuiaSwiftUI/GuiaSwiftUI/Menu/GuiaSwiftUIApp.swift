@@ -11,8 +11,8 @@ import SwiftUI
 struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            Texto.Tightening()
+            ContentView()
+//            Texto.LimiteLinhas()
         }
     }
 }

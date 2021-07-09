@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.Tightening()
+        Texto.LimiteLinhas()
     }
 }
 
@@ -187,8 +187,8 @@ struct Texto {
                     .font(.title)
                     .fontWeight(.bold)
                 Text("Se você quiser aprender SwiftUI temos duas dicas:\n\n")
-                    .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
+                    .padding(.horizontal)
                 
                 /// CENTER
                 Text("Center")
@@ -196,8 +196,8 @@ struct Texto {
                     .font(.title)
                     .fontWeight(.bold)
                 Text("Dica 1: Dedique pelo menos 30 minutos do seu dia para estudar sobre os elementos de programação do SwiftUI.\n\n")
-                    .fontWeight(.bold)
                     .multilineTextAlignment(.center)
+                    .padding(.horizontal)
                 
                 /// TRAILING
                 Text("Trailing")
@@ -205,8 +205,8 @@ struct Texto {
                     .font(.title)
                     .fontWeight(.bold)
                 Text("Dica 2: Depois dos estudos de SwiftUI pratique aquilo que você estudou para reforçar o aprendizado.\n\n")
-                    .fontWeight(.bold)
                     .multilineTextAlignment(.trailing)
+                    .padding(.horizontal)
             }
         }
     }
@@ -215,24 +215,20 @@ struct Texto {
         var body: some View {
             VStack {
                 Text("Espaço de valor 5\n")
-                    .foregroundColor(.blue)
+                    .foregroundColor(.red)
                     .font(.title)
                     .fontWeight(.bold)
-                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica. Elas são as grandes realizações intelectuais da primeira metade do século XX.\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
+                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica.\n")
                     .lineSpacing(5)
-                    .padding()
+                    .padding(.horizontal)
                 
-                Text("Espaço de valor 20\n")
+                Text("Espaço de valor 25\n")
                     .foregroundColor(.green)
                     .font(.title)
                     .fontWeight(.bold)
-                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica. Elas são as grandes realizações intelectuais da primeira metade do século XX.")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                    .lineSpacing(20)
-                    .padding()
+                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica.")
+                    .lineSpacing(25)
+                    .padding(.horizontal)
             }
         }
     }
@@ -246,10 +242,8 @@ struct Texto {
                     .fontWeight(.bold)
                     .padding()
                 Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
                     .lineLimit(3)
-                    .padding()
+                    .padding(.horizontal)
                 
                 
                 Text("\nSem limite de linhas\n")
@@ -257,10 +251,8 @@ struct Texto {
                     .font(.title)
                     .fontWeight(.bold)
                 Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
                     .lineLimit(nil)
-                    .padding()
+                    .padding(.horizontal)
             }
         }
     }
