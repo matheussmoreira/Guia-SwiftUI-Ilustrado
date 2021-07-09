@@ -10,7 +10,7 @@ import SwiftUI
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
         //Texto.LimiteLinhas()
-        Texto.LimiteLinhas()
+        Texto.GiroHorizontal()
     }
 }
 
@@ -88,7 +88,7 @@ struct Texto {
                     .fontWeight(.thin)
                 Text("Ultra light")
                     .fontWeight(.ultraLight)
-
+                
             }.font(.title)
         }
     }
@@ -140,12 +140,12 @@ struct Texto {
             Text(colorScheme == .dark ?
                     "A cor primary fica\nbranca no modo escuro" :
                     "A cor primary fica\npreta no modo claro"
-                    )
-                .foregroundColor(.primary)
-                .font(.title)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding()
+            )
+            .foregroundColor(.primary)
+            .font(.title)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.center)
+            .padding()
         }
     }
     
@@ -285,7 +285,7 @@ struct Texto {
                     .truncationMode(.head)
             }
         }
-            
+        
     }
     
     struct Kerning : View {
@@ -358,15 +358,15 @@ struct Texto {
                 Text("Tamanho 20, peso Bold")
                     .font(Font.system(size: 20, weight: .bold))
                     .padding()
-
+                
                 Text("Tamanho 20, design Serif")
                     .font(Font.system(size: 20, design: .serif))
                     .padding()
-
+                
                 Text("Tamanho 20, design Rounded")
                     .font(Font.system(size: 20, design: .rounded))
                     .padding()
-
+                
                 Text("Tamanho 20, design Monospaced")
                     .font(Font.system(size: 20, design: .monospaced))
                     .padding()
@@ -390,11 +390,43 @@ struct Texto {
                     .frame(width: 310, height: 50, alignment: .leading)
                     .lineLimit(1)
                     .allowsTightening(true)
-
+                
                 Text("Este é um texto bem longo")
                     .frame(width: 310, height: 50, alignment: .leading)
                     .lineLimit(1)
                     .allowsTightening(false)
+            }.font(.title)
+        }
+    }
+    
+    struct DeslocamentoVertical : View {
+        var body: some View {
+            HStack {
+                Text("Em baixo")
+                    .baselineOffset(-20)
+                    .border(Color.red)
+                
+                Text("Normal")
+                    .border(Color.green)
+                
+                Text("Em cima")
+                    .baselineOffset(20)
+                    .border(Color.blue)
+            }.font(.title)
+            
+        }
+    }
+    
+    struct GiroHorizontal : View {
+        var body: some View {
+            VStack {
+                Text("כאן אינך יכול לראות את משמעות הכתיבה מכיוון שלא אפשרתי זאת במערכת")
+                    .flipsForRightToLeftLayoutDirection(true)
+                    .padding()
+                
+                Text("هنا لا يمكنك رؤية معنى الكتابة لأنني لم أقم بتمكينها في النظام")
+                    .flipsForRightToLeftLayoutDirection(true)
+                    .padding()
             }.font(.title)
         }
     }

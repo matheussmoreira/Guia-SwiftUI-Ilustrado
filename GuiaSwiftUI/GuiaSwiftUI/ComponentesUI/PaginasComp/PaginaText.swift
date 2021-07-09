@@ -25,6 +25,8 @@ struct PaginaText : View {
     @State private var showFontSystem = false
     @State private var showTextCase = false
     @State private var showTightening = false
+    @State private var showDeslocamentoVertical = false
+    @State private var showGiroHorizontal = false
     
     var body: some View {
         ZStack {
@@ -117,6 +119,16 @@ struct PaginaText : View {
                             BotaoRetangular(nome: "Compressão")
                         }
                         .sheet(isPresented: $showTightening) { Texto.Tightening() }
+                        
+                        Button(action: {showDeslocamentoVertical.toggle()}) {
+                            BotaoRetangular(nome: "Deslocamento vertical")
+                        }
+                        .sheet(isPresented: $showDeslocamentoVertical) { Texto.DeslocamentoVertical() }
+                        
+                        Button(action: {showGiroHorizontal.toggle()}) {
+                            BotaoRetangular(nome: "Giro horizontal")
+                        }
+                        .sheet(isPresented: $showGiroHorizontal) { Texto.GiroHorizontal() }
                         
                     }
                     
