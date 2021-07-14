@@ -12,7 +12,9 @@ struct PaginaImage: View {
     @State private var showImagem = false
     @State private var showResizable = false
     @State private var showFit = false
+    @State private var showFitFrame = false
     @State private var showFill = false
+    @State private var showFillFrame = false
     @State private var showIcones = false
     
     var body: some View {
@@ -39,10 +41,20 @@ struct PaginaImage: View {
                     }
                     .sheet(isPresented: $showFit) { Imagens.Fit() }
                     
+                    Button(action: { showFitFrame.toggle() }) {
+                        BotaoRetangular(nome: "Fit com frame")
+                    }
+                    .sheet(isPresented: $showFitFrame) { Imagens.FitFrame() }
+                    
                     Button(action: { showFill.toggle() }) {
                         BotaoRetangular(nome: "Fill")
                     }
                     .sheet(isPresented: $showFill) { Imagens.Fill() }
+                    
+                    Button(action: { showFillFrame.toggle() }) {
+                        BotaoRetangular(nome: "Fill com frame")
+                    }
+                    .sheet(isPresented: $showFillFrame) { Imagens.FillFrame() }
                     
                     Button(action: { showIcones.toggle() }) {
                         BotaoRetangular(nome: "Icones")

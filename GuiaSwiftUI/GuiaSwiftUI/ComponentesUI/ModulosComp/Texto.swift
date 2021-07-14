@@ -430,5 +430,6 @@ struct Texto {
             }.font(.title)
         }
     }
+    
 }
 

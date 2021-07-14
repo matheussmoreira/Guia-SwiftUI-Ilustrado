@@ -10,10 +10,12 @@ import SwiftUI
 struct Imagens_Previews : PreviewProvider {
     static var previews : some View {
         //Imagens.Normal()
-        //Imagens.Resizable()
-        //Imagens.Fit()
-        //Imagens.Fill()
-        Imagens.ImageScale()
+        Imagens.Resizable()
+//        Imagens.Fit()
+//        Imagens.FitFrame()
+//        Imagens.Fill()
+//        Imagens.FillFrame()
+//        Imagens.ImageScale()
     }
 }
 
@@ -26,42 +28,46 @@ struct Imagens {
     
     struct Resizable : View {
         var body: some View {
-            VStack{
-                Text("Resizable")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                
-                Image("doguinho")
-                    .resizable()
-            }
+            Image("doguinho")
+                .resizable()
         }
     }
     
     struct Fit : View {
         var body: some View {
-            VStack {
-                Text("Fit")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                
-                Image("doguinho")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
+            Image("doguinho")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .border(Color.blue)
+        }
+    }
+    
+    struct FitFrame : View {
+        var body: some View {
+            Image("doguinho")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 300, height: 300)
+                    .border(Color.blue)
         }
     }
     
     struct Fill : View {
         var body: some View {
-            VStack {
-                Text("Fill")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                
-                Image("doguinho")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-            }
+            Image("doguinho")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .border(Color.red)
+        }
+    }
+    
+    struct FillFrame : View {
+        var body: some View {
+            Image("doguinho")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 300, height: 300)
+                .border(Color.red)
         }
     }
     
