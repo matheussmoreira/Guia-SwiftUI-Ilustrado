@@ -9,13 +9,7 @@ import SwiftUI
 
 struct Imagens_Previews : PreviewProvider {
     static var previews : some View {
-        //Imagens.Normal()
-        Imagens.Resizable()
-//        Imagens.Fit()
-//        Imagens.FitFrame()
-//        Imagens.Fill()
-//        Imagens.FillFrame()
-//        Imagens.ImageScale()
+        Imagens.ResizingMode()
     }
 }
 
@@ -30,6 +24,20 @@ struct Imagens {
         var body: some View {
             Image("doguinho")
                 .resizable()
+        }
+    }
+    
+    struct ResizingMode : View {
+        var body: some View {
+            VStack {
+                Image("estrela")
+                    .resizable(resizingMode: .stretch)
+                    .padding()
+                
+                Image("estrela")
+                    .resizable(resizingMode: .tile)
+                    .padding()
+            }
         }
     }
     
@@ -95,26 +103,31 @@ struct Imagens {
         }
     }
     
-    struct ImageScale : View {
-        var body : some View {
-            VStack(alignment: .leading) {
-                HStack {
-                    Image(systemName: "heart.fill")
-                        .imageScale(.small)
-                    Text(".small")
-                }
-                HStack {
-                    Image(systemName: "heart.fill")
-                        .imageScale(.medium)
-                    Text(".medium")
-                }
-
-                HStack {
-                    Image(systemName: "heart.fill")
-                        .imageScale(.large)
-                    Text(".large")
-                }
+    struct Interpolacao : View {
+        var body: some View {
+            VStack {
+                Image("estrela")
+                    .resizable()
+                    .interpolation(.none)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 300)
+                
+                Image("estrela")
+                    .resizable()
+                    .interpolation(.high)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 300)
             }
+        }
+    }
+    
+    struct Antialiasing : View {
+        var body: some View {
+            Image("barco")
+                .antialiased(true)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 350, height: 600)
         }
     }
     
