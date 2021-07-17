@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Imagens_Previews : PreviewProvider {
     static var previews : some View {
-        Imagens.ResizingMode()
+        Imagens.RenderingMode()
     }
 }
 
@@ -56,7 +56,7 @@ struct Imagens {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 300, height: 300)
-                    .border(Color.blue)
+                .border(Color.blue)
         }
     }
     
@@ -90,7 +90,7 @@ struct Imagens {
                 HStack {
                     Image(systemName: "thermometer.sun")
                         .font(.largeTitle)
-
+                    
                     Image(systemName: "thermometer.sun.fill")
                         .foregroundColor(.blue)
                         .font(.largeTitle)
@@ -128,6 +128,23 @@ struct Imagens {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 350, height: 600)
+        }
+    }
+    
+    struct RenderingMode : View {
+        var body: some View {
+            VStack {
+                Image(systemName: "timer")
+                    .renderingMode(.original)
+                    .foregroundColor(.blue)
+                    .font(.system(size: 70))
+                    .padding()
+                Image(systemName: "timer")
+                    .renderingMode(.template)
+                    .foregroundColor(.blue)
+                    .font(.system(size: 70))
+                    .padding()
+            }
         }
     }
     

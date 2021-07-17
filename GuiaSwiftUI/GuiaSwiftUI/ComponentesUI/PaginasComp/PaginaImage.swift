@@ -19,6 +19,7 @@ struct PaginaImage: View {
     @State private var showInterpolacao = false
     @State private var showAntialiasing = false
     @State private var showResiginMode = false
+    @State private var showRenderingMode = false
     
     var body: some View {
         ZStack {
@@ -64,11 +65,6 @@ struct PaginaImage: View {
                     }
                     .sheet(isPresented: $showFillFrame) { Imagens.FillFrame() }
                     
-                    Button(action: { showIcones.toggle() }) {
-                        BotaoRetangular(nome: "Icones")
-                    }
-                    .sheet(isPresented: $showIcones) { Imagens.Icones() }
-                    
                     Button(action: { showInterpolacao.toggle() }) {
                         BotaoRetangular(nome: "Interpolação")
                     }
@@ -79,7 +75,17 @@ struct PaginaImage: View {
                     }
                     .sheet(isPresented: $showAntialiasing) { Imagens.Antialiasing() }
                     
-                    
+                    Group {
+                        Button(action: { showIcones.toggle() }) {
+                            BotaoRetangular(nome: "Icones")
+                        }
+                        .sheet(isPresented: $showIcones) { Imagens.Icones() }
+                        
+                        Button(action: { showRenderingMode.toggle() }) {
+                            BotaoRetangular(nome: "Rendering Mode")
+                        }
+                        .sheet(isPresented: $showRenderingMode) { Imagens.RenderingMode() }
+                    }
                     
                 }.padding()
             }.offset(y: 60)
