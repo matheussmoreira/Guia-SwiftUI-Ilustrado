@@ -20,6 +20,7 @@ struct PaginaImage: View {
     @State private var showAntialiasing = false
     @State private var showResiginMode = false
     @State private var showRenderingMode = false
+    @State private var showImageScale = false
     
     var body: some View {
         ZStack {
@@ -85,6 +86,11 @@ struct PaginaImage: View {
                             BotaoRetangular(nome: "Rendering Mode")
                         }
                         .sheet(isPresented: $showRenderingMode) { Imagens.RenderingMode() }
+                        
+                        Button(action: { showImageScale.toggle() }) {
+                            BotaoRetangular(nome: "Image Scale")
+                        }
+                        .sheet(isPresented: $showImageScale) { Imagens.ImageScale() }
                     }
                     
                 }.padding()

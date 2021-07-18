@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Imagens_Previews : PreviewProvider {
     static var previews : some View {
-        Imagens.RenderingMode()
+        Imagens.ImageScale()
     }
 }
 
@@ -145,6 +145,29 @@ struct Imagens {
                     .font(.system(size: 70))
                     .padding()
             }
+        }
+    }
+    
+    struct ImageScale : View {
+        var body: some View {
+            VStack {
+                HStack {
+                    Image(systemName: "trash.circle.fill")
+                        .imageScale(.small)
+                    Text("Small")
+                }.padding()
+                HStack {
+                    Image(systemName: "trash.circle.fill")
+                        .imageScale(.medium)
+                    Text("Medium")
+                }.padding()
+                HStack {
+                    Image(systemName: "trash.circle.fill")
+                        .imageScale(.large)
+                    Text("Large")
+                }.padding()
+            }
+            
         }
     }
     
