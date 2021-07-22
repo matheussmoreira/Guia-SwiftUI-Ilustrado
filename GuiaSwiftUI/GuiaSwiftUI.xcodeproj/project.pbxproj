@@ -10,6 +10,7 @@
 		6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC0C25DC45C6009752E3 /* Espaco.swift */; };
 		6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1425DC4BBE009752E3 /* Divisor.swift */; };
 		6601FC1B25DC5492009752E3 /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1A25DC5492009752E3 /* Padding.swift */; };
+		664142A326A9A1880054C0E9 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664142A226A9A1880054C0E9 /* Preview.swift */; };
 		66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */; };
 		66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */; };
 		66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F3425E8403200B5E578 /* PaginaModifiers.swift */; };
@@ -54,6 +55,7 @@
 		6601FC0C25DC45C6009752E3 /* Espaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Espaco.swift; sourceTree = "<group>"; };
 		6601FC1425DC4BBE009752E3 /* Divisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divisor.swift; sourceTree = "<group>"; };
 		6601FC1A25DC5492009752E3 /* Padding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Padding.swift; sourceTree = "<group>"; };
+		664142A226A9A1880054C0E9 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaComponentes.swift; sourceTree = "<group>"; };
 		66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaOrganizacao.swift; sourceTree = "<group>"; };
 		66526F3425E8403200B5E578 /* PaginaModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaModifiers.swift; sourceTree = "<group>"; };
@@ -133,6 +135,14 @@
 				66EA595325E7F9CA00303D1F /* PaginasMod */,
 			);
 			path = ModifiersUniversais;
+			sourceTree = "<group>";
+		};
+		664142A126A9A1380054C0E9 /* Previews */ = {
+			isa = PBXGroup;
+			children = (
+				664142A226A9A1880054C0E9 /* Preview.swift */,
+			);
+			path = Previews;
 			sourceTree = "<group>";
 		};
 		66526F3C25E8406900B5E578 /* ModulosComp */ = {
@@ -237,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				66EA595525E7F9F000303D1F /* Menu */,
+				664142A126A9A1380054C0E9 /* Previews */,
 				6601FC0A25DC4592009752E3 /* ComponentesUI */,
 				6601FC1925DC547A009752E3 /* ModifiersUniversais */,
 				6601FC0B25DC45B1009752E3 /* OrganizacaoUI */,
@@ -404,6 +415,7 @@
 				66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */,
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
 				66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */,
+				664142A326A9A1880054C0E9 /* Preview.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botao.swift in Sources */,
 				666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */,
 				66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */,

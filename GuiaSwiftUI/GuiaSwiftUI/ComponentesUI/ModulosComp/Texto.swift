@@ -9,8 +9,7 @@ import SwiftUI
 
 struct Texto_Previews: PreviewProvider {
     static var previews: some View {
-        //Texto.LimiteLinhas()
-        Texto.GiroHorizontal()
+        Texto.Tamanhos()
     }
 }
 
