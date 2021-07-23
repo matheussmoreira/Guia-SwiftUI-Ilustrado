@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Previews_Previews: PreviewProvider {
     static var previews: some View {
-        Stacks.Aninhadas()
+        Texto.Tamanhos()
+            .previewDisplayName("Exemplo")
     }
 }
