@@ -21,7 +21,7 @@ struct PaginaModifiers : View {
             
             ScrollView(.vertical) {
                 LazyVGrid(columns: columns){
-                    NavigationLink(destination: PaginaPadding(corPagina: corPagina)) {
+                    NavigationLink(destination: PaginaPreenchimento(corPagina: corPagina)) {
                         BotaoQuadrado(nome: "Padding", cor: nil)
                     }
                 }.padding()

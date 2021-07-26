@@ -9,13 +9,12 @@ import SwiftUI
 
 struct Modifiers_Previews : PreviewProvider {
     static var previews: some View {
-        Padding.Posicoes()
-        Padding.ValorNumerico()
+        Preenchimento.IgnoresSafeArea()
     }
 }
 
-struct Padding {
-    struct Posicoes : View {
+struct Preenchimento {
+    struct PaddingPosicoes : View {
         var body: some View {
             VStack {
                 VStack {
@@ -91,7 +90,7 @@ struct Padding {
         }
     }
     
-    struct MultiplasPosicoes : View {
+    struct PaddingMultiplasPosicoes : View {
         var body: some View {
             Circle()
                 .foregroundColor(.green)
@@ -101,7 +100,7 @@ struct Padding {
         }
     }
     
-    struct ValorNumerico : View {
+    struct PaddingValorNumerico : View {
         @Environment(\.colorScheme) var colorScheme
         var body: some View {
             VStack {
@@ -117,6 +116,19 @@ struct Padding {
                     .padding(.leading, 70)
                     .background(colorScheme == .dark ? Color.white : Color.black)
                     .offset(y: 15)
+            }
+        }
+    }
+    
+    struct IgnoresSafeArea : View {
+        var body: some View {
+            ZStack {
+                Color.orange
+                    .ignoresSafeArea()
+                Text("Ignorando a safe area")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .bold()
             }
         }
     }
