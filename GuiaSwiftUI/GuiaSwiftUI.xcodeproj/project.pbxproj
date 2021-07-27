@@ -17,6 +17,8 @@
 		66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F4525E842A700B5E578 /* PaginaSobre.swift */; };
 		666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666A8B0625E696AD0039E5D4 /* PaginaText.swift */; };
 		667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B0EFF25C1CAFB00A079F8 /* Stacks.swift */; };
+		669A71E626B03D3300A616FA /* Exemplos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E526B03D3300A616FA /* Exemplos.swift */; };
+		669A71E826B0458100A616FA /* PaginaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E726B0458100A616FA /* PaginaLabel.swift */; };
 		66D3A91925C470B0001A0690 /* Botao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3A91825C470B0001A0690 /* Botao.swift */; };
 		66EA592025E7DE5A00303D1F /* PaginaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA591F25E7DE5A00303D1F /* PaginaImage.swift */; };
 		66EA592B25E7E19E00303D1F /* PaginaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA592A25E7E19E00303D1F /* PaginaButton.swift */; };
@@ -62,6 +64,8 @@
 		66526F4525E842A700B5E578 /* PaginaSobre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSobre.swift; sourceTree = "<group>"; };
 		666A8B0625E696AD0039E5D4 /* PaginaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaText.swift; sourceTree = "<group>"; };
 		667B0EFF25C1CAFB00A079F8 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
+		669A71E526B03D3300A616FA /* Exemplos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exemplos.swift; sourceTree = "<group>"; };
+		669A71E726B0458100A616FA /* PaginaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaLabel.swift; sourceTree = "<group>"; };
 		66D3A91825C470B0001A0690 /* Botao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botao.swift; sourceTree = "<group>"; };
 		66EA591F25E7DE5A00303D1F /* PaginaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaImage.swift; sourceTree = "<group>"; };
 		66EA592A25E7E19E00303D1F /* PaginaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaButton.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				66F6577425C0D05D007F6C99 /* Texto.swift */,
 				66FE1E6725C3458C0051B36E /* Imagens.swift */,
 				66D3A91825C470B0001A0690 /* Botao.swift */,
+				669A71E526B03D3300A616FA /* Exemplos.swift */,
 			);
 			path = ModulosComp;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				666A8B0625E696AD0039E5D4 /* PaginaText.swift */,
 				66EA591F25E7DE5A00303D1F /* PaginaImage.swift */,
 				66EA592A25E7E19E00303D1F /* PaginaButton.swift */,
+				669A71E726B0458100A616FA /* PaginaLabel.swift */,
 			);
 			path = PaginasComp;
 			sourceTree = "<group>";
@@ -416,6 +422,7 @@
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
 				66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */,
 				664142A326A9A1880054C0E9 /* Preview.swift in Sources */,
+				669A71E626B03D3300A616FA /* Exemplos.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botao.swift in Sources */,
 				666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */,
 				66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */,
@@ -429,6 +436,7 @@
 				CED8E64A25F522F600615929 /* UI.swift in Sources */,
 				66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */,
 				66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */,
+				669A71E826B0458100A616FA /* PaginaLabel.swift in Sources */,
 				BB576D5725C08FBD00F0B4E9 /* ContentView.swift in Sources */,
 				66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */,
 				66EA592025E7DE5A00303D1F /* PaginaImage.swift in Sources */,

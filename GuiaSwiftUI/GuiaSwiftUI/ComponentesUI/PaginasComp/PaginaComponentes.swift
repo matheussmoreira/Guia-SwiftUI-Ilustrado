@@ -29,6 +29,10 @@ struct PaginaComponentes : View {
                         BotaoQuadrado(nome: "Image", cor: nil)
                     }
                     
+                    NavigationLink(destination: PaginaLabel(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Label", cor: nil)
+                    }
+                    
                     NavigationLink(destination: PaginaButton(corPagina: corPagina)) {
                         BotaoQuadrado(nome: "Button", cor: nil)
                     }
