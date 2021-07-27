@@ -19,6 +19,7 @@
 		667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B0EFF25C1CAFB00A079F8 /* Stacks.swift */; };
 		669A71E626B03D3300A616FA /* Exemplos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E526B03D3300A616FA /* Exemplos.swift */; };
 		669A71E826B0458100A616FA /* PaginaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E726B0458100A616FA /* PaginaLabel.swift */; };
+		669A71EA26B04AE500A616FA /* LazyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E926B04AE500A616FA /* LazyGrids.swift */; };
 		66D3A91925C470B0001A0690 /* Botao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66D3A91825C470B0001A0690 /* Botao.swift */; };
 		66EA592025E7DE5A00303D1F /* PaginaImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA591F25E7DE5A00303D1F /* PaginaImage.swift */; };
 		66EA592B25E7E19E00303D1F /* PaginaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66EA592A25E7E19E00303D1F /* PaginaButton.swift */; };
@@ -66,6 +67,7 @@
 		667B0EFF25C1CAFB00A079F8 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
 		669A71E526B03D3300A616FA /* Exemplos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exemplos.swift; sourceTree = "<group>"; };
 		669A71E726B0458100A616FA /* PaginaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaLabel.swift; sourceTree = "<group>"; };
+		669A71E926B04AE500A616FA /* LazyGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGrids.swift; sourceTree = "<group>"; };
 		66D3A91825C470B0001A0690 /* Botao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Botao.swift; sourceTree = "<group>"; };
 		66EA591F25E7DE5A00303D1F /* PaginaImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaImage.swift; sourceTree = "<group>"; };
 		66EA592A25E7E19E00303D1F /* PaginaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaButton.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				667B0EFF25C1CAFB00A079F8 /* Stacks.swift */,
 				6601FC0C25DC45C6009752E3 /* Espaco.swift */,
 				6601FC1425DC4BBE009752E3 /* Divisor.swift */,
+				669A71E926B04AE500A616FA /* LazyGrids.swift */,
 			);
 			path = ModulosOrg;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */,
 				66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */,
 				669A71E826B0458100A616FA /* PaginaLabel.swift in Sources */,
+				669A71EA26B04AE500A616FA /* LazyGrids.swift in Sources */,
 				BB576D5725C08FBD00F0B4E9 /* ContentView.swift in Sources */,
 				66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */,
 				66EA592025E7DE5A00303D1F /* PaginaImage.swift in Sources */,
