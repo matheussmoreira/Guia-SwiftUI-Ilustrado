@@ -12,7 +12,7 @@ struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            MyLabel.Exemplos()
+//            Stacks.EspacamentoHorizontal()
         }
     }
 }

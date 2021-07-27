@@ -13,7 +13,7 @@ struct Stacks_Previews: PreviewProvider {
         //Stacks.Alinhamentos()
         //Stacks.Espacamentos()
         //Stacks.Aninhadas()
-        Stacks.LazyStacks()
+        Stacks.AlinhamentoHorizontal()
     }
 }
 
@@ -60,14 +60,13 @@ struct Stacks {
         }
     }
     
-    struct Alinhamentos : View {
+    struct AlinhamentoVertical : View {
         var body : some View {
             VStack {
-                Text("Alinhamentos")
+                Text("Alinhamento em VStack")
                     .font(.title)
                     .fontWeight(.bold)
                 
-                /// EXEMPLO 1
                 HStack {
                     VStack(alignment: .leading) {
                         ZStack {
@@ -89,7 +88,6 @@ struct Stacks {
                     }
                     .border(Color.blue)
                     
-                    /// EXEMPLO 2
                     VStack(alignment: .center) {
                         ZStack {
                             Rectangle()
@@ -110,7 +108,6 @@ struct Stacks {
                     }
                     .border(Color.blue)
                     
-                    /// EXEMPLO 3
                     VStack(alignment: .trailing) {
                         ZStack {
                             Rectangle()
@@ -135,14 +132,83 @@ struct Stacks {
         }
     }
     
-    struct Espacamentos : View {
+    struct AlinhamentoHorizontal : View {
         var body : some View {
             VStack {
-                Text("Espaçamentos")
+                Text("Alinhamento em HStack")
                     .font(.title)
                     .fontWeight(.bold)
                 
-                /// EXEMPLO 1
+                HStack(alignment: .top) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 100, height: 60)
+                            .foregroundColor(.blue)
+                        Text(".top")
+                            .bold()
+                            .foregroundColor(.white)
+                    } // retagulo azul com texto
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                }
+                .border(Color.blue)
+                
+                HStack(alignment: .center) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 100, height: 60)
+                            .foregroundColor(.blue)
+                        Text(".center")
+                            .bold()
+                            .foregroundColor(.white)
+                    } // retagulo azul com texto
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                }
+                .border(Color.blue)
+                
+                HStack(alignment: .bottom) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 100, height: 60)
+                            .foregroundColor(.blue)
+                        Text(".bottom")
+                            .bold()
+                            .foregroundColor(.white)
+                    } // retagulo azul com texto
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                }
+                .border(Color.blue)
+            }
+        }
+    }
+    
+    struct EspacamentoVertical : View {
+        var body : some View {
+            VStack {
+                Text("Espaçamento em VStack")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
                 HStack {
                     VStack(spacing: 40) {
                         ZStack {
@@ -165,7 +231,6 @@ struct Stacks {
                     }
                     .border(Color.green)
                     
-                    /// EXEMPLO 2
                     VStack(spacing: 80) {
                         ZStack {
                             Rectangle()
@@ -186,6 +251,59 @@ struct Stacks {
                             .padding()
                     }.border(Color.green)
                 }
+            }
+        }
+    }
+    
+    struct EspacamentoHorizontal : View {
+        var body: some View {
+            VStack {
+                Text("Espaçamento em HStack")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                HStack(spacing: 10) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 120, height: 80)
+                            .foregroundColor(.green)
+                        Text("Valor 10")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                .border(Color.green)
+                
+                HStack(spacing: 50) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 120, height: 80)
+                            .foregroundColor(.green)
+                        Text("Valor 50")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                .border(Color.green)
+                
             }
         }
     }

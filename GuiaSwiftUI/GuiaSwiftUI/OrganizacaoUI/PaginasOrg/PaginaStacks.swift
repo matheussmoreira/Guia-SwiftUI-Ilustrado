@@ -10,8 +10,10 @@ import SwiftUI
 struct PaginaStacks : View {
     var corPagina: Color
     @State private var showTipos = false
-    @State private var showAlignment = false
-    @State private var showSpacing = false
+    @State private var showAlignmentV = false
+    @State private var showSpacingV = false
+    @State private var showAlignmentH = false
+    @State private var showSpacingH = false
     @State private var showAninhadas = false
     @State private var showLazy = false
     
@@ -29,15 +31,25 @@ struct PaginaStacks : View {
                     }
                     .sheet(isPresented: $showTipos) { Stacks.Tipos() }
                     
-                    Button(action: { showAlignment.toggle()}) {
-                        BotaoRetangular(nome: "Alinhamentos")
+                    Button(action: { showAlignmentV.toggle()}) {
+                        BotaoRetangular(nome: "Alinhamento em VStack")
                     }
-                    .sheet(isPresented: $showAlignment) { Stacks.Alinhamentos() }
+                    .sheet(isPresented: $showAlignmentV) { Stacks.AlinhamentoVertical() }
                     
-                    Button(action: { showSpacing.toggle() }) {
-                        BotaoRetangular(nome: "Espaçamentos")
+                    Button(action: { showAlignmentH.toggle()}) {
+                        BotaoRetangular(nome: "Alinhamento em HStack")
                     }
-                    .sheet(isPresented: $showSpacing) { Stacks.Espacamentos() }
+                    .sheet(isPresented: $showAlignmentH) { Stacks.AlinhamentoHorizontal() }
+                    
+                    Button(action: { showSpacingV.toggle() }) {
+                        BotaoRetangular(nome: "Espaçamento em VStack")
+                    }
+                    .sheet(isPresented: $showSpacingV) { Stacks.EspacamentoVertical() }
+                    
+                    Button(action: { showSpacingH.toggle() }) {
+                        BotaoRetangular(nome: "Espaçamento em HStack")
+                    }
+                    .sheet(isPresented: $showSpacingH) { Stacks.EspacamentoHorizontal() }
                     
                     Button(action: { showAninhadas.toggle() }) {
                         BotaoRetangular(nome: "Stacks aninhadas")
@@ -45,7 +57,7 @@ struct PaginaStacks : View {
                     .sheet(isPresented: $showAninhadas) { Stacks.Aninhadas() }
                     
                     Button(action: { showLazy.toggle() }) {
-                        BotaoRetangular(nome: "Lazy Stacks")
+                        BotaoRetangular(nome: "LazyStacks")
                     }
                     .sheet(isPresented: $showLazy) { Stacks.LazyStacks() }
                     
