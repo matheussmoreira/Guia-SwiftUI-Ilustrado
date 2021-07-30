@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LazyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        LazyGrids.HGridSpacing()
+        LazyGrids.GridItemExemplos()
     }
 }
 
@@ -329,6 +329,94 @@ struct LazyGrids {
             }
         }
         
+    }
+    
+    struct GridItemExemplos: View {
+        let cols1: [GridItem] = Array(repeating: GridItem(.fixed(30), alignment: .top), count: 5)
+        let linhas = [GridItem(.adaptive(minimum: 50), spacing: 25)]
+        let cols2: [GridItem] = [GridItem(.flexible(minimum: 20)), GridItem(.fixed(240))]
+        
+        
+        var body: some View {
+            VStack {
+                LazyVGrid(columns: cols1){
+                    ForEach(1..<11) { n in
+                        Rectangle()
+                            .foregroundColor(Color.blue)
+                    }
+                }.padding()
+                
+                LazyHGrid(rows: linhas, spacing: 40){
+                    ForEach(1..<31) { n in
+                        Circle()
+                            .foregroundColor(Color.black)
+                            .border(Color.yellow)
+                    }
+                }.padding()
+                
+                LazyVGrid(columns: cols2){
+                    ForEach(1..<21) { n in
+                        Rectangle()
+                            .foregroundColor(Color.purple)
+                        
+                    }
+                }.padding()
+                
+            }
+        }
+    }
+    
+    struct VGridItemFixed: View {
+        //
+        let cols1: [GridItem] = Array(repeating: GridItem(.fixed(30)), count: 5)
+        let cols2: [GridItem] = Array(repeating: GridItem(.fixed(60)), count: 5)
+        
+        var body: some View {
+            VStack {
+                LazyVGrid(columns: cols1){
+                    ForEach(1..<61) { n in
+                        Rectangle()
+                            .foregroundColor(Color.orange)
+                    }
+                }.padding()
+                
+                LazyVGrid(columns: cols2){
+                    ForEach(1..<61) { n in
+                        Rectangle()
+                            .foregroundColor(Color.orange)
+                        
+                    }
+                }.padding()
+            }
+            
+        }
+    }
+    
+    struct HGridItemFixed: View {
+        //
+        let linhas1: [GridItem] = Array(repeating: GridItem(.fixed(30)), count: 5)
+        let linhas2: [GridItem] = Array(repeating: GridItem(.fixed(60)), count: 5)
+        
+        var body: some View {
+            VStack {
+                LazyHGrid(rows: linhas1){
+                    ForEach(1..<61) { n in
+                        Rectangle()
+                            .foregroundColor(Color.orange)
+                        //                        .frame(height: 50)
+                    }
+                }//.padding()
+                
+                LazyHGrid(rows: linhas2){
+                    ForEach(1..<61) { n in
+                        Rectangle()
+                            .foregroundColor(Color.red)
+                        //                        .frame(height: 50)
+                    }
+                }//.padding()
+            }
+            
+        }
     }
 }
 

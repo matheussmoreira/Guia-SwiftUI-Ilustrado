@@ -15,6 +15,7 @@ struct PaginaLazyGrids: View {
     @State private var showHGridAlignment = false
     @State private var showVGridSpacing = false
     @State private var showHGridSpacing = false
+    @State private var showGridItemExemplos = false
     
     var body: some View {
         ZStack {
@@ -54,6 +55,11 @@ struct PaginaLazyGrids: View {
                         BotaoRetangular(nome: "Espaçamento em grid horizontal")
                     }
                     .sheet(isPresented: $showHGridSpacing) { LazyGrids.HGridSpacing() }
+                    
+                    Button(action: { showGridItemExemplos.toggle() }) {
+                        BotaoRetangular(nome: "Itens nas lazy grids")
+                    }
+                    .sheet(isPresented: $showGridItemExemplos) { LazyGrids.GridItemExemplos() }
                     
                 }.padding()
             }.offset(y: 60)
