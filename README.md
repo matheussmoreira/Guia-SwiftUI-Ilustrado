@@ -3,7 +3,7 @@
 
 Se você está iniciando no mundo da programação saiba que, em algum momento dos seus estudos, deverá consultar a documentação oficial da linguagem ou framework que você está estudando para adquirir algumas informações específicas. **No mundo do desenvolvimento iOS isso não poderia ser diferente, não é mesmo?** Apesar das vantagens da documentação, desejamos tornar este processo mais simples. Não apenas a consulta, mas a própria aprendizagem, para sermos mais precisos!
 
-É com isso que idealizamos o **Guia SwiftUI Ilustrado**, um e-book onde você encontrará diversos trechos de código e ilustrações correspondentes em tela que lhe esclarecerão como funciona a aplicação de diversos componentes de interface através do **framework SwiftUI**, com o intuito de lhe auxiliar nos seus **estudos de desenvolvimento iOS.**
+É com isso que idealizamos o **Guia SwiftUI Ilustrado**, um e-book onde você encontrará diversos trechos de código e ilustrações correspondentes em tela que lhe esclarecerão como funciona a construção de interfaces gráficas através do **framework SwiftUI**, com o intuito de lhe auxiliar nos seus **estudos de desenvolvimento iOS.**
 
 <img src="https://github.com/matheussmoreira/Guia-SwiftUI-Ilustrado/blob/main/Pagina.png">
 
