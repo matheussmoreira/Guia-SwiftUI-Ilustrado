@@ -9,12 +9,12 @@ import SwiftUI
 
 struct LazyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        LazyGrids.HGridAlignment()
+        LazyGrids.HGridSpacing()
     }
 }
 
 struct LazyGrids {
-    struct VGrid : View {
+    struct VGrid: View {
         let cols: [GridItem] =
             Array(repeating: GridItem(.flexible()), count: 5)
         
@@ -31,7 +31,7 @@ struct LazyGrids {
         } // body
     }
     
-    struct HGrid : View {
+    struct HGrid: View {
         var linhas: [GridItem] =
             Array(repeating: GridItem(.fixed(30)), count: 5)
         
@@ -225,6 +225,110 @@ struct LazyGrids {
                 
             }.padding()
         }
+    }
+    
+    struct VGridSpacing: View {
+        let cols: [GridItem] =
+            Array(repeating: GridItem(.flexible()), count: 4)
+        
+        var body: some View {
+            VStack {
+                Text("Espaçamento em LazyVGrid")
+                    .font(.title2)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom)
+                
+                VStack {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 360, height: 60)
+                            .foregroundColor(.blue)
+                        Text("Valor 5")
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title2)
+                    } // retagulo azul com texto
+                    LazyVGrid(columns: cols, spacing: 5) {
+                        ForEach((1...20), id: \.self) {
+                            Text("\($0)")
+                                .font(.title2)
+                        }
+                    }
+                }.border(Color.blue).padding(.horizontal)
+                
+                VStack {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 360, height: 60)
+                            .foregroundColor(.green)
+                        Text("Valor 40")
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title2)
+                    } // retagulo verde com texto
+                    LazyVGrid(columns: cols, spacing: 40) {
+                        ForEach((1...20), id: \.self) {
+                            Text("\($0)")
+                                .font(.title2)
+                        }
+                    }
+                }.border(Color.green).padding(.horizontal)
+            }
+        } // body
+    }
+    
+    struct HGridSpacing: View {
+        var linhas: [GridItem] =
+            Array(repeating: GridItem(.fixed(30)), count: 2)
+        
+        var body: some View {
+            VStack {
+                Text("Espaçamento em LazyHGrid")
+                    .font(.title2)
+                    .bold()
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom)
+                
+                HStack {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 120)
+                            .foregroundColor(.blue)
+                        Text("Valor 5")
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title2)
+                    } // retangulo azul com texto
+                    
+                    LazyHGrid(rows: linhas, spacing: 5) {
+                        ForEach((1...12), id: \.self) {
+                            Text("\($0)")
+                                .font(.title2)
+                        }
+                    }
+                }.frame(height: 120).border(Color.blue)
+                
+                HStack {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 120)
+                            .foregroundColor(.green)
+                        Text("Valor 20")
+                            .bold()
+                            .foregroundColor(.white)
+                            .font(.title2)
+                    } // retangulo verde com texto
+                    LazyHGrid(rows: linhas, spacing: 20) {
+                        ForEach((1...12), id: \.self) {
+                            Text("\($0)")
+                                .font(.title2)
+                        }
+                    }
+                }.frame(height: 120).border(Color.green)
+            }
+        }
+        
     }
 }
 
