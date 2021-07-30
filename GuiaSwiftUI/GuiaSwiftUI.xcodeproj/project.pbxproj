@@ -10,6 +10,7 @@
 		6601FC0D25DC45C6009752E3 /* Espaco.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC0C25DC45C6009752E3 /* Espaco.swift */; };
 		6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1425DC4BBE009752E3 /* Divisor.swift */; };
 		6601FC1B25DC5492009752E3 /* Preenchimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1A25DC5492009752E3 /* Preenchimento.swift */; };
+		660B01D726B4363200F7DD92 /* PaginaLazyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B01D626B4363200F7DD92 /* PaginaLazyGrids.swift */; };
 		664142A326A9A1880054C0E9 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664142A226A9A1880054C0E9 /* Preview.swift */; };
 		66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */; };
 		66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */; };
@@ -58,6 +59,7 @@
 		6601FC0C25DC45C6009752E3 /* Espaco.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Espaco.swift; sourceTree = "<group>"; };
 		6601FC1425DC4BBE009752E3 /* Divisor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divisor.swift; sourceTree = "<group>"; };
 		6601FC1A25DC5492009752E3 /* Preenchimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preenchimento.swift; sourceTree = "<group>"; };
+		660B01D626B4363200F7DD92 /* PaginaLazyGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaLazyGrids.swift; sourceTree = "<group>"; };
 		664142A226A9A1880054C0E9 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
 		66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaComponentes.swift; sourceTree = "<group>"; };
 		66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaOrganizacao.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */,
 				66EA593025E7E57600303D1F /* PaginaStacks.swift */,
 				66EA593825E7EAF000303D1F /* PaginaSpacer.swift */,
+				660B01D626B4363200F7DD92 /* PaginaLazyGrids.swift */,
 			);
 			path = PaginasOrg;
 			sourceTree = "<group>";
@@ -443,6 +446,7 @@
 				669A71EA26B04AE500A616FA /* LazyGrids.swift in Sources */,
 				BB576D5725C08FBD00F0B4E9 /* ContentView.swift in Sources */,
 				66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */,
+				660B01D726B4363200F7DD92 /* PaginaLazyGrids.swift in Sources */,
 				66EA592025E7DE5A00303D1F /* PaginaImage.swift in Sources */,
 				BB576D5525C08FBD00F0B4E9 /* GuiaSwiftUIApp.swift in Sources */,
 			);

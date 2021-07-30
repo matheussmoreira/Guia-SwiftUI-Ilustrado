@@ -25,6 +25,11 @@ struct PaginaOrganizacao : View {
                     NavigationLink(destination: PaginaStacks(corPagina: corPagina)) {
                         BotaoQuadrado(nome: "Stacks", cor: nil)
                     }
+                    
+                    NavigationLink(destination: PaginaLazyGrids(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Lazy grids", cor: nil)
+                    }
+                    
                     NavigationLink(destination: PaginaSpacer(corPagina: corPagina)) {
                         BotaoQuadrado(nome: "Spacer", cor: nil)
                     }
