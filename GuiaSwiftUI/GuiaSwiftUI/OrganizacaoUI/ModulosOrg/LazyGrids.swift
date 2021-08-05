@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LazyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        LazyGrids.GridItemExemplos()
+        LazyGrids.VGridItemFixed()
     }
 }
 
@@ -367,24 +367,21 @@ struct LazyGrids {
     }
     
     struct VGridItemFixed: View {
-        //
-        let cols1: [GridItem] = Array(repeating: GridItem(.fixed(30)), count: 5)
-        let cols2: [GridItem] = Array(repeating: GridItem(.fixed(60)), count: 5)
+        let vetor1 = Array(repeating: GridItem(.fixed(30)), count: 5)
+        let vetor2 = Array(repeating: GridItem(.fixed(60)), count: 5)
         
         var body: some View {
             VStack {
-                LazyVGrid(columns: cols1){
+                Text("Valor 30").font(.title).bold()
+                LazyVGrid(columns: vetor1){
                     ForEach(1..<61) { n in
-                        Rectangle()
-                            .foregroundColor(Color.orange)
+                        Circle().border(Color.orange)
                     }
                 }.padding()
-                
-                LazyVGrid(columns: cols2){
+                Text("Valor 60").font(.title).bold()
+                LazyVGrid(columns: vetor2){
                     ForEach(1..<61) { n in
-                        Rectangle()
-                            .foregroundColor(Color.orange)
-                        
+                        Circle().border(Color.orange)
                     }
                 }.padding()
             }
@@ -393,31 +390,108 @@ struct LazyGrids {
     }
     
     struct HGridItemFixed: View {
-        //
-        let linhas1: [GridItem] = Array(repeating: GridItem(.fixed(30)), count: 5)
-        let linhas2: [GridItem] = Array(repeating: GridItem(.fixed(60)), count: 5)
+        let vetor1: [GridItem] = Array(repeating: GridItem(.fixed(30)), count: 5)
+        let vetor2: [GridItem] = Array(repeating: GridItem(.fixed(60)), count: 5)
         
         var body: some View {
             VStack {
-                LazyHGrid(rows: linhas1){
+                Text("Valor 30").font(.title).bold()
+                LazyHGrid(rows: vetor1){
                     ForEach(1..<61) { n in
-                        Rectangle()
-                            .foregroundColor(Color.orange)
-                        //                        .frame(height: 50)
+                        Circle().border(Color.blue)
                     }
-                }//.padding()
+                }
                 
-                LazyHGrid(rows: linhas2){
+                Text("Valor 60").font(.title).bold()
+                LazyHGrid(rows: vetor2){
                     ForEach(1..<61) { n in
-                        Rectangle()
-                            .foregroundColor(Color.red)
-                        //                        .frame(height: 50)
+                        Circle().border(Color.blue)
                     }
-                }//.padding()
+                }
             }
             
         }
     }
+    
+    struct VGridItemFlexible: View {
+        var vetor1 = [GridItem(.flexible(maximum: 50)), GridItem(.flexible())]
+        var vetor2 = [GridItem(.flexible(minimum: 200)),GridItem(.flexible())]
+        
+        var body: some View {
+            VStack {
+                Text("Coluna 1: tamanho máximo de 50\nColuna 2: tamanho correspondente ao espaço restante").font(.title3).bold()
+                LazyVGrid(columns: vetor1){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.pink)
+                    }
+                }.padding()
+                
+                Text("Coluna 1: tamanho mínimo de 200\nColuna 2: tamanho correspondente ao espaço restante").font(.title3).bold()
+                LazyVGrid(columns: vetor2){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.pink)
+                    }
+                }.padding()
+
+            }
+        }
+    }
+    
+    struct HGridItemFlexible: View {
+        var vetor1 = [GridItem(.flexible(maximum: 50)), GridItem(.flexible())]
+        var vetor2 = [GridItem(.flexible(minimum: 200)),GridItem(.flexible())]
+        
+        var body: some View {
+            VStack {
+                Text("Linha 1: tamanho máximo de 50\nLinha 2: tamanho correspondente ao espaço restante").font(.title3).bold()
+                LazyHGrid(rows: vetor1){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.yellow)
+                    }
+                }.padding()
+                
+                Text("Linha 1: tamanho mínimo de 200\nLinha 2: tamanho correspondente ao espaço restante").font(.title3).bold()
+                LazyHGrid(rows: vetor2){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.yellow)
+                    }
+                }.padding()
+
+            }
+        }
+    }
+    
+    struct VGridItemFixedFlexible: View {
+        var vetor1 = [
+            GridItem(.fixed(250)),
+            GridItem(.flexible(maximum: 50))
+        ]
+        
+        var vetor2 = [
+            GridItem(.fixed(250)),
+            GridItem(.flexible(minimum: 50))
+        ]
+        
+        var body: some View {
+            VStack {
+                Text("Coluna 1: tamanho fixo de 250\nColuna 2: tamanho máximo de 50 (podendo ser menor)").font(.title3).bold()
+                LazyVGrid(columns: vetor1){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.pink)
+                    }
+                }.padding()
+                
+                Text("Coluna 1: tamanho fixo de 250\nColuna 2: tamanho mínimo de 50 (podendo ser maior)").font(.title3).bold()
+                LazyVGrid(columns: vetor2){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.pink)
+                    }
+                }.padding()
+
+            }
+        }
+    }
+    
 }
 
 
