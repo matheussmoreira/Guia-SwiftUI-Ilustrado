@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LazyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        LazyGrids.VGridItemFixed()
+        LazyGrids.VGridItemFixedFlexible()
+        LazyGrids.VGridItemFixedAdaptative()
     }
 }
 
@@ -415,7 +416,7 @@ struct LazyGrids {
     
     struct VGridItemFlexible: View {
         var vetor1 = [GridItem(.flexible(maximum: 50)), GridItem(.flexible())]
-        var vetor2 = [GridItem(.flexible(minimum: 200)),GridItem(.flexible())]
+        var vetor2 = [GridItem(.flexible(minimum: 200)), GridItem(.flexible())]
         
         var body: some View {
             VStack {
@@ -461,6 +462,54 @@ struct LazyGrids {
         }
     }
     
+    struct VGridItemAdaptative: View {
+        var vetor1 = [GridItem(.adaptive(minimum: 50))]
+        var vetor2 = [GridItem(.adaptive(minimum: 100))]
+        
+        var body: some View {
+            VStack {
+                Text("Tamanho mínimo de 50").font(.title3).bold()
+                LazyVGrid(columns: vetor1){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.green)
+                    }
+                }.padding()
+                
+                Text("Tamanho mínimo de 100").font(.title3).bold()
+                LazyVGrid(columns: vetor2){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.green)
+                    }
+                }.padding()
+                
+            }
+        }
+    }
+    
+    struct HGridItemAdaptative: View {
+        var vetor1 = [GridItem(.adaptive(minimum: 20))]
+        var vetor2 = [GridItem(.adaptive(minimum: 70))]
+        
+        var body: some View {
+            VStack {
+                Text("Tamanho mínimo de 20").font(.title3).bold()
+                LazyHGrid(rows: vetor1){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.gray)
+                    }
+                }.padding()
+                
+                Text("Tamanho mínimo de 70").font(.title3).bold()
+                LazyHGrid(rows: vetor2){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.gray)
+                    }
+                }.padding()
+                
+            }
+        }
+    }
+    
     struct VGridItemFixedFlexible: View {
         var vetor1 = [
             GridItem(.fixed(250)),
@@ -474,20 +523,81 @@ struct LazyGrids {
         
         var body: some View {
             VStack {
-                Text("Coluna 1: tamanho fixo de 250\nColuna 2: tamanho máximo de 50 (podendo ser menor)").font(.title3).bold()
+                Text("Coluna 1: tamanho fixo de 250\nColuna 2: tamanho flexível, máximo de 50 (podendo ser menor)").font(.title3).bold().padding()
                 LazyVGrid(columns: vetor1){
                     ForEach(1..<21) { n in
-                        Rectangle().foregroundColor(.pink)
+                        Rectangle().foregroundColor(.blue)
                     }
                 }.padding()
                 
-                Text("Coluna 1: tamanho fixo de 250\nColuna 2: tamanho mínimo de 50 (podendo ser maior)").font(.title3).bold()
+                Text("Coluna 1: tamanho fixo de 250\nColuna 2: tamanho flexível, mínimo de 50 (podendo ser maior)").font(.title3).bold().padding()
                 LazyVGrid(columns: vetor2){
                     ForEach(1..<21) { n in
-                        Rectangle().foregroundColor(.pink)
+                        Rectangle().foregroundColor(.blue)
                     }
                 }.padding()
 
+            }
+        }
+    }
+    
+    // em desuso
+    struct VGridItemAdaptativeFlexible: View {
+        var vetor1 = [
+            GridItem(.adaptive(minimum: 20)),
+            GridItem(.flexible())
+        ]
+        
+        var vetor2 = [
+            GridItem(.adaptive(minimum: 60)),
+            GridItem(.flexible())
+        ]
+        
+        var body: some View {
+            VStack {
+                Text("Seis primeiras colunas: itens com tamanho adaptativo, mínimo de 20\n\nÚltima coluna: itens com tamanho flexível").font(.title3).bold().padding()
+                LazyVGrid(columns: vetor1){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.purple)
+                    }
+                }.padding()
+                
+                Text("Seis primeiras colunas: itens com tamanho adaptativo, mínimo de 60\n\nÚltima coluna: itens com tamanho flexível").font(.title3).bold().padding()
+                LazyVGrid(columns: vetor2){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.purple)
+                    }
+                }.padding()
+            }
+        }
+    }
+    
+    struct VGridItemFixedAdaptative: View {
+        var vetor3 = [
+            GridItem(.adaptive(minimum: 10)),
+            GridItem(.fixed(200))
+        ]
+        
+        var vetor4 = [
+            GridItem(.adaptive(minimum: 40)),
+            GridItem(.fixed(200))
+        ]
+        
+        var body: some View {
+            VStack {
+                Text("Cinco primeiras colunas: itens com tamanho adaptativo, mínimo de 10\n\nÚltima coluna: itens com tamanho fixo de 200").font(.title3).bold().padding()
+                LazyVGrid(columns: vetor3){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.red)
+                    }
+                }.padding()
+                
+                Text("Cinco primeiras colunas: itens com tamanho adaptativo, mínimo de 40\n\nÚltima coluna: itens com tamanho fixo de 200").font(.title3).bold().padding()
+                LazyVGrid(columns: vetor4){
+                    ForEach(1..<21) { n in
+                        Rectangle().foregroundColor(.red)
+                    }
+                }.padding()
             }
         }
     }
