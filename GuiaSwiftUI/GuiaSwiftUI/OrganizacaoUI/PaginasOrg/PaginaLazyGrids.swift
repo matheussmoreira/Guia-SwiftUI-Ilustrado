@@ -20,6 +20,10 @@ struct PaginaLazyGrids: View {
     @State private var showHGridItemFixed = false
     @State private var showVGridItemFlexible = false
     @State private var showHGridItemFlexible = false
+    @State private var showVGridItemAdaptative = false
+    @State private var showHGridItemAdaptative = false
+    @State private var showVGridItemFixedFlexible = false
+    @State private var showVGridItemFixedAdaptative = false
     
     var body: some View {
         ZStack {
@@ -75,7 +79,7 @@ struct PaginaLazyGrids: View {
                             BotaoRetangular(nome: "Itens com tamanho fixo\nem grid horizontal")
                         }
                         .sheet(isPresented: $showHGridItemFixed) { LazyGrids.HGridItemFixed() }
-                    } // group
+                    } // Group
                     
                     Button(action: { showVGridItemFlexible.toggle() }) {
                         BotaoRetangular(nome: "Itens com tamanho flexível\nem grid vertical")
@@ -86,6 +90,27 @@ struct PaginaLazyGrids: View {
                         BotaoRetangular(nome: "Itens com tamanho flexível\nem grid horizontal")
                     }
                     .sheet(isPresented: $showHGridItemFlexible) { LazyGrids.HGridItemFlexible() }
+                    
+                    Button(action: { showVGridItemAdaptative.toggle() }) {
+                        BotaoRetangular(nome: "Itens com tamanho adaptativo\nem grid vertical")
+                    }
+                    .sheet(isPresented: $showVGridItemAdaptative) { LazyGrids.VGridItemAdaptative() }
+                    
+                    Button(action: { showHGridItemAdaptative.toggle() }) {
+                        BotaoRetangular(nome: "Itens com tamanho adaptativo\nem grid horizontal")
+                    }
+                    .sheet(isPresented: $showHGridItemAdaptative) { LazyGrids.HGridItemAdaptative() }
+                    
+                    Button(action: { showVGridItemFixedFlexible.toggle() }) {
+                        BotaoRetangular(nome: "Itens com tamanhos fixo e flexível")
+                    }
+                    .sheet(isPresented: $showVGridItemFixedFlexible) { LazyGrids.VGridItemFixedFlexible() }
+                    
+                    Button(action: { showVGridItemFixedAdaptative.toggle() }) {
+                        BotaoRetangular(nome: "Itens com tamanhos fixo e adaptativo")
+                    }
+                    .sheet(isPresented: $showVGridItemFixedAdaptative) { LazyGrids.VGridItemFixedAdaptative() }
+                    
                     
                 }.padding()
             }.offset(y: 60)
