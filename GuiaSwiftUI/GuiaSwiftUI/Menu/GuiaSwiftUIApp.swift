@@ -11,8 +11,8 @@ import SwiftUI
 struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            LazyGrids.VGridItemFixedAdaptative()
+            ContentView()
+//            LazyGrids.HGridItemAlignment()
         }
     }
 }

@@ -24,6 +24,10 @@ struct PaginaLazyGrids: View {
     @State private var showHGridItemAdaptative = false
     @State private var showVGridItemFixedFlexible = false
     @State private var showVGridItemFixedAdaptative = false
+    @State private var showVGridItemAlignment = false
+    @State private var showHGridItemAlignment = false
+    @State private var showVGridItemSpacing = false
+    @State private var showHGridItemSpacing = false
     
     var body: some View {
         ZStack {
@@ -81,35 +85,57 @@ struct PaginaLazyGrids: View {
                         .sheet(isPresented: $showHGridItemFixed) { LazyGrids.HGridItemFixed() }
                     } // Group
                     
-                    Button(action: { showVGridItemFlexible.toggle() }) {
-                        BotaoRetangular(nome: "Itens com tamanho flexível\nem grid vertical")
-                    }
-                    .sheet(isPresented: $showVGridItemFlexible) { LazyGrids.VGridItemFlexible() }
+                    Group {
+                        Button(action: { showVGridItemFlexible.toggle() }) {
+                            BotaoRetangular(nome: "Itens com tamanho flexível\nem grid vertical")
+                        }
+                        .sheet(isPresented: $showVGridItemFlexible) { LazyGrids.VGridItemFlexible() }
+                        
+                        Button(action: { showHGridItemFlexible.toggle() }) {
+                            BotaoRetangular(nome: "Itens com tamanho flexível\nem grid horizontal")
+                        }
+                        .sheet(isPresented: $showHGridItemFlexible) { LazyGrids.HGridItemFlexible() }
+                        
+                        Button(action: { showVGridItemAdaptative.toggle() }) {
+                            BotaoRetangular(nome: "Itens com tamanho adaptativo\nem grid vertical")
+                        }
+                        .sheet(isPresented: $showVGridItemAdaptative) { LazyGrids.VGridItemAdaptative() }
+                        
+                        Button(action: { showHGridItemAdaptative.toggle() }) {
+                            BotaoRetangular(nome: "Itens com tamanho adaptativo\nem grid horizontal")
+                        }
+                        .sheet(isPresented: $showHGridItemAdaptative) { LazyGrids.HGridItemAdaptative() }
+                        
+                        Button(action: { showVGridItemFixedFlexible.toggle() }) {
+                            BotaoRetangular(nome: "Itens com tamanhos fixo e flexível")
+                        }
+                        .sheet(isPresented: $showVGridItemFixedFlexible) { LazyGrids.VGridItemFixedFlexible() }
+                        
+                        Button(action: { showVGridItemFixedAdaptative.toggle() }) {
+                            BotaoRetangular(nome: "Itens com tamanhos fixo e adaptativo")
+                        }
+                        .sheet(isPresented: $showVGridItemFixedAdaptative) { LazyGrids.VGridItemFixedAdaptative() }
+                    } // Group
                     
-                    Button(action: { showHGridItemFlexible.toggle() }) {
-                        BotaoRetangular(nome: "Itens com tamanho flexível\nem grid horizontal")
+                    Button(action: { showVGridItemAlignment.toggle() }) {
+                        BotaoRetangular(nome: "Alinhamento de GridItem em grid vertical")
                     }
-                    .sheet(isPresented: $showHGridItemFlexible) { LazyGrids.HGridItemFlexible() }
+                    .sheet(isPresented: $showVGridItemAlignment) { LazyGrids.VGridItemAlignment() }
                     
-                    Button(action: { showVGridItemAdaptative.toggle() }) {
-                        BotaoRetangular(nome: "Itens com tamanho adaptativo\nem grid vertical")
+                    Button(action: { showHGridItemAlignment.toggle() }) {
+                        BotaoRetangular(nome: "Alinhamento de GridItem em grid horizontal")
                     }
-                    .sheet(isPresented: $showVGridItemAdaptative) { LazyGrids.VGridItemAdaptative() }
+                    .sheet(isPresented: $showHGridItemAlignment) { LazyGrids.HGridItemAlignment() }
                     
-                    Button(action: { showHGridItemAdaptative.toggle() }) {
-                        BotaoRetangular(nome: "Itens com tamanho adaptativo\nem grid horizontal")
+                    Button(action: { showVGridItemSpacing.toggle() }) {
+                        BotaoRetangular(nome: "Espaçamento de GridItem em grid vertical")
                     }
-                    .sheet(isPresented: $showHGridItemAdaptative) { LazyGrids.HGridItemAdaptative() }
+                    .sheet(isPresented: $showVGridItemSpacing) { LazyGrids.VGridItemSpacing() }
                     
-                    Button(action: { showVGridItemFixedFlexible.toggle() }) {
-                        BotaoRetangular(nome: "Itens com tamanhos fixo e flexível")
+                    Button(action: { showHGridItemSpacing.toggle() }) {
+                        BotaoRetangular(nome: "Espaçamento de GridItem em grid horizontal")
                     }
-                    .sheet(isPresented: $showVGridItemFixedFlexible) { LazyGrids.VGridItemFixedFlexible() }
-                    
-                    Button(action: { showVGridItemFixedAdaptative.toggle() }) {
-                        BotaoRetangular(nome: "Itens com tamanhos fixo e adaptativo")
-                    }
-                    .sheet(isPresented: $showVGridItemFixedAdaptative) { LazyGrids.VGridItemFixedAdaptative() }
+                    .sheet(isPresented: $showHGridItemSpacing) { LazyGrids.HGridItemSpacing() }
                     
                     
                 }.padding()
@@ -123,3 +149,25 @@ struct PaginaLazyGrids_Previews: PreviewProvider {
         PaginaLazyGrids(corPagina: .orange)
     }
 }
+
+/*
+ Button(action: { showVGridAlignment.toggle() }) {
+     BotaoRetangular(nome: "Alinhamento em grid vertical")
+ }
+ .sheet(isPresented: $showVGridAlignment) { LazyGrids.VGridAlignment() }
+ 
+ Button(action: { showHGridAlignment.toggle() }) {
+     BotaoRetangular(nome: "Alinhamento em grid horizontal")
+ }
+ .sheet(isPresented: $showHGridAlignment) { LazyGrids.HGridAlignment() }
+ 
+ Button(action: { showVGridSpacing.toggle() }) {
+     BotaoRetangular(nome: "Espaçamento em grid vertical")
+ }
+ .sheet(isPresented: $showVGridSpacing) { LazyGrids.VGridSpacing() }
+ 
+ Button(action: { showHGridSpacing.toggle() }) {
+     BotaoRetangular(nome: "Espaçamento em grid horizontal")
+ }
+ .sheet(isPresented: $showHGridSpacing) { LazyGrids.HGridSpacing() }
+ */
