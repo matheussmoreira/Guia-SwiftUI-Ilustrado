@@ -10,6 +10,7 @@ import SwiftUI
 struct PaginaLabel: View {
     let corPagina: Color
     @State private var showExemplos = false
+    
     var body: some View {
         ZStack {
             VStack {

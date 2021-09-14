@@ -12,6 +12,8 @@
 		6601FC1B25DC5492009752E3 /* Preenchimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6601FC1A25DC5492009752E3 /* Preenchimento.swift */; };
 		660B01D726B4363200F7DD92 /* PaginaLazyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660B01D626B4363200F7DD92 /* PaginaLazyGrids.swift */; };
 		664142A326A9A1880054C0E9 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664142A226A9A1880054C0E9 /* Preview.swift */; };
+		664E1A2C26F020A3008524C1 /* MyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E1A2B26F020A3008524C1 /* MyTextField.swift */; };
+		664E1A2E26F02A3A008524C1 /* PaginaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664E1A2D26F02A3A008524C1 /* PaginaTextField.swift */; };
 		66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */; };
 		66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */; };
 		66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F3425E8403200B5E578 /* PaginaModifiers.swift */; };
@@ -61,6 +63,8 @@
 		6601FC1A25DC5492009752E3 /* Preenchimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preenchimento.swift; sourceTree = "<group>"; };
 		660B01D626B4363200F7DD92 /* PaginaLazyGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaLazyGrids.swift; sourceTree = "<group>"; };
 		664142A226A9A1880054C0E9 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; };
+		664E1A2B26F020A3008524C1 /* MyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextField.swift; sourceTree = "<group>"; };
+		664E1A2D26F02A3A008524C1 /* PaginaTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaTextField.swift; sourceTree = "<group>"; };
 		66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaComponentes.swift; sourceTree = "<group>"; };
 		66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaOrganizacao.swift; sourceTree = "<group>"; };
 		66526F3425E8403200B5E578 /* PaginaModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaModifiers.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				66FE1E6725C3458C0051B36E /* Imagens.swift */,
 				66D3A91825C470B0001A0690 /* Botao.swift */,
 				669A71E526B03D3300A616FA /* Exemplos.swift */,
+				664E1A2B26F020A3008524C1 /* MyTextField.swift */,
 			);
 			path = ModulosComp;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 				66EA591F25E7DE5A00303D1F /* PaginaImage.swift */,
 				66EA592A25E7E19E00303D1F /* PaginaButton.swift */,
 				669A71E726B0458100A616FA /* PaginaLabel.swift */,
+				664E1A2D26F02A3A008524C1 /* PaginaTextField.swift */,
 			);
 			path = PaginasComp;
 			sourceTree = "<group>";
@@ -427,7 +433,9 @@
 				66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */,
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
 				66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */,
+				664E1A2C26F020A3008524C1 /* MyTextField.swift in Sources */,
 				664142A326A9A1880054C0E9 /* Preview.swift in Sources */,
+				664E1A2E26F02A3A008524C1 /* PaginaTextField.swift in Sources */,
 				669A71E626B03D3300A616FA /* Exemplos.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botao.swift in Sources */,
 				666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */,
