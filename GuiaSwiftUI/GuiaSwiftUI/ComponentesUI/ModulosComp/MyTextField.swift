@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyTextField_Previews: PreviewProvider {
     static var previews: some View {
-        MyTextField.Autocapitalizacao()
+        MyTextField.Estilos()
     }
 }
 
@@ -73,6 +73,51 @@ struct MyTextField {
                     .autocapitalization(.words)
                 TextField(".none", text: $texto4)
                     .autocapitalization(.none)
+                
+            }.padding(.horizontal)
+        }
+    }
+    
+    struct Autocorrecao: View {
+        @State private var texto1 = ""
+        @State private var texto2 = ""
+        
+        var body: some View {
+            VStack {
+                HStack {
+                    Text("Digite abaixo:")
+                        .font(.headline)
+                    Spacer()
+                }
+                TextField("Digite aqui", text: $texto1)
+                    .disableAutocorrection(true)
+                TextField("Digite aqui", text: $texto2)
+                    .disableAutocorrection(false)
+            }.padding(.horizontal)
+        }
+    }
+    
+    struct Estilos: View {
+        @State private var texto1 = ""
+        @State private var texto2 = ""
+        @State private var texto3 = ""
+        @State private var texto4 = ""
+        
+        var body: some View {
+            VStack {
+                HStack {
+                    Text("Estilos")
+                        .font(.headline)
+                    Spacer()
+                }
+                TextField(".automatic", text: $texto1)
+                    .textFieldStyle(.automatic)
+                TextField(".plain", text: $texto2)
+                    .textFieldStyle(.plain)
+                TextField(".roundedBorder", text: $texto3)
+                    .textFieldStyle(.roundedBorder)
+//                TextField(".squareBorder", text: $texto4)
+//                    .textFieldStyle(.squareBorder)
                 
             }.padding(.horizontal)
         }
