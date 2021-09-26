@@ -45,6 +45,10 @@ struct PaginaComponentes : View {
                         BotaoQuadrado(nome: "SecureField", cor: nil)
                     }
                     
+                    NavigationLink(destination: PaginaTextEditor(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "TextEditor", cor: nil)
+                    }
+                    
                 }.padding()
             }.offset(y: 60)
         }
