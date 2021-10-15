@@ -12,7 +12,7 @@ struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            MyTextEditor.ExemploUnico()
+//            MyLink()
         }
     }
 }
