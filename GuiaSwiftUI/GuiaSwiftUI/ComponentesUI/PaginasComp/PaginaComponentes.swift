@@ -53,6 +53,10 @@ struct PaginaComponentes : View {
                         BotaoQuadrado(nome: "Link", cor: nil)
                     }
                     
+                    NavigationLink(destination: PaginaMenu(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Menu", cor: nil)
+                    }
+                    
                 }.padding()
             }.offset(y: 60)
         }

@@ -1,5 +1,5 @@
 //
-//  Label.swift
+//  MyLabel.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 27/07/21.

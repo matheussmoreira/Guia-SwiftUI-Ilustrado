@@ -18,9 +18,11 @@
 		66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */; };
 		66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F3425E8403200B5E578 /* PaginaModifiers.swift */; };
 		66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F4525E842A700B5E578 /* PaginaSobre.swift */; };
+		66674FB62770F06D00FE9231 /* MyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB52770F06D00FE9231 /* MyMenu.swift */; };
+		66674FB82771001C00FE9231 /* PaginaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB72771001C00FE9231 /* PaginaMenu.swift */; };
 		666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666A8B0625E696AD0039E5D4 /* PaginaText.swift */; };
 		667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B0EFF25C1CAFB00A079F8 /* Stacks.swift */; };
-		669A71E626B03D3300A616FA /* Exemplos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E526B03D3300A616FA /* Exemplos.swift */; };
+		669A71E626B03D3300A616FA /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E526B03D3300A616FA /* MyLabel.swift */; };
 		669A71E826B0458100A616FA /* PaginaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E726B0458100A616FA /* PaginaLabel.swift */; };
 		669A71EA26B04AE500A616FA /* LazyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E926B04AE500A616FA /* LazyGrids.swift */; };
 		66CDD79B2700E634001C9F30 /* MySecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CDD79A2700E634001C9F30 /* MySecureField.swift */; };
@@ -75,9 +77,11 @@
 		66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaOrganizacao.swift; sourceTree = "<group>"; };
 		66526F3425E8403200B5E578 /* PaginaModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaModifiers.swift; sourceTree = "<group>"; };
 		66526F4525E842A700B5E578 /* PaginaSobre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSobre.swift; sourceTree = "<group>"; };
+		66674FB52770F06D00FE9231 /* MyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenu.swift; sourceTree = "<group>"; };
+		66674FB72771001C00FE9231 /* PaginaMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaMenu.swift; sourceTree = "<group>"; };
 		666A8B0625E696AD0039E5D4 /* PaginaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaText.swift; sourceTree = "<group>"; };
 		667B0EFF25C1CAFB00A079F8 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
-		669A71E526B03D3300A616FA /* Exemplos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exemplos.swift; sourceTree = "<group>"; };
+		669A71E526B03D3300A616FA /* MyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
 		669A71E726B0458100A616FA /* PaginaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaLabel.swift; sourceTree = "<group>"; };
 		669A71E926B04AE500A616FA /* LazyGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyGrids.swift; sourceTree = "<group>"; };
 		66CDD79A2700E634001C9F30 /* MySecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecureField.swift; sourceTree = "<group>"; };
@@ -175,11 +179,12 @@
 				66F6577425C0D05D007F6C99 /* Texto.swift */,
 				66FE1E6725C3458C0051B36E /* Imagens.swift */,
 				66D3A91825C470B0001A0690 /* Botao.swift */,
-				669A71E526B03D3300A616FA /* Exemplos.swift */,
+				669A71E526B03D3300A616FA /* MyLabel.swift */,
 				664E1A2B26F020A3008524C1 /* MyTextField.swift */,
 				66CDD79A2700E634001C9F30 /* MySecureField.swift */,
 				66CDD79E2700F02C001C9F30 /* MyTextEditor.swift */,
 				66CF8F8A271A2FFF00D506B4 /* MyLink.swift */,
+				66674FB52770F06D00FE9231 /* MyMenu.swift */,
 			);
 			path = ModulosComp;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 				66CDD79C2700EAE4001C9F30 /* PaginaSecureField.swift */,
 				66CDD7A02700F641001C9F30 /* PaginaTextEditor.swift */,
 				66CF8F8C271A3D6000D506B4 /* PaginaLink.swift */,
+				66674FB72771001C00FE9231 /* PaginaMenu.swift */,
 			);
 			path = PaginasComp;
 			sourceTree = "<group>";
@@ -449,13 +455,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */,
+				66674FB82771001C00FE9231 /* PaginaMenu.swift in Sources */,
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
 				66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */,
 				664E1A2C26F020A3008524C1 /* MyTextField.swift in Sources */,
 				664142A326A9A1880054C0E9 /* Preview.swift in Sources */,
 				664E1A2E26F02A3A008524C1 /* PaginaTextField.swift in Sources */,
 				66CF8F8B271A2FFF00D506B4 /* MyLink.swift in Sources */,
-				669A71E626B03D3300A616FA /* Exemplos.swift in Sources */,
+				669A71E626B03D3300A616FA /* MyLabel.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botao.swift in Sources */,
 				666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */,
 				66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */,
@@ -468,6 +475,7 @@
 				6601FC1B25DC5492009752E3 /* Preenchimento.swift in Sources */,
 				66CDD7A12700F641001C9F30 /* PaginaTextEditor.swift in Sources */,
 				6601FC1525DC4BBE009752E3 /* Divisor.swift in Sources */,
+				66674FB62770F06D00FE9231 /* MyMenu.swift in Sources */,
 				CED8E64A25F522F600615929 /* UI.swift in Sources */,
 				66CDD79F2700F02C001C9F30 /* MyTextEditor.swift in Sources */,
 				66FE1E6825C3458C0051B36E /* Imagens.swift in Sources */,
@@ -642,7 +650,7 @@
 				DEVELOPMENT_TEAM = P27VQVDFNQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GuiaSwiftUI/Recursos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -664,7 +672,7 @@
 				DEVELOPMENT_TEAM = P27VQVDFNQ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GuiaSwiftUI/Recursos/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
