@@ -7,7 +7,7 @@ Se você está iniciando no mundo da programação saiba que, em algum momento d
 
 <img src="https://github.com/matheussmoreira/Guia-SwiftUI-Ilustrado/blob/main/Pagina.png">
 
-# [Baixar o Guia Ilustrado (1ª edição)](https://www.dropbox.com/s/pxc8807v94po5j4/Guia%20SwiftUI%20Ilustrado.pdf?dl=0)
+# [Baixar o Guia Ilustrado (1ª edição)](https://drive.google.com/file/d/1K-yHn5O0r96xuYszdFG-AmYitADYgPca/view)
 
 ## Este e-book serve para mim?
 Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o básico da linguagem **Swift**, no entanto, o que mais vale para esta situação é a **vontade de aprender** e, bem, possuir um simples **leitor de pdf!**
