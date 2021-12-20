@@ -57,6 +57,10 @@ struct PaginaComponentes : View {
                         BotaoQuadrado(nome: "Menu", cor: nil)
                     }
                     
+                    NavigationLink(destination: PaginaToggle(corPagina: corPagina)) {
+                        BotaoQuadrado(nome: "Toggle", cor: nil)
+                    }
+                    
                 }.padding()
             }.offset(y: 60)
         }

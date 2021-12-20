@@ -20,6 +20,8 @@
 		66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F4525E842A700B5E578 /* PaginaSobre.swift */; };
 		66674FB62770F06D00FE9231 /* MyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB52770F06D00FE9231 /* MyMenu.swift */; };
 		66674FB82771001C00FE9231 /* PaginaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB72771001C00FE9231 /* PaginaMenu.swift */; };
+		66674FBA2771058500FE9231 /* MyToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB92771058500FE9231 /* MyToggle.swift */; };
+		66674FBC2771110B00FE9231 /* PaginaToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FBB2771110B00FE9231 /* PaginaToggle.swift */; };
 		666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666A8B0625E696AD0039E5D4 /* PaginaText.swift */; };
 		667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B0EFF25C1CAFB00A079F8 /* Stacks.swift */; };
 		669A71E626B03D3300A616FA /* MyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669A71E526B03D3300A616FA /* MyLabel.swift */; };
@@ -79,6 +81,8 @@
 		66526F4525E842A700B5E578 /* PaginaSobre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSobre.swift; sourceTree = "<group>"; };
 		66674FB52770F06D00FE9231 /* MyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenu.swift; sourceTree = "<group>"; };
 		66674FB72771001C00FE9231 /* PaginaMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaMenu.swift; sourceTree = "<group>"; };
+		66674FB92771058500FE9231 /* MyToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToggle.swift; sourceTree = "<group>"; };
+		66674FBB2771110B00FE9231 /* PaginaToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaToggle.swift; sourceTree = "<group>"; };
 		666A8B0625E696AD0039E5D4 /* PaginaText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaText.swift; sourceTree = "<group>"; };
 		667B0EFF25C1CAFB00A079F8 /* Stacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacks.swift; sourceTree = "<group>"; };
 		669A71E526B03D3300A616FA /* MyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLabel.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 				66CDD79E2700F02C001C9F30 /* MyTextEditor.swift */,
 				66CF8F8A271A2FFF00D506B4 /* MyLink.swift */,
 				66674FB52770F06D00FE9231 /* MyMenu.swift */,
+				66674FB92771058500FE9231 /* MyToggle.swift */,
 			);
 			path = ModulosComp;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				66CDD7A02700F641001C9F30 /* PaginaTextEditor.swift */,
 				66CF8F8C271A3D6000D506B4 /* PaginaLink.swift */,
 				66674FB72771001C00FE9231 /* PaginaMenu.swift */,
+				66674FBB2771110B00FE9231 /* PaginaToggle.swift */,
 			);
 			path = PaginasComp;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66674FBC2771110B00FE9231 /* PaginaToggle.swift in Sources */,
 				66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */,
 				66674FB82771001C00FE9231 /* PaginaMenu.swift in Sources */,
 				667B0F0025C1CAFB00A079F8 /* Stacks.swift in Sources */,
@@ -463,6 +470,7 @@
 				664E1A2E26F02A3A008524C1 /* PaginaTextField.swift in Sources */,
 				66CF8F8B271A2FFF00D506B4 /* MyLink.swift in Sources */,
 				669A71E626B03D3300A616FA /* MyLabel.swift in Sources */,
+				66674FBA2771058500FE9231 /* MyToggle.swift in Sources */,
 				66D3A91925C470B0001A0690 /* Botao.swift in Sources */,
 				666A8B0725E696AD0039E5D4 /* PaginaText.swift in Sources */,
 				66EA593925E7EAF000303D1F /* PaginaSpacer.swift in Sources */,
