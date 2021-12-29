@@ -5,7 +5,7 @@ Se você está iniciando no mundo da programação saiba que, em algum momento d
 
 É com isso que idealizamos o **Guia SwiftUI Ilustrado**, um e-book onde você encontrará diversos trechos de código e ilustrações correspondentes em tela que lhe esclarecerão como funciona a construção de interfaces gráficas através do **framework SwiftUI**, com o intuito de lhe auxiliar nos seus **estudos de desenvolvimento iOS.**
 
-<img src="https://github.com/matheussmoreira/Guia-SwiftUI-Ilustrado/blob/main/Exemplo.png">
+<img src="https://github.com/matheussmoreira/Guia-SwiftUI-Ilustrado/blob/main/Pagina.png">
 
 ## Este e-book serve para mim?
 Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o básico da linguagem **Swift**, no entanto, o que mais vale para esta situação é a **vontade de aprender** e, bem, possuir um simples **leitor de pdf!**
