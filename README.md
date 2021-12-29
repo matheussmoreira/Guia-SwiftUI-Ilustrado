@@ -1,5 +1,5 @@
 # Guia SwiftUI Ilustrado
-## O Que é o Guia?
+## O que é o Guia?
 
 Se você está iniciando no mundo da programação saiba que, em algum momento dos seus estudos, deverá consultar a documentação oficial da linguagem ou framework que você está estudando para adquirir algumas informações específicas. **No mundo do desenvolvimento iOS isso não poderia ser diferente, não é mesmo?** Apesar das vantagens da documentação, desejamos tornar este processo mais simples. Não apenas a consulta, mas a própria aprendizagem, para sermos mais precisos!
 
@@ -7,14 +7,13 @@ Se você está iniciando no mundo da programação saiba que, em algum momento d
 
 <img src="https://github.com/matheussmoreira/Guia-SwiftUI-Ilustrado/blob/main/Pagina.png">
 
-# [Baixar o Guia Ilustrado (2ª edição) - Em produção!](https://www.dropbox.com/s/q6sylrzsbonk8wc/Produ%C3%A7%C3%A3o%20211221.pdf?dl=0)
-
 ## Este e-book serve para mim?
 Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o básico da linguagem **Swift**, no entanto, o que mais vale para esta situação é a **vontade de aprender** e, bem, possuir um simples **leitor de pdf!**
 
 Este Guia pode ser de maior proveito para estudantes iniciantes por conta do conteúdo e da linguagem simplificada, porém acreditamos que ele seja de grande valor para qualquer um que esteja buscando conhecer os variados elementos do SwiftUI por meio de **suporte visual.**
 
-Deseja discutir sobre outros detalhes do projeto? Envie um e-mail para matheussmoreira100@gmail.com com o assunto *Discussão: Guia SwiftUI Ilustrado*
+## [Baixar o Guia SwiftUI (Edição de Demonstração)](https://drive.google.com/file/d/1iOpF1OrbPwBAaM98LRjlPXEEPProbGAk/view?usp=sharing)
+Este e-book atualmente se encontra em fase de produção, contudo, você já pode ter um gostinho de como ele está ficando. Clique aqui acima para baixar!
 
 ## Idealizadores do projeto
 | <img src="https://avatars.githubusercontent.com/u/62520284?s=400&u=565e559fc4b743cbcd2ee3cde97e30854e166494&v=4" width=200>    | <img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=200> |
