@@ -12,6 +12,8 @@ struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+//            MyToggle.Estilos()
         }
     }
 }
+

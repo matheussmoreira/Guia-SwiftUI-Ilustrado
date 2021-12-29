@@ -1,100 +1,20 @@
 //
-//  EspacoAlinhamento.swift
+//  Modifiers.swift
 //  GuiaSwiftUI
 //
-//  Created by Matheus S. Moreira on 28/01/21.
+//  Created by Matheus S. Moreira on 16/02/21.
 //
 
 import SwiftUI
 
-struct EspacoAlinhamento_Previews : PreviewProvider {
+struct Modifiers_Previews : PreviewProvider {
     static var previews: some View {
-        //Espacamento.SpacerAbaixo()
-        //Espacamento.SpacerAcima()
-        //Espacamento.SpacerNoMeio()
-        //Espacamento.Divisor()
-        Espacamento.Padding()
-        Espacamento.PaddingNumerico()
+        Preenchimento.IgnoresSafeArea()
     }
 }
 
-struct Espacamento {
-    
-    struct SpacerAbaixo : View {
-        var body: some View {
-            VStack {
-                Text("Spacer inserido\nabaixo do texto")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .multilineTextAlignment(.center)
-                Spacer()
-            }
-        }
-    }
-    
-    struct SpacerAcima : View {
-        var body: some View {
-            VStack {
-                Spacer()
-                Text("Spacer inserido\nacima do texto")
-                    .font(.title)
-                    .fontWeight(.bold)
-            }
-        }
-    }
-    
-    struct SpacerNoMeio : View {
-        var body: some View {
-            
-            VStack {
-                Text("Spacer entre")
-                    .font(.title)
-                    .fontWeight(.bold)
-                Spacer()
-                Text("dois textos")
-                    .font(.title)
-                    .fontWeight(.bold)
-            }
-        
-        }
-    }
-    
-    struct Divisor : View {
-        var body: some View {
-            VStack {
-                
-                VStack {
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.blue)
-                        .padding()
-                    Divider()
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.blue)
-                        .padding()
-                }.border(Color.blue).padding()
-                
-                HStack {
-                    
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.orange)
-                        .padding()
-                    
-                    Divider()
-                    
-                    Circle()
-                        .frame(width: 100, height: 100)
-                        .foregroundColor(.orange)
-                        .padding()
-                    
-                }.border(Color.orange).padding()
-            }
-        }
-    }
-    
-    struct Padding : View {
+struct Preenchimento {
+    struct PaddingPosicoes : View {
         var body: some View {
             VStack {
                 VStack {
@@ -170,21 +90,45 @@ struct Espacamento {
         }
     }
     
-    struct PaddingNumerico : View {
+    struct PaddingMultiplasPosicoes : View {
+        var body: some View {
+            Circle()
+                .foregroundColor(.green)
+                .frame(width: 40, height: 40)
+                .padding([.top, .bottom, .leading])
+                .border(Color.red)
+        }
+    }
+    
+    struct PaddingValorNumerico : View {
+        @Environment(\.colorScheme) var colorScheme
         var body: some View {
             VStack {
                 Text(".leading, 15")
                     .font(.title)
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .padding(.leading, 15)
-                    .background(Color.black)
+                    .background(colorScheme == .dark ? Color.white : Color.black)
                 
                 Text(".leading, 70")
                     .font(.title)
-                    .foregroundColor(.white)
+                    .foregroundColor(colorScheme == .dark ? Color.black : Color.white)
                     .padding(.leading, 70)
-                    .background(Color.black)
+                    .background(colorScheme == .dark ? Color.white : Color.black)
                     .offset(y: 15)
+            }
+        }
+    }
+    
+    struct IgnoresSafeArea : View {
+        var body: some View {
+            ZStack {
+                Color.orange
+                    .ignoresSafeArea()
+                Text("Ignorando a safe area")
+                    .foregroundColor(.white)
+                    .font(.title)
+                    .bold()
             }
         }
     }

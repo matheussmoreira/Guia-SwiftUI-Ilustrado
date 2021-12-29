@@ -9,21 +9,20 @@ import SwiftUI
 
 struct Stacks_Previews: PreviewProvider {
     static var previews: some View {
-        Stacks.Exemplos()
-        Stacks.Alinhamentos()
-        Stacks.Espacamentos()
-        Stacks.Aninhadas()
+        //Stacks.Tipos()
+        //Stacks.Alinhamentos()
+        //Stacks.Espacamentos()
+        //Stacks.Aninhadas()
+        Stacks.AlinhamentoHorizontal()
     }
 }
 
 
 struct Stacks {
-    struct Exemplos : View {
+    struct Tipos : View {
         var body: some View {
             VStack {
                 Text("VStack").font(.title).fontWeight(.bold)
-                
-
                 VStack {
                     Rectangle()
                         .frame(width: 120, height: 120)
@@ -32,12 +31,8 @@ struct Stacks {
                     Circle()
                         .frame(width: 100, height: 100)
                         .foregroundColor(.red)
-                }
+                }.padding()
                 
-                
-                .padding()
-                
-                Spacer()
                 
                 Text("HStack").font(.title).fontWeight(.bold)
                 HStack {
@@ -50,7 +45,6 @@ struct Stacks {
                         .foregroundColor(.red)
                 }
                 
-                Spacer()
                 
                 Text("ZStack").font(.title).fontWeight(.bold)
                 ZStack {
@@ -66,16 +60,14 @@ struct Stacks {
         }
     }
     
-    struct Alinhamentos : View {
+    struct AlinhamentoVertical : View {
         var body : some View {
             VStack {
-                Text("Alinhamentos")
+                Text("Alinhamento em VStack")
                     .font(.title)
                     .fontWeight(.bold)
                 
-                /// EXEMPLO 1
                 HStack {
-                    
                     VStack(alignment: .leading) {
                         ZStack {
                             Rectangle()
@@ -94,12 +86,8 @@ struct Stacks {
                             .frame(width: 20, height: 20)
                             .foregroundColor(.red)
                     }
-                    
-                    
-                    
                     .border(Color.blue)
                     
-                    /// EXEMPLO 2
                     VStack(alignment: .center) {
                         ZStack {
                             Rectangle()
@@ -120,7 +108,6 @@ struct Stacks {
                     }
                     .border(Color.blue)
                     
-                    /// EXEMPLO 3
                     VStack(alignment: .trailing) {
                         ZStack {
                             Rectangle()
@@ -145,19 +132,93 @@ struct Stacks {
         }
     }
     
-    struct Espacamentos : View {
+    struct AlinhamentoHorizontal : View {
         var body : some View {
             VStack {
-                Text("Espaçamentos")
+                Text("Alinhamento em HStack")
                     .font(.title)
                     .fontWeight(.bold)
                 
-                /// EXEMPLO 1
+                HStack(alignment: .top) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 100, height: 60)
+                            .foregroundColor(.blue)
+                        Text(".top")
+                            .bold()
+                            .foregroundColor(.white)
+                    } // retagulo azul com texto
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                }
+                .border(Color.blue)
+                
+                HStack(alignment: .center) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 100, height: 60)
+                            .foregroundColor(.blue)
+                        Text(".center")
+                            .bold()
+                            .foregroundColor(.white)
+                    } // retagulo azul com texto
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                }
+                .border(Color.blue)
+                
+                HStack(alignment: .bottom) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 100, height: 60)
+                            .foregroundColor(.blue)
+                        Text(".bottom")
+                            .bold()
+                            .foregroundColor(.white)
+                    } // retagulo azul com texto
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.red)
+                }
+                .border(Color.blue)
+            }
+        }
+    }
+    
+    struct EspacamentoVertical : View {
+        var body : some View {
+            VStack {
+                Text("Espaçamento em VStack")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
                 HStack {
                     VStack(spacing: 40) {
-                        Rectangle()
-                            .frame(width: 160, height: 60)
-                            .foregroundColor(.green)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 160, height: 60)
+                                .foregroundColor(.green)
+                            Text("Valor 40")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                         
                         Circle()
                             .frame(width: 50, height: 50)
@@ -166,16 +227,19 @@ struct Stacks {
                         Circle()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.red)
+                            .padding()
                     }
                     .border(Color.green)
                     
-                    /// EXEMPLO 2
-                    
-                    
                     VStack(spacing: 80) {
-                        Rectangle()
-                            .frame(width: 60, height: 60)
-                            .foregroundColor(.green)
+                        ZStack {
+                            Rectangle()
+                                .frame(width: 160, height: 60)
+                                .foregroundColor(.green)
+                            Text("Valor 80")
+                                .bold()
+                                .foregroundColor(.white)
+                        }
                         
                         Circle()
                             .frame(width: 50, height: 50)
@@ -184,12 +248,62 @@ struct Stacks {
                         Circle()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.red)
+                            .padding()
                     }.border(Color.green)
-                    
-                    
-                    
-                    
                 }
+            }
+        }
+    }
+    
+    struct EspacamentoHorizontal : View {
+        var body: some View {
+            VStack {
+                Text("Espaçamento em HStack")
+                    .font(.title)
+                    .fontWeight(.bold)
+                
+                HStack(spacing: 10) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 120, height: 80)
+                            .foregroundColor(.green)
+                        Text("Valor 10")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                .border(Color.green)
+                
+                HStack(spacing: 50) {
+                    ZStack {
+                        Rectangle()
+                            .frame(width: 120, height: 80)
+                            .foregroundColor(.green)
+                        Text("Valor 50")
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                    
+                    Circle()
+                        .frame(width: 50, height: 50)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+                .border(Color.green)
+                
             }
         }
     }
@@ -230,8 +344,26 @@ struct Stacks {
             }
         }
     }
-
-
-
+    
+    struct LazyStacks : View {
+        var body: some View {
+            VStack {
+                Text("O código ao lado foi escrito para exibir 1000 quadrados. \n\nComo não mais que 4 aparecem na tela, somente estes são carregados pelo sistema, como se o restante não existisse.")
+                    .font(.title3)
+                    .padding()
+                LazyHStack {
+                    ForEach(Range(1...1000)) { _ in
+                        Rectangle()
+                            .foregroundColor(.purple)
+                            .frame(width: 100, height: 100)
+                            .padding()
+                    }
+                }.frame(height: 200)
+                Text("OBS: quando temos um número de componentes maior que o que conseguimos exibir na tela de uma só vez, é bem provável que eles estejam contidos numa barra de rolagem.")
+                    .font(.title3)
+                    .padding()
+            }
+        }
+    }
 
 }
