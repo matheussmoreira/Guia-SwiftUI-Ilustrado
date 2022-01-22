@@ -12,8 +12,8 @@ Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o
 
 Este Guia pode ser de maior proveito para estudantes iniciantes por conta do conteúdo e da linguagem simplificada, porém acreditamos que ele seja de grande valor para qualquer um que esteja buscando conhecer os variados elementos do SwiftUI por meio de **suporte visual.**
 
-## [Baixar o Guia SwiftUI (Edição de Demonstração)](https://drive.google.com/file/d/1iOpF1OrbPwBAaM98LRjlPXEEPProbGAk/view?usp=sharing)
-Este e-book atualmente se encontra em fase de produção, contudo, você já pode ter um gostinho de como ele está ficando. Clique aqui acima para baixar!
+## [Baixar o Guia SwiftUI (Amostra)](https://drive.google.com/file/d/1iOpF1OrbPwBAaM98LRjlPXEEPProbGAk/view?usp=sharing)
+A produção deste e-book atualmente se encontra em interrompida, porém você pode acessar o link acima e baixar a edição de demonstração!
 
 ## Idealizadores do projeto
 | <img src="https://avatars.githubusercontent.com/u/62520284?s=400&u=565e559fc4b743cbcd2ee3cde97e30854e166494&v=4" width=200>    | <img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=200> |
