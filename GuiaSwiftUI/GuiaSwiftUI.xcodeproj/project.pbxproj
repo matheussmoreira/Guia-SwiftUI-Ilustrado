@@ -23,7 +23,6 @@
 		66526F2825E83FCA00B5E578 /* PaginaComponentes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */; };
 		66526F3025E8401700B5E578 /* PaginaOrganizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */; };
 		66526F3525E8403200B5E578 /* PaginaModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F3425E8403200B5E578 /* PaginaModifiers.swift */; };
-		66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66526F4525E842A700B5E578 /* PaginaSobre.swift */; };
 		66674FB62770F06D00FE9231 /* MyMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB52770F06D00FE9231 /* MyMenu.swift */; };
 		66674FB82771001C00FE9231 /* PaginaMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB72771001C00FE9231 /* PaginaMenu.swift */; };
 		66674FBA2771058500FE9231 /* MyToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66674FB92771058500FE9231 /* MyToggle.swift */; };
@@ -71,7 +70,6 @@
 		66526F2725E83FCA00B5E578 /* PaginaComponentes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaComponentes.swift; sourceTree = "<group>"; };
 		66526F2F25E8401700B5E578 /* PaginaOrganizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaOrganizacao.swift; sourceTree = "<group>"; };
 		66526F3425E8403200B5E578 /* PaginaModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaModifiers.swift; sourceTree = "<group>"; };
-		66526F4525E842A700B5E578 /* PaginaSobre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaSobre.swift; sourceTree = "<group>"; };
 		66674FB52770F06D00FE9231 /* MyMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMenu.swift; sourceTree = "<group>"; };
 		66674FB72771001C00FE9231 /* PaginaMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginaMenu.swift; sourceTree = "<group>"; };
 		66674FB92771058500FE9231 /* MyToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToggle.swift; sourceTree = "<group>"; };
@@ -278,7 +276,6 @@
 			children = (
 				BB576D5625C08FBD00F0B4E9 /* ContentView.swift */,
 				BB576D5425C08FBD00F0B4E9 /* GuiaSwiftUIApp.swift */,
-				66526F4525E842A700B5E578 /* PaginaSobre.swift */,
 				CED8E64925F522F600615929 /* UI.swift */,
 			);
 			path = Menu;
@@ -503,7 +500,6 @@
 				669A71EA26B04AE500A616FA /* LazyGrids.swift in Sources */,
 				66CDD79D2700EAE4001C9F30 /* PaginaSecureField.swift in Sources */,
 				BB576D5725C08FBD00F0B4E9 /* ContentView.swift in Sources */,
-				66526F4625E842A700B5E578 /* PaginaSobre.swift in Sources */,
 				660B01D726B4363200F7DD92 /* PaginaLazyGrids.swift in Sources */,
 				66CF8F8D271A3D6000D506B4 /* PaginaLink.swift in Sources */,
 				66EA592025E7DE5A00303D1F /* PaginaImage.swift in Sources */,

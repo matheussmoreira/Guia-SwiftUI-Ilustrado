@@ -2,7 +2,7 @@
 //  UI.swift
 //  GuiaSwiftUI
 //
-//  Created by User on 07/03/21.
+//  Created by Matheus S. Moreira on 07/03/21.
 //
 
 import SwiftUI
