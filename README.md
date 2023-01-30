@@ -12,14 +12,16 @@ Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o
 
 Este Guia pode ser de maior proveito para estudantes iniciantes por conta do conteúdo e da linguagem simplificada, porém acreditamos que ele seja de grande valor para qualquer um que esteja buscando conhecer os variados elementos do SwiftUI por meio de **suporte visual.**
 
-### [Baixar o Guia SwiftUI (Amostra)](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
-# OBS:
-A produção deste e-book atualmente se encontra interrompida, porém você pode acessar o link acima e baixar a edição de demonstração!
+## [Baixar o Guia SwiftUI (Amostra)](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
+### OBS (29/01/2023)
+A produção deste e-book atualmente se encontra interrompida, porém ela vai voltar em breve!
+
+Acesse o link acima para baixar a edição de demonstração.
 
 ## Idealizadores do projeto
 | <img src="https://avatars.githubusercontent.com/u/62520284?s=400&u=565e559fc4b743cbcd2ee3cde97e30854e166494&v=4" width=200>    | <img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=200> |
 | ----------- | ----------- |
 | **Matheus S. Moreira** | **Lidiane Chen Wang**|
-| Apple Developer Academy @ PUC-Rio | Apple Developer Academy @ PUC-Rio |
+| Apple Developer Academy PUC-Rio | Apple Developer Academy PUC-Rio |
 | Rio de Janeiro - Turma 2020 | Rio de Janeiro - Turma 2020 |
 | Programador | Designer |
