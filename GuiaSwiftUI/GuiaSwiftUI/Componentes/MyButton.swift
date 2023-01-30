@@ -1,5 +1,5 @@
 //
-//  Botoes.swift
+//  MyButton.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 29/01/21.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Botao_Previews : PreviewProvider {
+struct MyButton_Previews : PreviewProvider {
     static var previews: some View {
-        Botao.Action_Sheet()
+        MyButton.Action_Sheet()
     }
 }
 
-struct Botao {
+struct MyButton {
     struct ExemploInicial : View {
         var body: some View {
             VStack {

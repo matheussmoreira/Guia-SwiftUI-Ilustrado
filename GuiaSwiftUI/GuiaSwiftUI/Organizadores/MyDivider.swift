@@ -1,5 +1,5 @@
 //
-//  Divisor.swift
+//  MyDivider.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 16/02/21.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Divisor_Previews : PreviewProvider {
+struct MyDivider_Previews : PreviewProvider {
     static var previews: some View {
-        Divisor.ExemploUnico()
+        MyDivider.ExemploUnico()
     }
 }
 
-struct Divisor {
+struct MyDivider {
     struct ExemploUnico : View {
         var body: some View {
             VStack {
