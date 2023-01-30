@@ -1,5 +1,5 @@
 //
-//  LazyGrids.swift
+//  MyLazyGrids.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 27/07/21.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct LazyGrids_Previews: PreviewProvider {
+struct MyLazyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        LazyGrids.VGridItemAlignment()
-        LazyGrids.HGridItemAlignment()
+        MyLazyGrids.VGridItemAlignment()
+        MyLazyGrids.HGridItemAlignment()
     }
 }
 
-struct LazyGrids {
+struct MyLazyGrids {
     struct VGrid: View {
         let cols: [GridItem] =
             Array(repeating: GridItem(.flexible()), count: 5)

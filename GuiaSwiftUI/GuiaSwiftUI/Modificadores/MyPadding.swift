@@ -1,5 +1,5 @@
 //
-//  Modifiers.swift
+//  MyPadding.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 16/02/21.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Modifiers_Previews : PreviewProvider {
+struct MyPadding_Previews : PreviewProvider {
     static var previews: some View {
-        Preenchimento.IgnoresSafeArea()
+        MyPadding.IgnoresSafeArea()
     }
 }
 
-struct Preenchimento {
+struct MyPadding {
     struct PaddingPosicoes : View {
         var body: some View {
             VStack {
