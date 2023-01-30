@@ -1,5 +1,5 @@
 //
-//  Espaco.swift
+//  MySpacer.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 16/02/21.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct Espaco_Previews : PreviewProvider {
+struct MySpacer_Previews : PreviewProvider {
     static var previews: some View {
-        Espaco.SpacerAbaixo()
-        Espaco.SpacerAcima()
-        Espaco.SpacerNoMeio()
-        Espaco.SpacerHorizontal()
+        MySpacer.SpacerAbaixo()
+        MySpacer.SpacerAcima()
+        MySpacer.SpacerNoMeio()
+        MySpacer.SpacerHorizontal()
     }
 }
 
-struct Espaco {
+struct MySpacer {
     struct SpacerAbaixo : View {
         var body: some View {
             VStack {

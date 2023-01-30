@@ -1,5 +1,5 @@
 //
-//  Stacks.swift
+//  MyStacks.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 27/01/21.
@@ -7,18 +7,19 @@
 
 import SwiftUI
 
-struct Stacks_Previews: PreviewProvider {
+struct MyStacks_Previews: PreviewProvider {
     static var previews: some View {
-        //Stacks.Tipos()
-        //Stacks.Alinhamentos()
-        //Stacks.Espacamentos()
-        //Stacks.Aninhadas()
-        Stacks.AlinhamentoHorizontal()
+        //MyStacks.Tipos()
+        //MyStacks.Alinhamentos()
+        //MyStacks.Espacamentos()
+        //MyStacks.Aninhadas()
+        //MyStacks.AlinhamentoHorizontal()
+        MyStacks.LazyStacks()
     }
 }
 
 
-struct Stacks {
+struct MyStacks {
     struct Tipos : View {
         var body: some View {
             VStack {
@@ -352,7 +353,7 @@ struct Stacks {
                     .font(.title3)
                     .padding()
                 LazyHStack {
-                    ForEach(Range(1...1000)) { _ in
+                    ForEach(1..<1001) { _ in
                         Rectangle()
                             .foregroundColor(.purple)
                             .frame(width: 100, height: 100)

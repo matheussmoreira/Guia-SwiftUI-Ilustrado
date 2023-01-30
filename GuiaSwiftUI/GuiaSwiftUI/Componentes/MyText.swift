@@ -1,5 +1,5 @@
 //
-//  Texto.swift
+//  MyText.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 26/01/21.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Texto_Previews: PreviewProvider {
+struct MyText_Previews: PreviewProvider {
     static var previews: some View {
-        Texto.Unico()
+        MyText.Unico()
     }
 }
 
-struct Texto {
+struct MyText {
     struct Unico : View {
         var body: some View {
             Text("Se você está lendo isso, parabéns!!")

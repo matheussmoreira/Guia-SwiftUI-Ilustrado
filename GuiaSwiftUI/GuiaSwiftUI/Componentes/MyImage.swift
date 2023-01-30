@@ -1,5 +1,5 @@
 //
-//  Imagens.swift
+//  MyImage.swift
 //  GuiaSwiftUI
 //
 //  Created by Matheus S. Moreira on 28/01/21.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct Imagens_Previews : PreviewProvider {
+struct MyImage_Previews : PreviewProvider {
     static var previews : some View {
-        Imagens.ImageScale()
+        MyImage.ImageScale()
     }
 }
 
-struct Imagens {
+struct MyImage {
     struct Normal : View {
         var body: some View {
             Image("doguinho")
