@@ -2,15 +2,15 @@
 //  ContentView.swift
 //  GuiaSwiftUI
 //
-//  Created by Ricardo Venieris on 26/01/21.
+//  Created by Matheus S. Moreira on 04/02/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
-        Text("Guia SwiftUI Ilustrado").font(.title).bold()
+        Text("Aprenda a programar!")
+            .font(.title)
     }
 }
 
