@@ -2,7 +2,7 @@
 //  GuiaSwiftUIApp.swift
 //  GuiaSwiftUI
 //
-//  Created by Ricardo Venieris on 26/01/21.
+//  Created by Matheus S. Moreira on 04/02/23.
 //
 
 import SwiftUI
@@ -12,8 +12,6 @@ struct GuiaSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-//            MyToggle.Estilos()
         }
     }
 }
-
