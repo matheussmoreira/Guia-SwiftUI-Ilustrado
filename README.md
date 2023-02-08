@@ -17,7 +17,7 @@ Este e-book teve produção interrompida, porém ela voltará em breve.
 
 Atualmente, ele se encontra em processo de revisão e atualização para o iOS 16.
 
-Enquanto ele não é finalizado, acesse o link abaixo para uma demonstração!
+Enquanto não é finalizado, acesse o link abaixo para uma demonstração!
 ## [Baixar amostra](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
 
 ## Idealizadores do projeto
