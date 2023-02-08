@@ -12,11 +12,13 @@ Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o
 
 Este Guia pode ser de maior proveito para estudantes iniciantes por conta do conteúdo e da linguagem simplificada, porém acreditamos que ele seja de grande valor para qualquer um que esteja buscando conhecer os variados componentes gráficos que SwiftUI possui por meio de **suporte visual.**
 
-## OBS (29/01/2023)
-A produção deste e-book foi interrompida, porém ela vai voltar em breve.
+## RECADO (08/02/2023)
+Este e-book teve produção interrompida, porém ela voltará em breve. 
 
-Enquanto isso, acesse o link abaixo para sentir um gostinho do que vem por aí!
-## [Baixar mostra](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
+Atualmente, ele se encontra em processo de revisão e atualização para o iOS 16.
+
+Enquanto ele não é finalizado, acesse o link abaixo para uma demonstração!
+## [Baixar amostra](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
 
 ## Idealizadores do projeto
 | <img src="https://avatars.githubusercontent.com/u/62520284?s=400&u=565e559fc4b743cbcd2ee3cde97e30854e166494&v=4" width=200>    | <img src="https://avatars.githubusercontent.com/u/62903825?s=400&u=88e98fba1ed77d9121a5354ec8d1bfeba04e51dd&v=4" width=200> |
