@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyText_Previews: PreviewProvider {
     static var previews: some View {
-        MyText.FontesSistema()
+        MyText.CoresPadrao()
     }
 }
 
@@ -59,7 +59,7 @@ struct MyText {
                 }
             }
         }
-    }
+    } // Tamanhos
     
     struct Pesos : View {
         var body : some View {
@@ -85,7 +85,7 @@ struct MyText {
                 
             }.font(.title)
         }
-    }
+    } // Pesos
     
     struct FontesSistema : View {
         var body: some View {
@@ -108,5 +108,77 @@ struct MyText {
                     .font(.system(.title3, design: .monospaced))
             }
         }
-    }
+    } // FontesSistema
+    
+    struct CoresPadrao : View {
+        @Environment(\.colorScheme) var colorScheme
+        
+        var body : some View {
+            
+            VStack(spacing: 40) {
+                
+                Spacer()
+                
+                Text("\tiOS 13.0+\t")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .fontWeight(.bold)
+                    .cornerRadius(8)
+                
+                HStack(spacing: 20) {
+                    VStack(alignment: .trailing, spacing: 10) {
+                        Text("Black")
+                            .foregroundColor(.black)
+                        Text("Blue")
+                            .foregroundColor(.blue)
+                        Text("Gray")
+                            .foregroundColor(.gray)
+                        Text("Green")
+                            .foregroundColor(.green)
+                        Text("Orange")
+                            .foregroundColor(.orange)
+                    }
+                    
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("Pink")
+                            .foregroundColor(.pink)
+                        Text("Purple")
+                            .foregroundColor(.purple)
+                        Text("Red")
+                            .foregroundColor(.red)
+                        Text("Yellow")
+                            .foregroundColor(.yellow)
+                        Text(" White ")
+                            .foregroundColor(.white)
+                            .background(colorScheme == .dark ? nil : Color.gray)
+                    }
+                }.font(.title).fontWeight(.medium)
+                
+                Divider()
+                
+                Text("\tiOS 15.0+\t")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .background(.black)
+                    .fontWeight(.bold)
+                    .cornerRadius(8)
+                
+                VStack(spacing: 10) {
+                    Text("Brown")
+                        .foregroundColor(.brown)
+                    Text("Cyan")
+                        .foregroundColor(.cyan)
+                    Text("Indigo")
+                        .foregroundColor(.indigo)
+                    Text("Mint")
+                        .foregroundColor(.mint)
+                    Text("Teal")
+                        .foregroundColor(.teal)
+                }.font(.title).fontWeight(.medium)
+                
+                Spacer()
+            } // VStack
+        } // body
+    } // CoresPadrao
 }
