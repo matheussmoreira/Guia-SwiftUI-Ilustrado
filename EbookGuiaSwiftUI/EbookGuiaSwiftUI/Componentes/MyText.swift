@@ -9,12 +9,13 @@ import SwiftUI
 
 struct MyText_Previews: PreviewProvider {
     static var previews: some View {
-        MyText.CoresPadrao()
+        MyText.Tachado()
     }
 }
 
 struct MyText {
-    struct Tamanhos : View {
+    
+    struct Tamanhos: View {
         var body: some View {
             VStack {
                 Text("Large Title")
@@ -61,8 +62,8 @@ struct MyText {
         }
     } // Tamanhos
     
-    struct Pesos : View {
-        var body : some View {
+    struct Pesos: View {
+        var body: some View {
             VStack {
                 Text("Black\n")
                     .fontWeight(.black)
@@ -87,7 +88,7 @@ struct MyText {
         }
     } // Pesos
     
-    struct FontesSistema : View {
+    struct FontesSistema: View {
         var body: some View {
             VStack(spacing: 50) {
                 Text("Fonte com tamanho 20")
@@ -110,10 +111,10 @@ struct MyText {
         }
     } // FontesSistema
     
-    struct CoresPadrao : View {
+    struct CoresPadrao: View {
         @Environment(\.colorScheme) var colorScheme
         
-        var body : some View {
+        var body: some View {
             
             VStack(spacing: 40) {
                 
@@ -181,4 +182,117 @@ struct MyText {
             } // VStack
         } // body
     } // CoresPadrao
+    
+    struct ModosClaroEscuro: View {
+        var body: some View {
+            Text("Mesmo código,\ncores diferentes")
+                .foregroundColor(.primary)
+                .font(.title)
+                .fontWeight(.bold)
+        }
+    } // ModosClaroEscuro
+    
+    struct NegritoItalico: View {
+        var body: some View {
+            VStack {
+                Text("Apenas negrito")
+                    .bold()
+                
+                Text("Apenas itálico")
+                    .italic()
+                
+                Text("Negrito e itálico")
+                    .bold()
+                    .italic()
+            }.font(.title)
+        }
+    } // NegritoItalico
+    
+    struct Underline: View {
+        var body: some View {
+            VStack(spacing: 15) {
+                
+                Text("Aplicação de cores")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
+                
+                Text("Cor padrão")
+                    .foregroundColor(.blue)
+                    .underline()
+                
+                Text("Cor customizada")
+                    .underline(color: .orange)
+                
+                
+                Divider()
+                    .padding(.vertical)
+                
+                Text("Estilos de linha")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
+                
+                Text("Solid (padrão)")
+                    .underline(pattern: .solid)
+                
+                Text("Dash (traços)")
+                    .underline(pattern: .dash)
+                
+                Text("Dot (pontos)")
+                    .underline(pattern: .dot)
+                
+                Text("DashDot (traços e pontos)")
+                    .underline(pattern: .dashDot)
+                
+                Text("DashDotDot (traços e 2 pontos)")
+                    .underline(pattern: .dashDotDot)
+                
+            }.font(.title2)
+        }
+    } // Underline
+    
+    struct Tachado: View {
+        var body: some View {
+            VStack(spacing: 15) {
+                
+                Text("Aplicação de cores")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
+                
+                Text("Tachado padrão")
+                    .foregroundColor(.green)
+                    .strikethrough()
+                
+                Text("Tachado colorido")
+                    .strikethrough(color: .red)
+                
+                Divider()
+                    .padding(.vertical)
+                
+                Text("Estilos de linha")
+                    .font(.title)
+                    .bold()
+                    .padding(.vertical)
+                
+                Text("Solid (padrão)")
+                    .strikethrough(pattern: .solid)
+                
+                Text("Dash (traços)")
+                    .strikethrough(pattern: .dash)
+                
+                Text("Dot (pontos)")
+                    .strikethrough(pattern: .dot)
+                
+                Text("DashDot (traços e pontos)")
+                    .strikethrough(pattern: .dashDot)
+                
+                Text("DashDotDot (traços e 2 pontos)")
+                    .strikethrough(pattern: .dashDotDot)
+                
+            }.font(.title2)
+        }
+    } // Tachado
+
 }
