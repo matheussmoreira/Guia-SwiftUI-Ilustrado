@@ -14,6 +14,7 @@ Este Guia pode ser de maior proveito para estudantes iniciantes por conta do con
 
 ## RECADO (09/02/2023)
 Este e-book teve sua produção interrompida. Antes de ser retomada, o escopo deste material se encontra em processo de revisão e atualização para o iOS 16. Enquanto ele não é finalizado, acesse o link abaixo para uma demonstração!
+
 ## [Baixar amostra](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
 
 ## Idealizadores do projeto
