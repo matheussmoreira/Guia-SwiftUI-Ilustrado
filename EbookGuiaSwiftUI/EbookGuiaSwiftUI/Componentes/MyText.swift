@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyText_Previews: PreviewProvider {
     static var previews: some View {
-        MyText.Tachado()
+        MyText.Monospace()
     }
 }
 
@@ -208,7 +208,7 @@ struct MyText {
         }
     } // NegritoItalico
     
-    struct Underline: View {
+    struct Sublinhado: View {
         var body: some View {
             VStack(spacing: 15) {
                 
@@ -250,7 +250,7 @@ struct MyText {
                 
             }.font(.title2)
         }
-    } // Underline
+    } // Sublinhado
     
     struct Tachado: View {
         var body: some View {
@@ -294,5 +294,222 @@ struct MyText {
             }.font(.title2)
         }
     } // Tachado
-
+    
+    struct Capitalizacao: View {
+        var body: some View {
+            VStack {
+                Text("TUDO MINÚSCULO").textCase(.lowercase)
+                Text("tudo maiúsculo").textCase(.uppercase)
+            }.font(.title)
+        }
+    } // Capitalizacao
+    
+    struct DeslocamentoVertical : View {
+        var body: some View {
+            HStack {
+                Text("Em baixo")
+                    .baselineOffset(-20)
+                    .border(Color.red)
+                
+                Text("Normal")
+                    .border(Color.green)
+                
+                Text("Em cima")
+                    .baselineOffset(20)
+                    .border(Color.blue)
+            }.font(.title)
+        }
+    } // DeslocamentoVertical
+    
+    struct Compressao: View {
+        var body: some View {
+            VStack {
+                Text("Este é um texto bem longo")
+                    .frame(width: 310, height: 50, alignment: .leading)
+                    .lineLimit(1)
+                    .allowsTightening(true)
+                
+                Text("Este é um texto bem longo")
+                    .frame(width: 310, height: 50, alignment: .leading)
+                    .lineLimit(1)
+                    .allowsTightening(false)
+            }.font(.title)
+        }
+    } // Compressao
+    
+    struct Tracking: View {
+        var body: some View {
+            VStack {
+                Text("ABCDEF").tracking(-3)
+                Text("ABCDEF")
+                Text("ABCDEF").tracking(8)
+            }.font(.title)
+        }
+    } // Tracking
+    
+    struct Kerning: View {
+        var body: some View {
+            VStack {
+                Text("ABCDEF").kerning(-3)
+                Text("ABCDEF")
+                Text("ABCDEF").kerning(8)
+            }.font(.title)
+        }
+    } // Kerning
+    
+    struct AlinhamentoMultilinha: View {
+        var body : some View {
+            VStack {
+                // Leading
+                Text("Leading")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Se você quiser aprender SwiftUI temos duas dicas:\n\n")
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal)
+                
+                // Center
+                Text("Center")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Dica 1: Dedique pelo menos 30 minutos do seu dia para estudar sobre seus recursos.\n\n")
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal)
+                
+                // Trailing
+                Text("Trailing")
+                    .foregroundColor(.blue)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Dica 2: Depois pratique aquilo que você estudou para reforçar o aprendizado.\n\n")
+                    .multilineTextAlignment(.trailing)
+                    .padding(.horizontal)
+            }
+        }
+    } // AlinhamentoMultilinha
+    
+    struct EspacoLinhas: View {
+        var body: some View {
+            VStack {
+                Text("Espaço de valor 5\n")
+                    .foregroundColor(.red)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica.\n")
+                    .lineSpacing(5)
+                    .padding(.horizontal)
+                
+                // Espaço de valor 25
+                
+                Text("Espaço de valor 25\n")
+                    .foregroundColor(.green)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Hoje, os cientistas descrevem o universo a partir de duas teorias parciais básicas: a teoria da relatividade geral e a mecânica quântica.")
+                    .lineSpacing(25)
+                    .padding(.horizontal)
+            }
+        }
+    } // EspacoLinhas
+    
+    struct LimiteLinhas: View {
+        var body: some View {
+            VStack {
+                Text("Limite de 3 linhas")
+                    .foregroundColor(.orange)
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .padding()
+                Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
+                    .lineLimit(3)
+                    .padding(.horizontal)
+                
+                // Sem limite de linhas
+                
+                Text("\nSem limite de linhas\n")
+                    .foregroundColor(.green)
+                    .font(.title)
+                    .fontWeight(.bold)
+                Text("Os computadores da Apple são melhores do que os computadores da Microsoft? Um é melhor do que o outro quando olhados empiricamente, baseado em dados e análises, testes e comparações objetivas?\n")
+                    .lineLimit(nil)
+                    .padding(.horizontal)
+            }
+        }
+    } // LimiteLinhas
+    
+    struct FatorMinEscala: View {
+        var body: some View {
+            HStack {
+                Text("Texto qualquer")
+                    .bold()
+                    .foregroundColor(.red)
+                Text("Este é um texto bem longo, como você pode ver!")
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+            }.padding()
+        }
+    } // FatorMinEscala
+    
+    struct Truncamento: View {
+        var body: some View {
+            VStack {
+                Text("Esse é um bloco de texto que provavelmente contém múltiplas linhas. O texto vai preencher o espaço disponível e então, eventualmente, ser truncado.")
+                    .frame(width: 150, height: 150)
+                    .truncationMode(.tail)
+                
+                // Middle
+                // Head
+                
+                Text("Esse é um bloco de texto que provavelmente contém múltiplas linhas. O texto vai preencher o espaço disponível e então, eventualmente, ser truncado.")
+                    .frame(width: 150, height: 150)
+                    .truncationMode(.middle)
+                
+                Text("Esse é um bloco de texto que provavelmente contém múltiplas linhas. O texto vai preencher o espaço disponível e então, eventualmente, ser truncado.")
+                    .frame(width: 150, height: 150)
+                    .truncationMode(.head)
+            }
+        }
+        
+    } // Truncamento
+    
+    struct EspelhamentoHorizontal: View {
+        var body: some View {
+            VStack {
+                Text("יש כאן הרבה תוכן. נחשו מה אני אומר.")
+                    .padding()
+                
+                Text("هناك الكثير من المحتوى هنا. خمن ما أقوله.")
+                    .padding()
+                
+                Text("Agora o texto está em português, mas invertido.")
+                    .flipsForRightToLeftLayoutDirection(true)
+                    .padding()
+            }
+            .lineLimit(nil)
+            .font(.title)
+        }
+    } // EspelhamentoHorizontal
+    
+    struct Monospace: View {
+        var body: some View {
+            VStack(alignment: .leading) {
+                Text("AA123456789")
+                
+                Text("AA123456789")
+                    .monospacedDigit()
+                
+                Text("AA123456789")
+                    .monospaced(true)
+            }
+            .font(.largeTitle)
+            .fontWeight(.black)
+        }
+    } // Monospace
+    
+    // DesignFonte
+    // LarguraFonte
+    // DinamicTypeSize
 }
+
