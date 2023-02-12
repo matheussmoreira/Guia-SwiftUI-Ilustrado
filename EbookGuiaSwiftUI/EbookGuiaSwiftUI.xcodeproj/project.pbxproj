@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66515CC329930E89007370A7 /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66515CC229930E89007370A7 /* MyText.swift */; };
+		66BEF58F2999936400301BA9 /* PosicionamentoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEF58E2999936400301BA9 /* PosicionamentoViews.swift */; };
+		66BEF5912999A12000301BA9 /* CtrlExibicaoInteracao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEF5902999A12000301BA9 /* CtrlExibicaoInteracao.swift */; };
 		66F266E42991D702003D3E6D /* EbookGuiaSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F266E32991D702003D3E6D /* EbookGuiaSwiftUIApp.swift */; };
 		66F266E62991D702003D3E6D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F266E52991D702003D3E6D /* ContentView.swift */; };
 		66F266E82991D703003D3E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66F266E72991D703003D3E6D /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		66515CC229930E89007370A7 /* MyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
+		66BEF58E2999936400301BA9 /* PosicionamentoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosicionamentoViews.swift; sourceTree = "<group>"; };
+		66BEF5902999A12000301BA9 /* CtrlExibicaoInteracao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtrlExibicaoInteracao.swift; sourceTree = "<group>"; };
 		66F266E02991D702003D3E6D /* EbookGuiaSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EbookGuiaSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F266E32991D702003D3E6D /* EbookGuiaSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EbookGuiaSwiftUIApp.swift; sourceTree = "<group>"; };
 		66F266E52991D702003D3E6D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,15 @@
 			path = Componentes;
 			sourceTree = "<group>";
 		};
+		66BEF58D2999934600301BA9 /* Modificadores */ = {
+			isa = PBXGroup;
+			children = (
+				66BEF58E2999936400301BA9 /* PosicionamentoViews.swift */,
+				66BEF5902999A12000301BA9 /* CtrlExibicaoInteracao.swift */,
+			);
+			path = Modificadores;
+			sourceTree = "<group>";
+		};
 		66F266D72991D702003D3E6D = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 		66F266E22991D702003D3E6D /* EbookGuiaSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				66BEF58D2999934600301BA9 /* Modificadores */,
 				66515CC129930E7B007370A7 /* Componentes */,
 				66F266E32991D702003D3E6D /* EbookGuiaSwiftUIApp.swift */,
 				66F266E52991D702003D3E6D /* ContentView.swift */,
@@ -149,7 +163,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66515CC329930E89007370A7 /* MyText.swift in Sources */,
+				66BEF5912999A12000301BA9 /* CtrlExibicaoInteracao.swift in Sources */,
 				66F266E62991D702003D3E6D /* ContentView.swift in Sources */,
+				66BEF58F2999936400301BA9 /* PosicionamentoViews.swift in Sources */,
 				66F266E42991D702003D3E6D /* EbookGuiaSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
