@@ -362,7 +362,7 @@ struct MyText {
         }
     } // Kerning
     
-    struct DeslocamentoVertical : View {
+    struct DeslocamentoVertical: View {
         var body: some View {
             HStack {
                 Text("Em baixo")
@@ -431,7 +431,7 @@ struct MyText {
     } // Truncamento
     
     struct AlinhamentoMultilinha: View {
-        var body : some View {
+        var body: some View {
             VStack {
                 // Leading
                 Text("Leading")

@@ -19,9 +19,9 @@ struct MyDivider {
             VStack {
                 // Circulos azuis
                 VStack {
-                    CirculoAzul()
+                    MyDivider.CirculoAzul()
                     Divider().padding()
-                    CirculoAzul()
+                    MyDivider.CirculoAzul()
                 }
                 .frame(width: 300, height: 300)
                 .border(Color.blue)
@@ -29,9 +29,9 @@ struct MyDivider {
                 
                 // Circulos laranjas
                 HStack {
-                    CirculoLaranja()
+                    MyDivider.CirculoLaranja()
                     Divider().padding()
-                    CirculoLaranja()
+                    MyDivider.CirculoLaranja()
                 }
                 .frame(width: 300, height: 300)
                 .border(Color.orange)
@@ -41,18 +41,22 @@ struct MyDivider {
     }
 }
 
-struct CirculoAzul: View {
-    var body: some View {
-        Circle()
-            .frame(width: 75, height: 75)
-            .foregroundColor(.blue)
-    }
-}
+// MARK: - Objetos
 
-struct CirculoLaranja: View {
-    var body: some View {
-        Circle()
-            .frame(width: 75, height: 75)
-            .foregroundColor(.orange)
-    }
+extension MyDivider {
+    struct CirculoAzul: View {
+        var body: some View {
+            Circle()
+                .frame(width: 75, height: 75)
+                .foregroundColor(.blue)
+        }
+    } // Circulo azul
+
+    struct CirculoLaranja: View {
+        var body: some View {
+            Circle()
+                .frame(width: 75, height: 75)
+                .foregroundColor(.orange)
+        }
+    } // Circulo laranja
 }

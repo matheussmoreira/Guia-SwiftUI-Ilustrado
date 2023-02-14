@@ -104,15 +104,15 @@ struct MySpacer {
                         .bold()
                     
                     HStack {
-                        CirculoRoxo()
+                        MySpacer.CirculoRoxo()
                         Spacer(minLength: 2)
-                        CirculoRoxo()
+                        MySpacer.CirculoRoxo()
                         Spacer(minLength: 2)
-                        CirculoRoxo()
+                        MySpacer.CirculoRoxo()
                         Spacer(minLength: 2)
-                        CirculoRoxo()
+                        MySpacer.CirculoRoxo()
                         Spacer(minLength: 2)
-                        CirculoRoxo()
+                        MySpacer.CirculoRoxo()
                     }
                 } // Fileira superior
                 
@@ -122,15 +122,15 @@ struct MySpacer {
                         .bold()
                     
                     HStack {
-                        CirculoVerde()
+                        MySpacer.CirculoVerde()
                         Spacer(minLength: 60)
-                        CirculoVerde()
+                        MySpacer.CirculoVerde()
                         Spacer(minLength: 60)
-                        CirculoVerde()
+                        MySpacer.CirculoVerde()
                         Spacer(minLength: 60)
-                        CirculoVerde()
+                        MySpacer.CirculoVerde()
                         Spacer(minLength: 60)
-                        CirculoVerde()
+                        MySpacer.CirculoVerde()
                     }
                 } // Fileira inferior
             }
@@ -138,18 +138,23 @@ struct MySpacer {
     } // ComprimentoMinimo
 }
 
-struct CirculoRoxo: View {
-    var body: some View {
-        Circle()
-            .frame(width: 40, height: 40)
-            .foregroundColor(.purple)
-    }
+// MARK: - Objetos
+
+extension MySpacer {
+    struct CirculoRoxo: View {
+        var body: some View {
+            Circle()
+                .frame(width: 40, height: 40)
+                .foregroundColor(.purple)
+        }
+    } // Circulo roxo
+
+    struct CirculoVerde: View {
+        var body: some View {
+            Circle()
+                .frame(width: 40, height: 40)
+                .foregroundColor(.green)
+        }
+    } // Circulo verde
 }
 
-struct CirculoVerde: View {
-    var body: some View {
-        Circle()
-            .frame(width: 40, height: 40)
-            .foregroundColor(.green)
-    }
-}
