@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		66515CC329930E89007370A7 /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66515CC229930E89007370A7 /* MyText.swift */; };
+		66522345299FB2FD00BF2C63 /* MyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66522344299FB2FD00BF2C63 /* MyGrids.swift */; };
 		66A93489299BE9F5004CBF96 /* MyStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A93488299BE9F5004CBF96 /* MyStacks.swift */; };
 		66BEF58F2999936400301BA9 /* PosicionamentoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEF58E2999936400301BA9 /* PosicionamentoViews.swift */; };
 		66BEF5912999A12000301BA9 /* CtrlExibicaoInteracao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BEF5902999A12000301BA9 /* CtrlExibicaoInteracao.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		66515CC229930E89007370A7 /* MyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
+		66522344299FB2FD00BF2C63 /* MyGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrids.swift; sourceTree = "<group>"; };
 		66A93488299BE9F5004CBF96 /* MyStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStacks.swift; sourceTree = "<group>"; };
 		66BEF58E2999936400301BA9 /* PosicionamentoViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosicionamentoViews.swift; sourceTree = "<group>"; };
 		66BEF5902999A12000301BA9 /* CtrlExibicaoInteracao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtrlExibicaoInteracao.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				66BEF593299AB74A00301BA9 /* MySpacer.swift */,
 				66BEF595299AC37000301BA9 /* MyDivider.swift */,
 				66A93488299BE9F5004CBF96 /* MyStacks.swift */,
+				66522344299FB2FD00BF2C63 /* MyGrids.swift */,
 			);
 			path = Organizadores;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66A93489299BE9F5004CBF96 /* MyStacks.swift in Sources */,
+				66522345299FB2FD00BF2C63 /* MyGrids.swift in Sources */,
 				66515CC329930E89007370A7 /* MyText.swift in Sources */,
 				66BEF5912999A12000301BA9 /* CtrlExibicaoInteracao.swift in Sources */,
 				66F266E62991D702003D3E6D /* ContentView.swift in Sources */,
