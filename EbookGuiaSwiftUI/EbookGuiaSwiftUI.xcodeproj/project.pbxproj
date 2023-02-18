@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		663FC32329A10082002642C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663FC32229A10082002642C7 /* Extensions.swift */; };
 		66515CC329930E89007370A7 /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66515CC229930E89007370A7 /* MyText.swift */; };
 		66522345299FB2FD00BF2C63 /* MyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66522344299FB2FD00BF2C63 /* MyGrids.swift */; };
 		66A93489299BE9F5004CBF96 /* MyStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A93488299BE9F5004CBF96 /* MyStacks.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		663FC32229A10082002642C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		66515CC229930E89007370A7 /* MyText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
 		66522344299FB2FD00BF2C63 /* MyGrids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrids.swift; sourceTree = "<group>"; };
 		66A93488299BE9F5004CBF96 /* MyStacks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStacks.swift; sourceTree = "<group>"; };
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		663FC32129A10073002642C7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				663FC32229A10082002642C7 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		66515CC129930E7B007370A7 /* Componentes */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		66F266E22991D702003D3E6D /* EbookGuiaSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				663FC32129A10073002642C7 /* Utils */,
 				66F266E52991D702003D3E6D /* ContentView.swift */,
 				66F266E32991D702003D3E6D /* EbookGuiaSwiftUIApp.swift */,
 				66F266E72991D703003D3E6D /* Assets.xcassets */,
@@ -187,6 +198,7 @@
 				66515CC329930E89007370A7 /* MyText.swift in Sources */,
 				66BEF5912999A12000301BA9 /* CtrlExibicaoInteracao.swift in Sources */,
 				66F266E62991D702003D3E6D /* ContentView.swift in Sources */,
+				663FC32329A10082002642C7 /* Extensions.swift in Sources */,
 				66BEF58F2999936400301BA9 /* PosicionamentoViews.swift in Sources */,
 				66F266E42991D702003D3E6D /* EbookGuiaSwiftUIApp.swift in Sources */,
 				66BEF596299AC37000301BA9 /* MyDivider.swift in Sources */,

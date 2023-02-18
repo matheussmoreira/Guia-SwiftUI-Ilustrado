@@ -103,8 +103,40 @@ struct MyGrids {
                     MyGrids.GridAlinhada(alinhamento: .bottom, cor: .blue)
                 }
                 
-                Text("Orientações").font(.title)
+                Divider()
+                
+                Text("Alinhamentos").font(.title)
+                
+                Grid(horizontalSpacing: 120, verticalSpacing: 60) {
+                    GridRow {
+                        MyGrids.CirculoPequeno(cor: .red)
+                        MyGrids.CirculoPequeno(cor: .gray)
+                        MyGrids.CirculoPequeno(cor: .mint)
+                    }
+                    
+                    Divider()
+                        .gridCellUnsizedAxes([.horizontal, .vertical])
+                    
+                    GridRow {
+                        MyGrids.CirculoPequeno(cor: .yellow)
+                        MyGrids.CirculoPequeno(cor: .blue)
+                        MyGrids.CirculoPequeno(cor: .orange)
+                    }
+                    
+                    Divider()
+                        .gridCellUnsizedAxes([.horizontal, .vertical])
+                    
+                    GridRow {
+                        MyGrids.CirculoPequeno(cor: .green)
+                        MyGrids.CirculoPequeno(cor: .brown)
+                        MyGrids.CirculoPequeno(cor: .purple)
+                    }
+                }
+                .padding()
+                .border(.gray)
             }
+            .padding(.vertical)
+            
         }
     } // Alinhamentos
     
@@ -161,12 +193,32 @@ extension MyGrids {
         }
     } // Quadrado transparente
     
+    struct CirculoPequeno: View {
+        var cor: Color
+        var width: CGFloat = 20
+        
+        var body: some View {
+            ZStack {
+                Capsule()
+                    .stroke(cor, lineWidth: 1)
+                    .frame(width: width+1, height: width+1)
+                    .foregroundColor(cor)
+                
+                Circle()
+                    .frame(width: width, height: width)
+                    .foregroundColor(cor)
+                    .opacity(0.25)
+            }
+        }
+    } // CirculoPequeno
+    
     struct GridAlinhada: View {
         var alinhamento: Alignment
         var cor: Color
         
         var body: some View {
             Grid(alignment: alinhamento) {
+                // Conteúdo da Grid
                 Text(alinhamento.description)
                     .fontWeight(.medium)
                     .foregroundColor(cor)
@@ -192,21 +244,4 @@ extension MyGrids {
 //                .rotationEffect(Angle(degrees: 45))
 //        }
 //    } // Diamante
-}
-
-extension Alignment: CustomStringConvertible {
-    public var description: String {
-        switch self {
-            case .topLeading: return ".topLeading"
-            case .top: return ".top"
-            case .topTrailing: return ".topTrailing"
-            case .leading: return ".leading"
-            case .center: return ".center"
-            case .trailing: return ".trailing"
-            case .bottomLeading: return ".bottomLeading"
-            case .bottom: return ".bottom"
-            case.bottomTrailing: return ".bottomTrailing"
-            default: return "other"
-        }
-    }
 }
