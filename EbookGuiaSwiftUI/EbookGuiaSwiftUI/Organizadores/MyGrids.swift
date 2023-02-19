@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        MyGrids.Alinhamentos()
+        MyGrids.EspacamentoVertical()
     }
 }
 
@@ -140,6 +140,34 @@ struct MyGrids {
         }
     } // Alinhamentos
     
+    struct EspacamentoHorizontal: View {
+        var body: some View {
+            VStack(spacing: 40) {
+                MyGrids.GridEspacamentoHorizontal(valor: 1)
+                Divider()
+                MyGrids.GridEspacamentoHorizontal(valor: 5)
+                Divider()
+                MyGrids.GridEspacamentoHorizontal(valor: 50)
+                Divider()
+                MyGrids.GridEspacamentoHorizontal(valor: 100)
+                
+            }
+        }
+    } // Espacamento horizontal
+    
+    struct EspacamentoVertical: View {
+        var body: some View {
+            VStack(spacing: 20) {
+                MyGrids.GridEspacamentoVertical(valor: 5)
+                Divider()
+                MyGrids.GridEspacamentoVertical(valor: 50)
+                Divider()
+                MyGrids.GridEspacamentoVertical(valor: 80)
+                
+            }
+        }
+    } // Espacamento vertical
+    
     struct ColunasEmOcupacao: View {
         var body: some View {
             Text(".gridCellColumns")
@@ -235,6 +263,56 @@ extension MyGrids {
             }.border(cor)
         }
     } // GridAlinhada
+    
+    struct GridEspacamentoHorizontal: View {
+        var valor: CGFloat
+        var valorInt: Int { Int(valor) }
+        
+        var body: some View {
+            Grid(horizontalSpacing: valor) {
+                Text("Espaçamento horizontal de \(valorInt.description)")
+                    .fontWeight(.medium)
+                    .padding(.bottom)
+                
+                GridRow {
+                    Image(systemName: "figure.handball")
+                    Image(systemName: "figure.pool.swim")
+                }
+                .font(.title)
+                
+                GridRow {
+                    Image(systemName: "figure.hockey")
+                    Image(systemName: "figure.outdoor.cycle")
+                }
+                .font(.title)
+            }
+        }
+    } // GridEspacamentoHorizontal
+    
+    struct GridEspacamentoVertical: View {
+        var valor: CGFloat
+        var valorInt: Int { Int(valor) }
+        
+        var body: some View {
+            Grid(verticalSpacing: valor) {
+                Text("Espaçamento vertical de \(valorInt.description)")
+                    .fontWeight(.medium)
+                    .padding(.bottom)
+                
+                GridRow {
+                    Image(systemName: "figure.handball")
+                    Image(systemName: "figure.pool.swim")
+                }
+                .font(.title)
+                
+                GridRow {
+                    Image(systemName: "figure.hockey")
+                    Image(systemName: "figure.outdoor.cycle")
+                }
+                .font(.title)
+            }
+        }
+    } // GridEspacamentoVertical
 
 //    struct Diamante: View {
 //        var body: some View {
