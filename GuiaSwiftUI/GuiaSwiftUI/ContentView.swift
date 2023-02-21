@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  EbookGuiaSwiftUI
+//  GuiaSwiftUI
 //
-//  Created by Matheus S. Moreira on 06/02/23.
+//  Created by Matheus S. Moreira on 20/02/23.
 //
 
 import SwiftUI
