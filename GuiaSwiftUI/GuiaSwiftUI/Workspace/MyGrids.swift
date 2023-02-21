@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        MyGrids.EspacamentoVertical()
+        MyGrids.ColunasOcupadas()
     }
 }
 
@@ -140,6 +140,44 @@ struct MyGrids {
         }
     } // Alinhamentos
     
+    struct AlinhamentoColuna: View {
+        var cor: Color = .blue
+        
+        var body: some View {
+            Grid(alignment: .leading, horizontalSpacing: 40, verticalSpacing: 20) {
+                
+                GridRow {
+                    MyGrids.QuadradoOpaco(cor: cor)
+                    MyGrids.Losango(cor: .orange)
+                        .gridColumnAlignment(.trailing)
+                    MyGrids.QuadradoOpaco(cor: cor)
+                }
+                
+                // Conteúdo restante da Grid
+                
+                ForEach(1..<4) { _ in
+                    GridRow {
+                        MyGrids.QuadradoTransparente(cor: cor)
+                        MyGrids.QuadradoOpaco(cor: cor)
+                        MyGrids.QuadradoTransparente(cor: cor)
+                    }
+                }
+                
+                GridRow {
+                    MyGrids.QuadradoOpaco(cor: cor)
+                    MyGrids.Losango(cor: .orange)
+                    MyGrids.QuadradoOpaco(cor: cor)
+                }
+                
+                GridRow {
+                    MyGrids.QuadradoTransparente(cor: cor)
+                    MyGrids.QuadradoOpaco(cor: cor)
+                    MyGrids.QuadradoOpaco(cor: cor)
+                }
+            }.border(cor)
+        }
+    } // Alinhamento coluna
+    
     struct EspacamentoHorizontal: View {
         var body: some View {
             VStack(spacing: 40) {
@@ -168,11 +206,32 @@ struct MyGrids {
         }
     } // Espacamento vertical
     
-    struct ColunasEmOcupacao: View {
+    struct ColunasOcupadas: View {
         var body: some View {
-            Text(".gridCellColumns")
+            Grid {
+                // GridRow superior
+                GridRow {
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                }
+                GridRow {
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.Losango(cor: .purple)
+                        .gridCellColumns(2)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                }
+                // GridRow inferior
+                GridRow {
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                    MyGrids.QuadradoOpaco(cor: .green)
+                }
+            }
         }
-    } // Colunas em ocupacao
+    } // Colunas ocupadas
 }
 
 // MARK: - Objetos
@@ -314,12 +373,11 @@ extension MyGrids {
         }
     } // GridEspacamentoVertical
 
-//    struct Diamante: View {
-//        var body: some View {
-//            Rectangle()
-//                .frame(width: 30, height: 30)
-//                .foregroundColor(.gray)
-//                .rotationEffect(Angle(degrees: 45))
-//        }
-//    } // Diamante
+    struct Losango: View {
+        var cor: Color
+        var body: some View {
+            MyGrids.QuadradoTransparente(cor: cor)
+                .rotationEffect(Angle(degrees: 45))
+        }
+    } // Losango
 }
