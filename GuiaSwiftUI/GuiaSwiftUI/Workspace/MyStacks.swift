@@ -9,10 +9,9 @@ import SwiftUI
 
 struct MyStacks_Previews: PreviewProvider {
     static var previews: some View {
-        MyStacks.LazyStacks()
+        MyStacks.AlinhamentoHStack()
     }
 }
-
 
 struct MyStacks {
     struct Tipos: View {
@@ -138,6 +137,22 @@ struct MyStacks {
                 // Bottom
                 HStack(alignment: .bottom) {
                     MyStacks.RetanguloAzul(texto: ".bottom")
+                    MyStacks.CirculoVermelhoPequeno()
+                    MyStacks.CirculoVermelhoPequeno()
+                }
+                .border(Color.blue)
+                
+                // First text baseline
+                HStack(alignment: .firstTextBaseline) {
+                    MyStacks.RetanguloAzul(texto: ".firstText\nBaseline")
+                    MyStacks.CirculoVermelhoPequeno()
+                    MyStacks.CirculoVermelhoPequeno()
+                }
+                .border(Color.blue)
+                
+                // Last text baseline
+                HStack(alignment: .lastTextBaseline) {
+                    MyStacks.RetanguloAzul(texto: ".lastText\nBaseline")
                     MyStacks.CirculoVermelhoPequeno()
                     MyStacks.CirculoVermelhoPequeno()
                 }
