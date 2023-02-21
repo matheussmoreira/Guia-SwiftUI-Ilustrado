@@ -12,7 +12,6 @@
 		66CBDDC029A439E00087D1D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CBDDBF29A439E00087D1D7 /* Assets.xcassets */; };
 		66CBDDC329A439E00087D1D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66CBDDC229A439E00087D1D7 /* Preview Assets.xcassets */; };
 		66CBDDCB29A43A550087D1D7 /* MyStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBDDC929A43A550087D1D7 /* MyStacks.swift */; };
-		66CBDDCC29A43A550087D1D7 /* MyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBDDCA29A43A550087D1D7 /* MyGrids.swift */; };
 		66CBDDD329A43CA70087D1D7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBDDD229A43CA70087D1D7 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +22,6 @@
 		66CBDDBF29A439E00087D1D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66CBDDC229A439E00087D1D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		66CBDDC929A43A550087D1D7 /* MyStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStacks.swift; sourceTree = "<group>"; };
-		66CBDDCA29A43A550087D1D7 /* MyGrids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGrids.swift; sourceTree = "<group>"; };
 		66CBDDD229A43CA70087D1D7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,11 +55,11 @@
 		66CBDDBA29A439DE0087D1D7 /* GuiaSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				66CBDDD129A43C960087D1D7 /* Utils */,
 				66CBDDBD29A439DE0087D1D7 /* ContentView.swift */,
 				66CBDDBB29A439DE0087D1D7 /* GuiaSwiftUIApp.swift */,
 				66CBDDBF29A439E00087D1D7 /* Assets.xcassets */,
 				66CBDDC129A439E00087D1D7 /* Preview Content */,
+				66CBDDD129A43C960087D1D7 /* Utils */,
 				66CBDDD029A43A8C0087D1D7 /* Workspace */,
 			);
 			path = GuiaSwiftUI;
@@ -78,7 +76,6 @@
 		66CBDDD029A43A8C0087D1D7 /* Workspace */ = {
 			isa = PBXGroup;
 			children = (
-				66CBDDCA29A43A550087D1D7 /* MyGrids.swift */,
 				66CBDDC929A43A550087D1D7 /* MyStacks.swift */,
 			);
 			path = Workspace;
@@ -166,7 +163,6 @@
 				66CBDDBE29A439DE0087D1D7 /* ContentView.swift in Sources */,
 				66CBDDBC29A439DE0087D1D7 /* GuiaSwiftUIApp.swift in Sources */,
 				66CBDDCB29A43A550087D1D7 /* MyStacks.swift in Sources */,
-				66CBDDCC29A43A550087D1D7 /* MyGrids.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

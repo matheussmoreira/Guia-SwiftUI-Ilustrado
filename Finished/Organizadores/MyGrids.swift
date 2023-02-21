@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MyGrids_Previews: PreviewProvider {
     static var previews: some View {
-        MyGrids.ColunasOcupadas()
+        MyGrids.Alinhamentos()
     }
 }
 
@@ -99,7 +99,7 @@ struct MyGrids {
                 Text("Exemplo").font(.title)
                 
                 HStack {
-                    MyGrids.GridAlinhada(alinhamento: .center, cor: .green)
+                    MyGrids.GridAlinhada(alinhamento: .topTrailing, cor: .green)
                     MyGrids.GridAlinhada(alinhamento: .bottom, cor: .blue)
                 }
                 
@@ -140,11 +140,102 @@ struct MyGrids {
         }
     } // Alinhamentos
     
+    struct AlinhamentoLinha: View {
+        var cor1: Color = .indigo
+        var cor2: Color = .yellow
+        
+        var body: some View {
+            VStack(spacing: 40) {
+                Grid {
+                    GridRow(alignment: .top) {
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        Text("Top")
+                            .multilineTextAlignment(.center)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                    }
+                }
+                .padding()
+                .border(cor1)
+                
+                Grid {
+                    GridRow {
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        Text("Center")
+                            .multilineTextAlignment(.center)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                    }
+                }
+                .padding()
+                .border(cor1)
+                
+                Grid {
+                    GridRow(alignment: .bottom) {
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        Text("Bottom")
+                            .multilineTextAlignment(.center)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                    }
+
+                }
+                .padding()
+                .border(cor1)
+                
+                Grid {
+                    GridRow(alignment: .firstTextBaseline) {
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        Text("First text\nbaseline")
+                            .multilineTextAlignment(.center)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                    }
+                }
+                .padding()
+                .border(cor1)
+                
+                Grid {
+                    GridRow(alignment: .lastTextBaseline) {
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        Text("Last text\nbaseline")
+                            .multilineTextAlignment(.center)
+                        MyGrids.QuadradoTransparente(width: 25, cor: cor1)
+                        MyGrids.QuadradoOpaco(cor: cor1)
+                    }
+                }
+                .padding()
+                .border(cor1)
+            }
+        }
+    } // Alinhamento linha
+    
     struct AlinhamentoColuna: View {
         var cor: Color = .blue
         
         var body: some View {
-            Grid(alignment: .leading, horizontalSpacing: 40, verticalSpacing: 20) {
+            Grid(alignment: .topLeading, verticalSpacing: 20) {
+                
+                GridRow {
+                    MyGrids.QuadradoOpaco(cor: cor)
+                    MyGrids.QuadradoOpaco(cor: cor)
+                    MyGrids.QuadradoOpaco(cor: cor)
+                }
+                
+                
+                ForEach(1..<4) { _ in
+                    GridRow {
+                        MyGrids.QuadradoTransparente(cor: cor)
+                        MyGrids.Losango(cor: .orange)
+                        MyGrids.QuadradoTransparente(cor: cor)
+                    }
+                }
+                // GridRows superiores
                 
                 GridRow {
                     MyGrids.QuadradoOpaco(cor: cor)
@@ -153,30 +244,47 @@ struct MyGrids {
                     MyGrids.QuadradoOpaco(cor: cor)
                 }
                 
-                // Conteúdo restante da Grid
-                
-                ForEach(1..<4) { _ in
-                    GridRow {
-                        MyGrids.QuadradoTransparente(cor: cor)
-                        MyGrids.QuadradoOpaco(cor: cor)
-                        MyGrids.QuadradoTransparente(cor: cor)
-                    }
-                }
-                
+                // GridRow inferior
                 GridRow {
                     MyGrids.QuadradoOpaco(cor: cor)
-                    MyGrids.Losango(cor: .orange)
-                    MyGrids.QuadradoOpaco(cor: cor)
-                }
-                
-                GridRow {
-                    MyGrids.QuadradoTransparente(cor: cor)
                     MyGrids.QuadradoOpaco(cor: cor)
                     MyGrids.QuadradoOpaco(cor: cor)
                 }
-            }.border(cor)
+            }
+            .padding()
+            .border(cor)
         }
     } // Alinhamento coluna
+    
+    struct AncoragemCelula: View {
+        var cor1: Color = .gray
+        
+        var body: some View {
+            Grid {
+                GridRow {
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                }
+                // GridRow superior
+                
+                GridRow {
+                    MyGrids.Losango(cor: .red)
+                        .gridCellAnchor(UnitPoint(x: 0.25, y: 0.75))
+                    MyGrids.Losango(cor: .green)
+                        .gridCellAnchor(.topLeading)
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                }
+                
+                // GridRow inferior
+                GridRow {
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                    MyGrids.QuadradoOpaco(width: 80, cor: cor1)
+                }
+            }
+        }
+    } // Ancoragem de celula
     
     struct EspacamentoHorizontal: View {
         var body: some View {
@@ -232,6 +340,7 @@ struct MyGrids {
             }
         }
     } // Colunas ocupadas
+    
 }
 
 // MARK: - Objetos
@@ -259,10 +368,12 @@ extension MyGrids {
     }
     
     struct QuadradoOpaco: View {
+        var width: CGFloat = 40
+        
         var cor: Color
         var body: some View {
             Rectangle()
-                .frame(width: 40, height: 40)
+                .frame(width: width, height: width)
                 .foregroundColor(cor)
         }
     } // Quadrado opaco
@@ -304,18 +415,21 @@ extension MyGrids {
         var cor: Color
         
         var body: some View {
-            Grid(alignment: alinhamento) {
+            Grid(alignment: alinhamento, horizontalSpacing: 20, verticalSpacing: 20) {
                 // Conteúdo da Grid
                 Text(alinhamento.description)
                     .fontWeight(.medium)
                     .foregroundColor(cor)
+                    .gridCellAnchor(.center)
                 
                 GridRow {
                     MyGrids.QuadradoOpaco(cor: cor)
-                    MyGrids.QuadradoOpaco(cor: cor)
+                    MyGrids.QuadradoTransparente(cor: cor)
+                    MyGrids.QuadradoTransparente(cor: cor)
                 }
                 
                 GridRow {
+                    MyGrids.QuadradoTransparente(cor: cor)
                     MyGrids.QuadradoTransparente(cor: cor)
                     MyGrids.QuadradoOpaco(cor: cor)
                 }
