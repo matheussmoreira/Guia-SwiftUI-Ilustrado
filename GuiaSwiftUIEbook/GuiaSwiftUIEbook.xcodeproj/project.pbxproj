@@ -11,6 +11,14 @@
 		664B685B29A6950F0037B9A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B685A29A6950F0037B9A7 /* ContentView.swift */; };
 		664B685D29A695100037B9A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664B685C29A695100037B9A7 /* Assets.xcassets */; };
 		664B686029A695100037B9A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 664B685F29A695100037B9A7 /* Preview Assets.xcassets */; };
+		664B687E29A695A00037B9A7 /* MySpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B686729A695A00037B9A7 /* MySpacer.swift */; };
+		664B687F29A695A00037B9A7 /* MyGrids.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B686829A695A00037B9A7 /* MyGrids.swift */; };
+		664B688029A695A00037B9A7 /* MyDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B686929A695A00037B9A7 /* MyDivider.swift */; };
+		664B688129A695A00037B9A7 /* MyText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B686B29A695A00037B9A7 /* MyText.swift */; };
+		664B688229A695A00037B9A7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B686D29A695A00037B9A7 /* Extensions.swift */; };
+		664B688329A695A00037B9A7 /* MyStacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B686E29A695A00037B9A7 /* MyStacks.swift */; };
+		664B688F29A695A00037B9A7 /* PosicionamentoViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B687C29A695A00037B9A7 /* PosicionamentoViews.swift */; };
+		664B689029A695A00037B9A7 /* CtrlExibicaoInteracao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 664B687D29A695A00037B9A7 /* CtrlExibicaoInteracao.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		664B685A29A6950F0037B9A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		664B685C29A695100037B9A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		664B685F29A695100037B9A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		664B686729A695A00037B9A7 /* MySpacer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MySpacer.swift; sourceTree = "<group>"; };
+		664B686829A695A00037B9A7 /* MyGrids.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGrids.swift; sourceTree = "<group>"; };
+		664B686929A695A00037B9A7 /* MyDivider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDivider.swift; sourceTree = "<group>"; };
+		664B686B29A695A00037B9A7 /* MyText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyText.swift; sourceTree = "<group>"; };
+		664B686D29A695A00037B9A7 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		664B686E29A695A00037B9A7 /* MyStacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStacks.swift; sourceTree = "<group>"; };
+		664B687C29A695A00037B9A7 /* PosicionamentoViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosicionamentoViews.swift; sourceTree = "<group>"; };
+		664B687D29A695A00037B9A7 /* CtrlExibicaoInteracao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CtrlExibicaoInteracao.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +67,15 @@
 		664B685729A6950F0037B9A7 /* GuiaSwiftUIEbook */ = {
 			isa = PBXGroup;
 			children = (
-				664B685829A6950F0037B9A7 /* GuiaSwiftUIEbookApp.swift */,
 				664B685A29A6950F0037B9A7 /* ContentView.swift */,
+				664B685829A6950F0037B9A7 /* GuiaSwiftUIEbookApp.swift */,
+				664B686E29A695A00037B9A7 /* MyStacks.swift */,
 				664B685C29A695100037B9A7 /* Assets.xcassets */,
+				664B686A29A695A00037B9A7 /* Componentes */,
+				664B687B29A695A00037B9A7 /* Modificadores */,
+				664B686629A695A00037B9A7 /* Organizadores */,
 				664B685E29A695100037B9A7 /* Preview Content */,
+				664B686C29A695A00037B9A7 /* Utils */,
 			);
 			path = GuiaSwiftUIEbook;
 			sourceTree = "<group>";
@@ -65,6 +86,41 @@
 				664B685F29A695100037B9A7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		664B686629A695A00037B9A7 /* Organizadores */ = {
+			isa = PBXGroup;
+			children = (
+				664B686729A695A00037B9A7 /* MySpacer.swift */,
+				664B686829A695A00037B9A7 /* MyGrids.swift */,
+				664B686929A695A00037B9A7 /* MyDivider.swift */,
+			);
+			path = Organizadores;
+			sourceTree = "<group>";
+		};
+		664B686A29A695A00037B9A7 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				664B686B29A695A00037B9A7 /* MyText.swift */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
+		664B686C29A695A00037B9A7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				664B686D29A695A00037B9A7 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		664B687B29A695A00037B9A7 /* Modificadores */ = {
+			isa = PBXGroup;
+			children = (
+				664B687C29A695A00037B9A7 /* PosicionamentoViews.swift */,
+				664B687D29A695A00037B9A7 /* CtrlExibicaoInteracao.swift */,
+			);
+			path = Modificadores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +193,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				664B688329A695A00037B9A7 /* MyStacks.swift in Sources */,
+				664B688129A695A00037B9A7 /* MyText.swift in Sources */,
 				664B685B29A6950F0037B9A7 /* ContentView.swift in Sources */,
+				664B689029A695A00037B9A7 /* CtrlExibicaoInteracao.swift in Sources */,
+				664B688F29A695A00037B9A7 /* PosicionamentoViews.swift in Sources */,
 				664B685929A6950F0037B9A7 /* GuiaSwiftUIEbookApp.swift in Sources */,
+				664B688029A695A00037B9A7 /* MyDivider.swift in Sources */,
+				664B687E29A695A00037B9A7 /* MySpacer.swift in Sources */,
+				664B687F29A695A00037B9A7 /* MyGrids.swift in Sources */,
+				664B688229A695A00037B9A7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
