@@ -14,7 +14,6 @@ struct MyText_Previews: PreviewProvider {
 }
 
 struct MyText {
-    
     struct TamanhosFonte: View {
         var body: some View {
             VStack {
