@@ -12,8 +12,7 @@ Para que você aproveite bem o conteúdo do e-book, é desejável que conheça o
 
 Este Guia pode ser de maior proveito para estudantes iniciantes por conta do conteúdo e da linguagem simplificada, porém acreditamos que ele seja de grande valor para qualquer um que esteja buscando conhecer os variados componentes gráficos que SwiftUI possui por meio de **suporte visual.**
 
-## Importante
-Este e-book atualmente está com sua produção interrompida. Enquanto ela não é retomada, acesse o link abaixo para uma demonstração!
+# Importante: a produção deste e-boo foi descontinuada.
 
 ## [Baixar amostra](https://mega.nz/file/2GYjyaSD#MKsOemPQATDMIQR5e9ceu6OSKJd6vpkS_SdwN9ZrSo8)
 
